@@ -7,155 +7,154 @@ $layout-mint: map-get($pysul-layout, accent-mint);
   background-color: $layout-mint;
   border-radius: $radius-4;
   box-shadow: 0 20px 45px rgba($layout-mint, 0.4);
+}
+.location__container {
+  @extend .section-container;
+  align-items: flex-start;
+  gap: $space-8;
+}
 
-  &__container {
-    @extend .section-container;
-    align-items: flex-start;
-    gap: $space-8;
+.location__heading {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-3;
+  color: var(--color-text-strong);
+  font-weight: 700;
+  text-transform: none;
+}
+
+.location__heading svg {
+  width: 32px;
+  height: 32px;
+}
+
+.location__heading h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.location__grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+
+  @media (min-width: $breakpoint-lg) {
+    flex-direction: row;
+    align-items: stretch;
+    gap: $space-12;
   }
+}
 
-  &__heading {
-    display: inline-flex;
-    align-items: center;
-    gap: $space-3;
-    color: var(--color-text-strong);
-    font-weight: 700;
-    text-transform: none;
+.location__details {
+  flex: 1 1 0%;
+  @include flex-column-start;
+  gap: $space-5;
+}
 
-    svg {
-      width: 32px;
-      height: 32px;
-    }
+.location__venue-block {
+  @include flex-column-start;
+  gap: $space-1;
+}
 
-    h2 {
-      margin: 0;
-      font-size: clamp(1.5rem, 4vw, 2rem);
-    }
+.location__venue {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-text-strong);
+}
+
+.location__place {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.location__description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  max-width: 50ch;
+}
+
+.location__info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
+}
+
+.location__info-item {
+  display: flex;
+  gap: $space-3;
+  align-items: flex-start;
+  color: var(--color-text);
+}
+
+.location__info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background-color: rgba($layout-primary, 0.12);
+  color: $layout-primary;
+  @include flex-center;
+}
+
+.location__info-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+}
+
+.location__info-text {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+}
+
+.location__info-label {
+  font-weight: 700;
+  color: var(--color-text-strong);
+}
+
+.location__map-card {
+  flex: 1 1 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location__map-placeholder {
+  width: 100%;
+  min-height: 220px;
+  border-radius: $radius-3;
+  background-color: $white;
+  border: 1px solid rgba($black, 0.08);
+  box-shadow: 0 15px 35px rgba($black, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-text);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: $space-4;
+
+  @media (min-width: $breakpoint-lg) {
+    min-height: 260px;
   }
+}
 
-  &__grid {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: $space-8;
+.location__map-placeholder:hover,
+.location__map-placeholder:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba($black, 0.1);
+}
 
-    @media (min-width: $breakpoint-lg) {
-      flex-direction: row;
-      align-items: stretch;
-      gap: $space-12;
-    }
-  }
-
-  &__details {
-    flex: 1 1 0%;
-    @include flex-column-start;
-    gap: $space-5;
-  }
-
-  &__venue-block {
-    @include flex-column-start;
-    gap: $space-1;
-  }
-
-  &__venue {
-    font-size: clamp(1.75rem, 4vw, 2.25rem);
-    font-weight: 700;
-    color: var(--color-text-strong);
-  }
-
-  &__place {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--color-text-muted);
-  }
-
-  &__description {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--color-text);
-    max-width: 50ch;
-  }
-
-  &__info-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: $space-5;
-  }
-
-  &__info-item {
-    display: flex;
-    gap: $space-3;
-    align-items: flex-start;
-    color: var(--color-text);
-  }
-
-  &__info-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 999px;
-    background-color: rgba($layout-primary, 0.12);
-    color: $layout-primary;
-    @include flex-center;
-
-    svg {
-      width: 22px;
-      height: 22px;
-      stroke: currentColor;
-    }
-  }
-
-  &__info-text {
-    display: flex;
-    flex-direction: column;
-    gap: $space-1;
-  }
-
-  &__info-label {
-    font-weight: 700;
-    color: var(--color-text-strong);
-  }
-
-  &__map-card {
-    flex: 1 1 0%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__map-placeholder {
-    width: 100%;
-    min-height: 220px;
-    border-radius: $radius-3;
-    background-color: $white;
-    border: 1px solid rgba($black, 0.08);
-    box-shadow: 0 15px 35px rgba($black, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    color: var(--color-text);
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    padding: $space-4;
-
-    @media (min-width: $breakpoint-lg) {
-      min-height: 260px;
-    }
-
-    &:hover,
-    &:focus-visible {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 45px rgba($black, 0.1);
-    }
-  }
-
-  figure {
-    margin: 0 !important;
-  }
+.location figure {
+  margin: 0 !important;
 }

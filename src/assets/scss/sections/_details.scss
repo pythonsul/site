@@ -9,87 +9,87 @@ $layout-white: map-get($pysul-layout, white);
   color: var(--color-details-title);
   border-radius: $radius-4;
   box-shadow: 0 20px 45px rgba($black, 0.05);
+}
 
-  &__container {
-    @extend .section-container;
-    text-align: center;
+.details-section__container {
+  @extend .section-container;
+  text-align: center;
+}
 
-    &--title {
-      margin-bottom: $space-4;
-    }
+.details-section__container--title {
+  margin-bottom: $space-4;
+}
 
-    &--description {
-      opacity: 0.9;
-      text-align: center;
-    }
+.details-section__container--description {
+  opacity: 0.9;
+  text-align: center;
+}
+
+.details-section__cards {
+  @include grid(3, $space-6);
+  margin-top: $space-6;
+
+  @media (max-width: $breakpoint-xl) {
+    @include grid(2, $space-4);
   }
 
-  &__cards {
-    @include grid(3, $space-6);
-    margin-top: $space-6;
-
-    @media (max-width: $breakpoint-xl) {
-      @include grid(2, $space-4);
-    }
-
-    @media (max-width: $breakpoint-md) {
-      @include grid(1, $space-4);
-    }
+  @media (max-width: $breakpoint-md) {
+    @include grid(1, $space-4);
   }
+}
 
-  &__card {
-    @include flex-column-center;
-    padding: $space-8 $space-4;
-    background-color: var(--color-details-card-bg);
-    color: var(--color-details-text);
-    box-shadow: 0 15px 35px rgba($black, 0.08);
-    border-radius: $radius-4;
-    border: 1px solid var(--color-border);
-    text-align: center;
+.details-section__card {
+  @include flex-column-center;
+  padding: $space-8 $space-4;
+  background-color: var(--color-details-card-bg);
+  color: var(--color-details-text);
+  box-shadow: 0 15px 35px rgba($black, 0.08);
+  border-radius: $radius-4;
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
 
-    &:hover {
-      box-shadow: 0 20px 45px rgba($black, 0.15);
-    }
+.details-section__card:hover {
+  box-shadow: 0 20px 45px rgba($black, 0.15);
+}
 
-    .icon-box {
-      @include flex-center;
-      width: $space-8;
-      height: $space-8;
-      background-color: var(--color-details-icon-bg);
-      border-radius: 50%;
-      margin-bottom: $space-4;
+.details-section__card .icon-box {
+  @include flex-center;
+  width: $space-8;
+  height: $space-8;
+  background-color: var(--color-details-icon-bg);
+  border-radius: 50%;
+  margin-bottom: $space-4;
+}
 
-      svg {
-        width: $space-4;
-        height: $space-4;
-        color: inherit;
-      }
-    }
+.details-section__card .icon-box svg {
+  width: $space-4;
+  height: $space-4;
+  color: inherit;
+}
 
-    .item-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 999px;
-      background-color: $layout-primary;
-      color: $layout-white;
-      font-weight: 700;
-      margin-bottom: $space-3;
-      box-shadow: 0 10px 20px rgba($layout-primary, 0.3);
-    }
+.details-section__card .item-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background-color: $layout-primary;
+  color: $layout-white;
+  font-weight: 700;
+  margin-bottom: $space-3;
+  box-shadow: 0 10px 20px rgba($layout-primary, 0.3);
+}
 
-    h3 {
-      font-weight: 600;
-      margin-bottom: $space-3;
-      color: var(--color-details-title);
-    }
+.details-section__card h3 {
+  font-weight: 600;
+  margin-bottom: $space-3;
+  color: var(--color-details-title);
+}
 
-    p {
-      opacity: 0.9;
-      line-height: 1.625;
-      color: var(--color-details-text);
-    }
-  }
+.details-section__card p {
+  opacity: 0.9;
+  line-height: 1.625;
+  color: var(--color-details-text);
 }

@@ -5,89 +5,86 @@ $layout-white: map-get($pysul-layout, white);
   @extend .section;
   background-color: var(--color-bg);
   text-align: center;
+}
+.supporters__container {
+  @extend .section-container;
+  gap: $space-6;
+}
 
-  &__container {
-    @extend .section-container;
-    gap: $space-6;
-  }
+.supporters__header {
+  @include flex-column-center;
+  gap: $space-3;
+}
 
-  &__header {
-    @include flex-column-center;
-    gap: $space-3;
-  }
+.supporters__icon {
+  @include flex-center;
+  width: $space-8;
+  height: $space-8;
+  border-radius: 999px;
+  background-color: rgba($layout-primary, 0.15);
+}
 
-  &__icon {
-    @include flex-center;
-    width: $space-8;
-    height: $space-8;
-    border-radius: 999px;
-    background-color: rgba($layout-primary, 0.15);
+.supporters__icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  color: $layout-primary;
+}
 
-    svg {
-      width: 1.4rem;
-      height: 1.4rem;
-      color: $layout-primary;
-    }
-  }
+.supporters .section-title {
+  margin: 0;
+  padding-left: 0;
+}
 
-  .section-title {
-    margin: 0;
-    padding-left: 0;
+.supporters .section-title::before {
+  display: none;
+}
 
-    &::before {
-      display: none;
-    }
-  }
+.supporters .section-description {
+  margin: 0;
+  max-width: 60ch;
+}
 
-  .section-description {
-    margin: 0;
-    max-width: 60ch;
-  }
+.supporters__logos {
+  @include flex-center;
+  gap: $space-4;
+}
 
-  &__logos {
-    @include flex-center;
-    gap: $space-4;
-  }
+.supporter-logo {
+  @include flex-center;
+  padding: $space-3;
+  border: 1px solid var(--color-border-muted);
+  border-radius: $radius-4;
+  background-color: $layout-white;
+  box-shadow: 0 12px 24px rgba($black, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  .supporter-logo {
-    @include flex-center;
-    padding: $space-3;
-    border: 1px solid var(--color-border-muted);
-    border-radius: $radius-4;
-    background-color: $layout-white;
-    box-shadow: 0 12px 24px rgba($black, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.supporter-logo a {
+  @include flex-center;
+  padding: $space-2;
+}
 
-    a {
-      @include flex-center;
-      padding: $space-2;
-    }
+.supporter-logo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba($black, 0.12);
+}
 
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 30px rgba($black, 0.12);
-    }
+.supporter-logo img {
+  max-height: 2.75rem;
+  width: auto;
+}
 
-    img {
-      max-height: 2.75rem;
-      width: auto;
-    }
+.supporter-logo.phprs img {
+  max-height: 2rem;
+}
 
-    &.phprs {
-      img {
-        max-height: 2rem;
-      }
-    }
-  }
+.supporters figure,
+.supporters picture {
+  margin: 0 !important;
+  @include flex-center;
+  width: 100%;
+}
 
-  figure,
-  picture {
-    margin: 0 !important;
-    @include flex-center;
-    width: 100%;
-  }
-
-  figcaption {
-    display: none;
-  }
+.supporters figcaption {
+  display: none;
 }

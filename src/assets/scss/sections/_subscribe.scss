@@ -9,108 +9,107 @@ $layout-white: map-get($pysul-layout, white);
   border-radius: $radius-4;
   box-shadow: 0 20px 45px rgba($black, 0.05);
   border-top: 6px solid $layout-mint;
+}
+.subscribe-newsletter-section .section-container {
+  width: 100%;
+  @include flex-column-center;
+  gap: $space-8;
 
-  .section-container {
-    width: 100%;
-    @include flex-column-center;
-    gap: $space-8;
-
-    @media (min-width: $breakpoint-lg) {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      gap: $space-10;
-    }
-  }
-
-  &__content {
-    width: 100%;
-    flex: 1 1 0%;
-    @include flex-column-start;
-    gap: $space-5;
-
-    &--copy {
-      gap: $space-6;
-
-      @media (min-width: $breakpoint-lg) {
-        max-width: 55%;
-      }
-    }
-
-    &--logo {
-      align-items: center;
-
-      @media (min-width: $breakpoint-lg) {
-        max-width: 45%;
-      }
-
-      svg {
-        width: clamp(12rem, 30vw, 20rem);
-        height: auto;
-      }
-    }
-  }
-
-  &__text {
-    @include flex-column-start;
-    gap: $space-3;
-
-    h2 {
-      @extend .section-title;
-      margin-bottom: 0;
-      padding-left: 0;
-      text-align: left;
-
-      &::before {
-        display: none;
-      }
-    }
-
-    p {
-      @extend .section-description;
-      hyphens: initial;
-      max-width: 50ch;
-      margin: 0;
-      text-align: left;
-    }
-  }
-
-  &__social {
-    display: flex;
+  @media (min-width: $breakpoint-lg) {
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    gap: $space-4;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $space-10;
   }
+}
 
-  &__social-link {
-    width: 52px;
-    height: 52px;
-    border-radius: 999px;
-    @include flex-center;
-    background-color: rgba($layout-primary, 0.08);
-    border: 1px solid rgba($layout-primary, 0.25);
-    color: $layout-primary;
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease,
-      border-color 0.2s ease;
+.subscribe-newsletter-section__content {
+  width: 100%;
+  flex: 1 1 0%;
+  @include flex-column-start;
+  gap: $space-5;
+}
 
-    svg {
-      width: 26px;
-      height: 26px;
-      stroke: currentColor;
+.subscribe-newsletter-section__content--copy {
+  gap: $space-6;
 
-      * {
-        stroke: currentColor;
-        fill: none;
-      }
-    }
-
-    &:hover,
-    &:focus-visible {
-      background-color: $layout-primary;
-      border-color: $layout-primary;
-      color: $layout-white;
-      transform: translateY(-2px);
-    }
+  @media (min-width: $breakpoint-lg) {
+    max-width: 55%;
   }
+}
+
+.subscribe-newsletter-section__content--logo {
+  align-items: center;
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: 45%;
+  }
+}
+
+.subscribe-newsletter-section__content--logo svg {
+  width: clamp(12rem, 30vw, 20rem);
+  height: auto;
+}
+
+.subscribe-newsletter-section__text {
+  @include flex-column-start;
+  gap: $space-3;
+}
+
+.subscribe-newsletter-section__text h2 {
+  @extend .section-title;
+  margin-bottom: 0;
+  padding-left: 0;
+  text-align: left;
+}
+
+.subscribe-newsletter-section__text h2::before {
+  display: none;
+}
+
+.subscribe-newsletter-section__text p {
+  @extend .section-description;
+  hyphens: initial;
+  max-width: 50ch;
+  margin: 0;
+  text-align: left;
+}
+
+.subscribe-newsletter-section__social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $space-4;
+  flex-wrap: wrap;
+}
+
+.subscribe-newsletter-section__social-link {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  @include flex-center;
+  background-color: rgba($layout-primary, 0.08);
+  border: 1px solid rgba($layout-primary, 0.25);
+  color: $layout-primary;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.subscribe-newsletter-section__social-link svg {
+  width: 26px;
+  height: 26px;
+  stroke: currentColor;
+}
+
+.subscribe-newsletter-section__social-link svg * {
+  stroke: currentColor;
+  fill: none;
+}
+
+.subscribe-newsletter-section__social-link:hover,
+.subscribe-newsletter-section__social-link:focus-visible {
+  background-color: $layout-primary;
+  border-color: $layout-primary;
+  color: $layout-white;
+  transform: translateY(-2px);
 }

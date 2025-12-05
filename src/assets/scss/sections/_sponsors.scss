@@ -5,51 +5,51 @@ $layout-white: map-get($pysul-layout, white);
   @extend .section;
   background-color: var(--color-bg);
   text-align: center;
+}
 
-  &__container {
-    @extend .section-container;
-    gap: $space-8;
-  }
+.sponsors__container {
+  @extend .section-container;
+  gap: $space-8;
+}
 
-  &__intro {
-    @include flex-column-center;
-    justify-content: center;
-    gap: $space-3;
-  }
+.sponsors__intro {
+  @include flex-column-center;
+  justify-content: center;
+  gap: $space-3;
+}
 
-  &__icon {
-    @include flex-center;
-    width: $space-8;
-    height: $space-8;
-    border-radius: 999px;
-    background-color: rgba($layout-primary, 0.15);
+.sponsors__icon {
+  @include flex-center;
+  width: $space-8;
+  height: $space-8;
+  border-radius: 999px;
+  background-color: rgba($layout-primary, 0.15);
+}
 
-    svg {
-      width: 1.4rem;
-      height: 1.4rem;
-      color: $layout-primary;
-    }
-  }
+.sponsors__icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  color: $layout-primary;
+}
 
-  .section-title {
-    margin: 0;
-    padding-left: 0;
+.sponsors .section-title {
+  margin: 0;
+  padding-left: 0;
+}
 
-    &::before {
-      display: none;
-    }
-  }
+.sponsors .section-title::before {
+  display: none;
+}
 
-  .section-description {
-    margin: 0;
-    color: var(--color-text);
-  }
+.sponsors .section-description {
+  margin: 0;
+  color: var(--color-text);
+}
 
-  &__tiers {
-    width: 100%;
-    display: grid;
-    gap: $space-5;
-  }
+.sponsors__tiers {
+  width: 100%;
+  display: grid;
+  gap: $space-5;
 }
 
 
@@ -61,23 +61,23 @@ $layout-white: map-get($pysul-layout, white);
   border-radius: $radius-4;
   border: 1px solid var(--color-border-muted);
   box-shadow: 0 12px 24px rgba($black, 0.08);
+}
 
-  &__title {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-text-strong);
-  }
+.sponsor-tier__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-strong);
+}
 
-  &__logos {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-    gap: $space-4;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+.sponsor-tier__logos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: $space-4;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -89,16 +89,16 @@ $layout-white: map-get($pysul-layout, white);
   border-radius: $radius-3;
   box-shadow: 0 10px 25px rgba($black, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba($black, 0.12);
-  }
+.sponsor-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba($black, 0.12);
+}
 
-  img {
-    max-height: 3rem;
-    width: auto;
-  }
+.sponsor-logo img {
+  max-height: 3rem;
+  width: auto;
 }
 
 
@@ -113,43 +113,43 @@ $layout-white: map-get($pysul-layout, white);
   border-radius: 0;
   box-shadow: 0 20px 45px rgba($layout-primary, 0.4);
 
-  &-title {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-
-  &-text {
-    margin: 0;
-    max-width: 55ch;
-    line-height: 1.6;
-  }
-
-  &-actions {
-    @include flex-center;
-    flex-wrap: wrap;
-    gap: $space-4;
-
-    .btn {
-      min-width: 16rem;
-      background-color: $layout-white;
-      color: $layout-primary;
-      border: 2px solid rgba($white, 0.4);
-      font-weight: 600;
-      text-transform: none;
-
-      svg {
-        stroke: currentColor;
-      }
-
-      &:hover {
-        background-color: rgba($layout-white, 0.9);
-        color: $layout-primary;
-      }
-    }
-  }
-
   @media (min-width: $breakpoint-lg) {
     padding-block: $space-10;
   }
+}
+
+.sponsors__cta-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.sponsors__cta-text {
+  margin: 0;
+  max-width: 55ch;
+  line-height: 1.6;
+}
+
+.sponsors__cta-actions {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: $space-4;
+}
+
+.sponsors__cta-actions .btn {
+  min-width: 16rem;
+  background-color: $layout-white;
+  color: $layout-primary;
+  border: 2px solid rgba($white, 0.4);
+  font-weight: 600;
+  text-transform: none;
+}
+
+.sponsors__cta-actions .btn svg {
+  stroke: currentColor;
+}
+
+.sponsors__cta-actions .btn:hover {
+  background-color: rgba($layout-white, 0.9);
+  color: $layout-primary;
 }

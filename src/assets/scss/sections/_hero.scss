@@ -31,11 +31,6 @@ $layout-white: map-get($pysul-layout, white);
   }
 }
 
-
-
-
-
-
 .hero-section__container {
   @extend .section-container;
   flex-direction: column-reverse;
@@ -66,65 +61,6 @@ $layout-white: map-get($pysul-layout, white);
   border: none;
   box-shadow: none;
 
-  .hero-section__meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: $space-3;
-    margin-bottom: $space-5;
-  }
-
-  .hero-section__badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    padding: $space-2 $space-5;
-    border-radius: $radius-100;
-    background-color: rgba($black, 0.25);
-    border: 1px solid rgba($white, 0.35);
-    box-shadow: 0 6px 18px rgba($black, 0.25);
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-size: 0.95rem;
-  }
-
-  .hero-section__location {
-    font-weight: 600;
-    color: rgba($white, 0.85);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  &--title {
-    margin-bottom: $space-4;
-    @include font-title(800);
-    font-size: clamp(2.5rem, 5vw, 3.25rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    text-wrap: balance;
-
-    strong {
-      font-weight: inherit;
-      color: inherit;
-    }
-  }
-
-  &--description {
-    @include font-body(500);
-    font-size: font-size-from-px(21px);
-    margin-bottom: $space-7;
-    line-height: 1.5;
-    color: rgba($white, 0.92);
-    text-wrap: balance;
-
-    @media (min-width: $breakpoint-xl) {
-      font-size: 1.3rem;
-      max-width: 48ch;
-    }
-  }
-
   @media (min-width: $breakpoint-lg) {
     height: fit-content;
     padding: $space-6;
@@ -132,10 +68,64 @@ $layout-white: map-get($pysul-layout, white);
   }
 }
 
+.hero-section__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-3;
+  margin-bottom: $space-5;
+}
 
+.hero-section__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: $space-2 $space-5;
+  border-radius: $radius-100;
+  background-color: rgba($black, 0.25);
+  border: 1px solid rgba($white, 0.35);
+  box-shadow: 0 6px 18px rgba($black, 0.25);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
 
+.hero-section__location {
+  font-weight: 600;
+  color: rgba($white, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 
+.hero-section__content--title {
+  margin-bottom: $space-4;
+  @include font-title(800);
+  font-size: clamp(2.5rem, 5vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
 
+.hero-section__content--title strong {
+  font-weight: inherit;
+  color: inherit;
+}
+
+.hero-section__content--description {
+  @include font-body(500);
+  font-size: font-size-from-px(21px);
+  margin-bottom: $space-7;
+  line-height: 1.5;
+  color: rgba($white, 0.92);
+  text-wrap: balance;
+
+  @media (min-width: $breakpoint-xl) {
+    font-size: 1.3rem;
+    max-width: 48ch;
+  }
+}
 
 .hero-section__countdown {
   display: grid;
@@ -161,24 +151,19 @@ $layout-white: map-get($pysul-layout, white);
   border: 2px solid rgba($white, 0.25);
   box-shadow: 0 20px 35px rgba($black, 0.35);
   min-height: 6rem;
-
-  span:first-child {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: 700;
-  }
-
-  span:last-child {
-    opacity: 0.8;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
 }
 
+.hero-section__countdown-item span:first-child {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
 
-
-
-
+.hero-section__countdown-item span:last-child {
+  opacity: 0.8;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 
 .hero-section__cta {
   @include flex-start;
@@ -186,41 +171,36 @@ $layout-white: map-get($pysul-layout, white);
   gap: $space-4;
   margin-top: $space-6;
   align-items: center;
-
-  .btn {
-    padding-inline: $space-10;
-  }
-
-  .btn.accent {
-    background-color: $layout-white;
-    color: $layout-primary;
-    border: 1px solid $layout-white;
-    box-shadow: 0 12px 25px rgba($black, 0.25);
-
-    &:hover {
-      background-color: rgba($layout-white, 0.92);
-      color: $layout-primary;
-    }
-  }
-
-  .btn.outline {
-    color: $white;
-    background-color: rgba($white, 0.05);
-    border: 2px solid rgba($white, 0.8);
-    box-shadow: inset 0 0 0 1px rgba($white, 0.15);
-
-    &:hover {
-      background-color: rgba($white, 0.15);
-      border-color: $white;
-      color: $white;
-    }
-  }
 }
 
+.hero-section__cta .btn {
+  padding-inline: $space-10;
+}
 
+.hero-section__cta .btn.accent {
+  background-color: $layout-white;
+  color: $layout-primary;
+  border: 1px solid $layout-white;
+  box-shadow: 0 12px 25px rgba($black, 0.25);
+}
 
+.hero-section__cta .btn.accent:hover {
+  background-color: rgba($layout-white, 0.92);
+  color: $layout-primary;
+}
 
+.hero-section__cta .btn.outline {
+  color: $white;
+  background-color: rgba($white, 0.05);
+  border: 2px solid rgba($white, 0.8);
+  box-shadow: inset 0 0 0 1px rgba($white, 0.15);
+}
 
+.hero-section__cta .btn.outline:hover {
+  background-color: rgba($white, 0.15);
+  border-color: $white;
+  color: $white;
+}
 
 .hero-section__images {
   position: relative;
@@ -230,8 +210,7 @@ $layout-white: map-get($pysul-layout, white);
   display: flex;
   justify-content: center;
 
-  @media (min-width: $breakpoint-lg),
-  (orientation: landscape) and (max-height: $height-xs) {
+  @media (min-width: $breakpoint-lg), (orientation: landscape) and (max-height: $height-xs) {
     width: auto;
   }
 }
@@ -247,31 +226,33 @@ $layout-white: map-get($pysul-layout, white);
   box-shadow: 0 35px 65px rgba($black, 0.4);
   overflow: hidden;
   border: 6px solid rgba($white, 0.65);
+}
 
-  figure {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16/9;
-    margin: 0 !important;
+.hero-section__images-container figure {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: 0 !important;
+}
 
-    img {
-      @include img-cover(center);
-      border-radius: inherit;
-      transform: none;
-    }
-  }
+.hero-section__images-container img {
+  @include img-cover(center);
+  border-radius: inherit;
+  transform: none;
+}
 
-  @media (min-width: $breakpoint-lg) {
+@media (min-width: $breakpoint-lg) {
+  .hero-section__images-container {
     max-width: 34rem;
-
-    figure {
-      figcaption {
-        display: block;
-      }
-    }
   }
 
-  @media (min-width: $breakpoint-xl) {
+  .hero-section__images-container figure figcaption {
+    display: block;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .hero-section__images-container {
     max-width: 38rem;
   }
 }

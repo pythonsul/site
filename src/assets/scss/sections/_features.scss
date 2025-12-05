@@ -32,32 +32,32 @@ $layout-primary: map-get($pysul-layout, primary);
   @include flex-column-start;
 
   gap: $space-4;
+}
 
-  .section-title {
-    margin: 0;
-    padding-left: 0;
-    text-align: left;
-    max-width: 28rem;
+.features--intro-text .section-title {
+  margin: 0;
+  padding-left: 0;
+  text-align: left;
+  max-width: 28rem;
+}
 
-    &::before {
-      display: none;
-    }
-  }
+.features--intro-text .section-title::before {
+  display: none;
+}
 
-  .section-description {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    color: var(--color-about-text);
+.features--intro-text .section-description {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  color: var(--color-about-text);
+}
 
-    p {
-      margin: 0;
+.features--intro-text .section-description p {
+  margin: 0;
+}
 
-      &+p {
-        margin-top: $space-4;
-      }
-    }
-  }
+.features--intro-text .section-description p + p {
+  margin-top: $space-4;
 }
 
 .features-cards {
@@ -70,64 +70,55 @@ $layout-primary: map-get($pysul-layout, primary);
   @media (min-width: $breakpoint-md) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
 
-  .card {
-    width: 100%;
+.features-cards .card {
+  width: 100%;
+  padding: $space-5;
+  border: 1px solid var(--color-border-muted);
+  border-radius: $radius-4;
+  background-color: var(--color-about-card-bg);
+  box-shadow: 0 12px 28px rgba($black, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    padding: $space-5;
+.features-cards .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 35px rgba($black, 0.12);
+}
 
-    border: 1px solid var(--color-border-muted);
-    border-radius: $radius-4;
-    background-color: var(--color-about-card-bg);
+.features-cards .card-head {
+  width: 100%;
+  @include flex-start;
+  padding-bottom: $space-2;
+  border-bottom: 2px solid rgba($layout-primary, 0.7);
+}
 
-    box-shadow: 0 12px 28px rgba($black, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.features-cards .icon-box {
+  @include flex-center;
+  width: $space-6;
+  height: $space-6;
+}
 
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 35px rgba($black, 0.12);
-    }
-  }
+.features-cards .icon-box svg {
+  width: $space-5;
+  height: $space-5;
+  color: $layout-primary;
+}
 
-  .card-head {
-    width: 100%;
+.features-cards .card-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: $layout-primary;
+}
 
-    @include flex-start;
-
-    padding-bottom: $space-2;
-    border-bottom: 2px solid rgba($layout-primary, 0.7);
-  }
-
-  .icon-box {
-    @include flex-center;
-
-    width: $space-6;
-    height: $space-6;
-
-    svg {
-      width: $space-5;
-      height: $space-5;
-      color: $layout-primary;
-    }
-  }
-
-  .card-title {
-    margin: 0;
-
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: $layout-primary;
-  }
-
-  .card-content {
-    margin: 0;
-    margin-top: $space-2;
-
-    font-size: 1rem;
-    line-height: 1.6;
-    text-align: left;
-    padding-left: 0;
-
-    color: var(--color-about-card-text);
-  }
+.features-cards .card-content {
+  margin: 0;
+  margin-top: $space-2;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  padding-left: 0;
+  color: var(--color-about-card-text);
 }
