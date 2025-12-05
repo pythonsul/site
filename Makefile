@@ -1,5 +1,5 @@
 ###############################################################################
-# Python Sul 2025 - Porto Alegre Makefile
+# Python Sul2026 - Porto Alegre Makefile
 # author: Regis Tomkiel<me@tomkiel.com.br>
 #
 # Content map:

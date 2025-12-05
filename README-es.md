@@ -1,4 +1,4 @@
-# Sitio Python Sul 2025
+# Sitio Python Sul2026
 
 ![Build Status](https://github.com/pythonsul/python-sul-site/actions/workflows/build.yml/badge.svg)
 
@@ -10,7 +10,7 @@
 - [English](./README-en.md)
 
 ---
-Este repositorio contiene el código fuente del **sitio oficial** de **Python Sul 2025**, una conferencia comunitaria que reúne a entusiastas y profesionales de Python en el sur de Brasil. Construido con [Hugo](https://gohugo.io/), el sitio soporta **tres idiomas** (portugués, español e inglés) y está diseñado para facilitar la gestión de contenido y la colaboración de la comunidad.
+Este repositorio contiene el código fuente del **sitio oficial** de **Python Sul2026**, una conferencia comunitaria que reúne a entusiastas y profesionales de Python en el sur de Brasil. Construido con [Hugo](https://gohugo.io/), el sitio soporta **tres idiomas** (portugués, español e inglés) y está diseñado para facilitar la gestión de contenido y la colaboración de la comunidad.
 
 ---
 
@@ -191,7 +191,7 @@ Este proyecto es open source. Consultá el repositorio para detalles sobre la li
 
 ## Equipo
 
-Personas involucradas en Python Sul 2025:
+Personas involucradas en Python Sul2026:
 
 - [Regis Tomkiel](http://tomkiel.com.br)
 
