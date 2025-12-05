@@ -1,0 +1,2139 @@
+/*
+  Theme Name: TheEvent
+  Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+  Author: BootstrapMade.com
+  License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+:root {
+  --base-color: #BD651D;
+}
+
+
+body {
+  background: #fef7e454;
+  color: #2f3138;
+  font-family: "nunito", "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--base-color);
+  transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: var(--base-color);
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "ribeye", "Raleway", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: #0e1b4d;
+}
+
+.main-page {
+  margin-top: 70px;
+}
+
+
+/* Prelaoder */
+
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #fff url("../images/preloader.svg") no-repeat center center;
+}
+
+/* Back to top button */
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: var(--base-color);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s ease-in-out;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  padding-top: 6px;
+}
+
+.back-to-top:focus {
+  background: var(--base-color);
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: var(--base-color);
+  color: #fff;
+}
+
+/* Sections Header
+--------------------------------*/
+
+.section-header {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+
+.section-header h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9195a2;
+}
+
+.section-with-bg {
+  background-color: #f6f7fd;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+#header {
+  height: 90px;
+  padding: 25px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997;
+  background-color: #336d9a;
+}
+
+#header.header-scrolled,
+#header.header-fixed {
+  background: #336d9a;
+  height: 70px;
+  padding: 15px 0;
+  transition: all 0.5s;
+}
+
+#header #logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-family: "ribeye","Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header #logo h1 span {
+  color: var(--base-color);
+}
+
+#header #logo h1 a,
+#header #logo h1 a:hover {
+  color: #fff;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* Nav Menu Essentials */
+
+.nav-menu,
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+
+.sf-arrows .sf-with-ul {
+  padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 15px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Meu Container */
+
+#nav-menu-container {
+  float: right;
+  margin: 0;
+}
+
+/* Nav Meu Styling */
+
+.nav-menu a {
+  padding: 8px;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  font-family: "nunito","Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  outline: none;
+}
+
+.nav-menu .menu-active a,
+.nav-menu a:hover {
+  color: white;
+}
+
+.nav-menu > li {
+  margin-left: 8px;
+}
+
+.nav-menu > li > a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--base-color);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before,
+.nav-menu li:hover > a:before,
+.nav-menu .menu-active > a:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.nav-menu li.buy-tickets a {
+  color: #fff;
+  background: var(--base-color);
+  padding: 7px 22px;
+  border-radius: 50px;
+  border: 2px solid var(--base-color);
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+  margin-left: 8px;
+  margin-top: 2px;
+  line-height: 1;
+  font-size: 13px;
+}
+
+.nav-menu li.buy-tickets a:hover {
+  background: none;
+}
+
+.nav-menu li.buy-tickets:hover a:before,
+.nav-menu li.buy-tickets.menu-active a:before {
+  visibility: hidden;
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 0;
+  padding: 10px;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background: #fff;
+  border-radius: 3px;
+}
+
+.nav-menu ul li {
+  transition: 0.3s;
+}
+
+.nav-menu ul li a {
+  padding: 10px;
+  color: #060c22;
+  transition: 0.3s;
+  display: block;
+  font-size: 13px;
+  text-transform: none;
+  border-radius: 3px;
+}
+
+.nav-menu ul li:hover > a {
+  background: var(--base-color);
+  color: #fff;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+/* Mobile Nav Toggle */
+
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 15px 15px 0 0;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+
+#mobile-nav-toggle i {
+  color: #fff;
+}
+
+/* Mobile Nav Styling */
+
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: #336d9a;
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav ul li {
+  position: relative;
+}
+
+#mobile-nav ul li a {
+  color: #fff;
+  font-size: 17px;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-nav ul li a:hover {
+  color: var(--base-color);
+}
+
+#mobile-nav ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+  color: var(--base-color);
+}
+
+#mobile-nav ul .menu-item-active {
+  color: var(--base-color);
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(6, 12, 34, 0.8);
+  display: none;
+}
+
+/* Mobile Nav body classes */
+
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Intro Section
+--------------------------------------------------------------*/
+
+
+@-webkit-keyframes pulsate-btn {
+  0% {
+    -webkit-transform: scale(0.6, 0.6);
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsate-btn {
+  0% {
+    -webkit-transform: scale(0.6, 0.6);
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+
+#about {
+  background-color: #20284f;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding: 0px 0 40px 0;
+}
+
+/* #about:before {
+  content: "";
+  background: rgba(13, 20, 41, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+} */
+
+#about h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#about h3 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#about p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-family: "nunito", "Open Sans", sans-serif;
+  font-weight: 500;
+  text-align: justify;
+}
+
+/*--------------------------------------------------------------
+# Speakers Section
+--------------------------------------------------------------*/
+
+#speakers {
+  padding: 60px 0 30px 0;
+}
+
+#speakers .speaker {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#speakers .speaker .details {
+  background: rgba(6, 12, 34, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  right: 0;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#speakers .speaker .details h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#speakers .speaker .details p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+#speakers .speaker .details .social {
+  height: 30px;
+}
+
+#speakers .speaker .details a {
+  color: #fff;
+}
+
+#speakers .speaker .details a:hover {
+  color: var(--base-color);
+}
+
+#speakers .speaker:hover .details {
+  bottom: 0;
+}
+
+#speakers-details {
+  padding: 60px 0;
+}
+
+#speakers-details .details h2 {
+  color: #112363;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#speakers-details .details .social {
+  margin-bottom: 15px;
+}
+
+#speakers-details .details .social a {
+  background: #e9edfb;
+  color: #112363;
+  line-height: 1;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding-top: 9px;
+}
+
+#speakers-details .details .social a:hover {
+  background: var(--base-color);
+  color: #fff;
+}
+
+#speakers-details .details .social a i {
+  font-size: 18px;
+}
+
+#speakers-details .details p {
+  color: #112363;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+# Schedule Section
+--------------------------------------------------------------*/
+
+#schedule {
+  padding: 60px 0 60px 0;
+}
+
+#schedule .nav-tabs {
+  text-align: center;
+  margin: auto;
+  display: block;
+  border-bottom: 0;
+  margin-bottom: 30px;
+}
+
+#schedule .nav-tabs li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+#schedule .nav-tabs a {
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  background-color: #0e1b4d;
+  color: #fff;
+  padding: 10px 100px;
+}
+
+#schedule .nav-tabs a.active {
+  background-color: var(--base-color);
+  color: #fff;
+}
+
+#schedule .sub-heading {
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 auto 30px auto;
+}
+
+#schedule .tab-pane {
+  transition: ease-in-out .2s;
+}
+
+#schedule .schedule-item {
+  border-bottom: 1px solid #cad4f6;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: background-color ease-in-out 0.3s;
+}
+
+#schedule .schedule-item:hover {
+  background-color: #fff;
+}
+
+#schedule .schedule-item time {
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+#schedule .schedule-item .speaker {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+#schedule .schedule-item .speaker img {
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-left: 50%;
+  transition: all ease-in-out 0.3s;
+}
+
+#schedule .schedule-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#schedule .schedule-item h4 span {
+  font-style: italic;
+  color: #19328e;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+#schedule .schedule-item p {
+  font-style: italic;
+  color: #152b79;
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Venue Section
+--------------------------------------------------------------*/
+
+#venue {
+  padding: 60px 0;
+}
+
+#venue .container-fluid {
+  margin-bottom: 3px;
+}
+
+#venue .venue-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+#venue .venue-info {
+  background: url("../images/venue-info-bg.jpg") top center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#venue .venue-info:before {
+  content: "";
+  background: rgba(13, 20, 41, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#venue .venue-info h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#venue .venue-info p {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+#venue .venue-gallery-container {
+  padding-right: 12px;
+}
+
+#venue .venue-gallery {
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
+#venue .venue-gallery img {
+  transition: all ease-in-out 0.4s;
+}
+
+#venue .venue-gallery:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
+# Hotels Section
+--------------------------------------------------------------*/
+
+#hotels {
+  padding: 60px 0;
+}
+
+#hotels .hotel {
+  border: 1px solid #e0e5fa;
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+#hotels .hotel:hover .hotel-img img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#hotels .hotel-img {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+#hotels .hotel-img img {
+  transition: 0.3s ease-in-out;
+}
+
+#hotels h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding: 0 20px;
+}
+
+#hotels a {
+  color: #152b79;
+}
+
+#hotels a:hover {
+  color: var(--base-color);
+}
+
+#hotels .stars {
+  padding: 0 20px;
+  margin-bottom: 5px;
+}
+
+#hotels .stars i {
+  color: #ffc31d;
+}
+
+#hotels p {
+  padding: 0 20px;
+  margin-bottom: 20px;
+  color: #060c22;
+  font-style: italic;
+  font-size: 15px;
+}
+
+/*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+
+#gallery {
+  overflow: hidden;
+}
+
+#gallery .owl-nav,
+#gallery .owl-dots {
+  margin-top: 25px;
+  text-align: center;
+}
+
+#gallery .owl-item {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+#gallery .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+#gallery .owl-dot.active {
+  background-color: var(--base-color);
+}
+
+#gallery .gallery-carousel .owl-stage-outer {
+  overflow: visible;
+}
+
+#gallery .gallery-carousel .center {
+  border: 6px solid var(--base-color);
+  margin: -10px;
+  box-sizing: content-box;
+  padding: 4px;
+  background: #fff;
+  z-index: 1;
+}
+
+/*--------------------------------------------------------------
+# supporters Section
+--------------------------------------------------------------*/
+
+#supporters {
+  padding: 60px 0;
+}
+
+#supporters .supporters-wrap {
+  border-top: 1px solid #e0e5fa;
+  border-left: 1px solid #e0e5fa;
+  margin-bottom: 30px;
+}
+
+#supporters .supporter-logo {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-right: 1px solid #e0e5fa;
+  border-bottom: 1px solid #e0e5fa;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+  height: 160px;
+}
+
+#supporters .supporter-logo:hover img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+#supporters img {
+  transition: all 0.4s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# F.A.Q Section
+--------------------------------------------------------------*/
+
+#faq {
+  padding: 60px 0;
+}
+
+#faq #faq-list {
+  padding: 0;
+  list-style: none;
+}
+
+#faq #faq-list li {
+  border-bottom: 1px solid #ddd;
+}
+
+#faq #faq-list a {
+  padding: 18px 0;
+  display: block;
+  position: relative;
+  font-family: "ribeye","Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+#faq #faq-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 16px;
+}
+
+#faq #faq-list p {
+  margin-bottom: 20px;
+}
+
+#faq #faq-list a.collapse {
+  color: var(--base-color);
+}
+
+#faq #faq-list a.collapsed {
+  color: #000;
+}
+
+#faq #faq-list a.collapsed i::before {
+  content: "\f055" !important;
+}
+
+/*--------------------------------------------------------------
+# code-conduct Section
+--------------------------------------------------------------*/
+
+#code-conduct {
+  background: #336d9a !important;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+
+#code-conduct a {
+  color: #fef7e4;
+}
+
+
+#pre-code-conduct > .container {
+  background-color: #c1d2e8 !important
+}
+
+#pre-code-conduct .wave {
+  background-color: #336d9a;
+}
+
+#pre-contact > .container {
+  background-color: #336d9a !important;
+}
+
+#pre-contact .ocean{
+  background-color: #336d9a !important;
+}
+
+#pre-contact  .wave {
+  background-color: #fef7e4;
+}
+
+/* for the pen */
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #fef7e454;
+}
+
+/* waves */
+.ocean {
+  height: 100px; /* change the height of the waves here */
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin-left: -50px;
+}
+
+.wave {
+  -webkit-mask:  url("../images/ondinha-ponteaguda.svg") repeat-x;
+  mask:  url("../images/ondinha-ponteaguda.svg") repeat-x;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #1F284E;
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 10s -2s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+
+
+@keyframes wave {
+    50% {transform: translateX(-25%);}
+}
+
+
+
+
+#code-conduct .section-header h2,
+#code-conduct p {
+  color: #fff;
+}
+
+#code-conduct input {
+  background: #fff;
+  color: #060c22;
+  border: 0;
+  outline: none;
+  margin: 0;
+  padding: 9px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+#code-conduct button {
+  border: 0;
+  padding: 9px 25px;
+  cursor: pointer;
+  background: var(--base-color);
+  color: #fff;
+  transition: all 0.3s ease;
+  outline: none;
+  font-size: 14px;
+  border-radius: 50px;
+}
+
+#code-conduct button:hover {
+  background: var(--base-color);
+}
+
+/*--------------------------------------------------------------
+# Buy Tickets Section
+--------------------------------------------------------------*/
+
+#buy-tickets {
+  padding: 60px 0;
+}
+
+#buy-tickets .card {
+  border: none;
+  border-radius: 5px;
+  transition: all  0.3s ease-in-out;
+  box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+}
+
+#buy-tickets .card:hover {
+  box-shadow: 0 10px 35px 0 rgba(6, 12, 34, 0.2);
+}
+
+#buy-tickets .card hr {
+  margin: 25px 0;
+}
+
+#buy-tickets .card .card-title {
+  margin: 10px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+#buy-tickets .card .card-price {
+  font-size: 48px;
+  margin: 0;
+}
+
+#buy-tickets .card ul li {
+  margin-bottom: 20px;
+}
+
+#buy-tickets .card .text-muted {
+  opacity: 0.7;
+}
+
+#buy-tickets .card .btn {
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 10px 40px;
+  transition: all 0.2s;
+  background-color: var(--base-color);
+  border: 0;
+  color: #fff;
+}
+
+#buy-tickets .card .btn:hover {
+  background-color: var(--base-color);
+}
+
+#buy-tickets #buy-ticket-modal input,
+#buy-tickets #buy-ticket-modal select {
+  border-radius: 0;
+}
+
+#buy-tickets #buy-ticket-modal .btn {
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 10px 40px;
+  transition: all 0.2s;
+  background-color: var(--base-color);
+  border: 0;
+  color: #fff;
+}
+
+#buy-tickets #buy-ticket-modal .btn:hover {
+  background-color: var(--base-color);
+}
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+
+#contact {
+  padding: 60px 0;
+  background-color: #fef7e4;
+}
+
+#contact .contact-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#contact .contact-info i {
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--base-color);
+}
+
+#contact .contact-info address,
+#contact .contact-info p {
+  margin-bottom: 0;
+  color: #112363;
+}
+
+#contact .contact-info h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #112363;
+  font-family: "nunito", "Open Sans", sans-serif;
+}
+
+#contact .contact-info a {
+  color: #4869df;
+}
+
+#contact .contact-info a:hover {
+  color: var(--base-color);
+}
+
+#contact .contact-address,
+#contact .contact-phone,
+#contact .contact-email {
+  margin-bottom: 20px;
+}
+
+#contact .form #sendmessage {
+  color: var(--base-color);
+  border: 1px solid var(--base-color);
+  display: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact .form #errormessage {
+  color: var(--base-color);
+  display: none;
+  border: 1px solid var(--base-color);
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact .form #sendmessage.show,
+#contact .form #errormessage.show,
+#contact .form .show {
+  display: block;
+}
+
+#contact .form .validation {
+  color: var(--base-color);
+  display: none;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+#contact .form input,
+#contact .form textarea {
+  padding: 10px 14px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 15px;
+}
+
+#contact .form button[type="submit"] {
+  background: var(--base-color);
+  border: 0;
+  padding: 10px 40px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#contact .form button[type="submit"]:hover {
+  background: var(--base-color);
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+
+#footer .footer-top {
+  padding: 10px 0 30px 0;
+  background: url(../images/footer.webp) center center repeat;
+  background-color: #fef7e4;
+  background-size: contain;
+  overflow: hidden;
+  position: relative;
+}
+.footer-top .container {
+  opacity: 0.95;
+  background-color: #fef7e4;
+  padding: 25px 15px 0px 15px;
+}
+
+.footer-info {
+  position: relative;
+}
+
+.pre-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+.pre-image > img {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0px;
+}
+
+#footer .footer-top .footer-info {
+  min-height: 250px;
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info h3 {
+  font-size: 26px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-family: "ribeye","Raleway", sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+#footer .footer-top .footer-info img {
+  max-width: 40%;
+  margin: 0px;
+}
+
+#footer .footer-top .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "ribeye","Raleway", sans-serif;
+  color: #fff;
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #222636;
+  color: #eee;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+  background: var(--base-color);
+  color: #fff;
+}
+
+#footer .footer-top h1 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #20284f;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--base-color);
+  font-family: "nunito", "Open Sans", sans-serif;
+}
+
+.footer-top p {
+  color: #20284f;
+
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 5px;
+  color: var(--base-color);
+  font-size: 18px;
+}
+
+#footer .footer-top .footer-links ul li {
+  border-bottom: 1px solid var(--base-color);
+  padding: 10px 0;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #222636;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  color: var(--base-color);
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact p {
+  line-height: 26px;
+}
+
+#footer .footer-top .footer-newsletter {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-newsletter input[type="email"] {
+  border: 0;
+  padding: 6px 8px;
+  width: 65%;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"] {
+  background: var(--base-color);
+  border: 0;
+  width: 35%;
+  padding: 6px 0;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"]:hover {
+  background: var(--base-color);
+}
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#footer .credits {
+  text-align: center;
+  font-size: 13px;
+  color: #ddd;
+}
+
+#footer .credits a {
+  color: #ddd;
+}
+
+/*--------------------------------------------------------------
+# Responsive Media Queries
+--------------------------------------------------------------*/
+
+@media (min-width: 767px) {
+  #code-conduct input {
+    min-width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  #contact .contact-address,
+  #contact .contact-phone,
+  #contact .contact-email {
+    padding: 20px 0;
+  }
+
+  #contact .contact-phone {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+}
+
+@media (min-width: 991px) {
+  #schedule .sub-heading {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  #about {
+    background-attachment: fixed;
+  }
+
+  #code-conduct {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 1199px) {
+  #header .container {
+    max-width: 100%;
+  }
+
+  .nav-menu a {
+    padding: 8px 4px;
+  }
+}
+
+@media (max-width: 991px) {
+  #header {
+    background: #336d9a;
+    height: 70px;
+    padding: 15px 0;
+    transition: all 0.5s;
+  }
+
+  #nav-menu-container {
+    display: none;
+  }
+
+  #mobile-nav-toggle {
+    display: inline;
+  }
+
+  #schedule .nav-tabs a {
+    padding: 8px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+
+  #faq #faq-list a {
+    font-size: 18px;
+  }
+
+  #faq #faq-list i {
+    top: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  #schedule .nav-tabs a {
+    padding: 8px 50px;
+  }
+}
+
+@media (max-width: 574px) {
+  #venue .venue-info h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  #schedule .nav-tabs a {
+    padding: 8px 30px;
+  }
+}
+
+@media (max-width: 460px) {
+  #code-conduct button {
+    margin-top: 10px;
+  }
+}
+
+#footer .footer-top {
+  padding: 10px 0px 0px 0px;
+}
+
+#footer {
+  padding: 0px !important;
+  opacity: 0.9;
+}
+
+.bt-sponsorship {
+  background-color: #bd651d;
+  border-color: #bd651d;
+  color: #fffffd;
+}
+
+.bt-sponsorship:nth-of-type(1) {
+  margin-top:10px;
+}
+
+#sponsorship {
+  background: #c1d2e8 !important;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+#pre-sponsorship  .container {
+  background-color: #e6bf89 !important;
+}
+
+#pre-sponsorship  .wave {
+  background-color: #c1d2e8;
+}
+
+.pre-wave {
+  height: 100% !important;
+  width: 100% !important;
+  margin: -1px;
+}
+
+
+.pre-wave  .container {
+  height: 100px !important;
+  padding: 0px !important;
+  visibility: visible;
+  margin: 0px 0px 0px 0px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden;
+}
+
+.pre-wave  .section-header{
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.pre-wave .wave {
+  -webkit-mask:  url("../images/ondinha-ponteaguda.svg") repeat-x;
+  mask:  url("../images/ondinha-ponteaguda.svg") repeat-x;
+  animation: wave 30s -1s linear infinite;
+}
+
+#location {
+  background: #e6bf89 !important;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+#location p {
+  color: #20284f;
+}
+
+#pre-location > .container {
+  background-color: #bd641e !important;
+}
+
+#pre-location  .wave {
+  background-color: #e6bf89;
+}
+
+#location ul > li {
+  list-style: none;
+  font-weight: bold;
+}
+
+#sponsorship .section-header {
+  margin-bottom: 0px;
+}
+
+#diamond {
+  background: #aab8c9 !important;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+#diamond  .section-header h2 {
+  color: white;
+}
+
+#pre-diamond  .container {
+  background-color: #336d9a !important;
+}
+
+#pre-diamond  .section-header{
+  background-color: #c1d2e8;
+}
+
+#pre-diamond .ocean{
+  background-color: #c1d2e8;
+}
+
+.wave-diamond {
+  background-image: url(../images/patrocinadores/onda-diamante.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #1F284E;
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 20s -2s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.wave-ouro {
+  background-image: url(../images/patrocinadores/onda-ouro.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #1F284E;
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 25s -2s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+
+#ouro {
+  background: #fff6e1 !important;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+#ouro  .section-header h2 {
+  color: #202850;
+}
+
+#pre-ouro .container {
+  background-color: #336d9a !important;
+}
+
+#pre-ouro  .section-header{
+  background-color: #c1d2e8;
+}
+
+#pre-ouro .ocean{
+  background-color: #c1d2e8;
+}
+
+#patrocinadores { 
+  font-size: 25px;
+}
+
+
+
+#sponsor {
+  background: #202850 !important;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+#sponsor strong {
+  text-align: center;
+  color: white;
+}
+
+#sponsor  .section-header h2 {
+  color: white;
+}
+
+#pre-sponsor .container {
+  background-color: #336d9a !important;
+}
+
+#pre-sponsor  .section-header{
+  background-color: #aab8c9;
+}
+.wave-sponsor {
+  background-image: url(../images/patrocinadores/onda-apadrinhamento.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #1F284E;
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 30s -2s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+#intro {
+  height: calc(100vh - 90px);
+  margin-top: 90px;
+}
+
+.ocean-intro {
+  width: 100%;
+  overflow: hidden;
+  margin-left: -50px;
+  bottom: 0;
+}
+
+.wave-intro {
+  -webkit-mask:  url("../images/ondinha-ponteaguda.svg") repeat-x;
+  mask:  url("../images/ondinha-ponteaguda.svg") repeat-x;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #1F284E;
+  position: absolute;
+  width: 200%;
+  height: 100px;
+  transform: translate3d(0, 0, 0);
+  animation: wave 10s -2s linear infinite;
+  opacity: 1;
+}
+
+
+.wave-intro:nth-of-type(1){
+  background-color:#336d9a;
+  bottom: 175px;
+  animation: wave 40s linear infinite;
+}
+
+
+.wave-intro:nth-of-type(2){
+  -webkit-mask:  url("../images/ondinha-redonda.svg") repeat-x;
+  mask:  url("../images/ondinha-redonda.svg") repeat-x;
+  background-color:#a9b5c4;
+  animation: wave 35s linear infinite;
+  bottom: 115px;
+}
+
+.wave-intro:nth-of-type(3){
+  background-color:#c1d2e8;
+  animation: wave 30s -2s linear infinite;
+  bottom: 65px;
+}
+
+.wave-intro:nth-of-type(4){
+  -webkit-mask:  url("../images/ondinha-redonda.svg") repeat-x;
+  mask:  url("../images/ondinha-redonda.svg") repeat-x;
+  background-color:#20284f;
+  animation: wave 25s -2s linear infinite;
+}
+
+.pre-wave-intro {
+  width: 100% !important;
+}
+
+.content {
+  padding-bottom: 50px;
+}
+
+.pre-wave-intro  .container {
+  height: 100%;
+  padding: 0px !important;
+  visibility: visible;
+  margin: 0px 0px 0px 0px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.pre-wave-intro .row-wave {
+  bottom: -1px;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+}
+
+.pre-wave-intro  .section-header{
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#center-bg-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    height: calc(100vh - 370px);
+}
+
+#pre-lineup {
+  background-color: #336d9a;
+}
+
+#pre-lineup .wave {
+  background-color: #bd641e;
+}
+
+#c4p {
+  background-color: #bd641e;
+}
+
+
+#c4p {
+  background-color: #bd641e;
+  color: white;
+}
+
+#c4p h2 {
+  color: white !important;
+}
+
+
+.bt-c4p {
+  background-color: #336d9a;
+  border-color: #336d9a;
+  color: #fffffd;
+}
+
+.bt-c4p:nth-of-type(1) {
+  margin-top:10px;
+}
+
+.bt-c4p:hover {
+  color: #20284f;
+  background-color: #a9b5c4;
+}
+
+.bt-sponsorship:hover {
+  background-color: #fef7e4;
+}
+
+#diamond img {
+  width: 100%;
+}
+
+#tickets button{
+  font-size: 26px;
+}
+
+.bt-tickets {
+  background-color: #bd641e;
+  border-color: #bd641e;
+  color: #fffffd;
+}
+
+.bt-tickets:nth-of-type(1) {
+  margin-top:20px;
+}
+
+.bt-tickets:hover {
+  color: #20284f;
+  background-color: #e6bf89;
+}
+
+#pre-about {
+  background-color: #20284f;
+}
+
+
+#keynotes {
+  text-align: left;
+  background-color: #336d9a;
+}
+
+
+#pre-keynotes {
+  background-color: #20284f;
+}
+
+
+#pre-keynotes .wave {
+  background-color: #336d9a;
+}
+
+#keynotes h3 {
+  color: #E6BF89;
+}
+
+#keynotes p {
+  color: #FFF6E1;
+}
+#keynotes h2 {
+  color: #fef7e4
+}
+
+#keynotes .carousel-control-prev-icon {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2320284f'><path%20d='M11.354%201.646a.5.5%200%200%201%200%20.708L5.707%208l5.647%205.646a.5.5%200%200%201-.708.708l-6-6a.5.5%200%200%201%200-.708l6-6a.5.5%200%200%201%20.708%200z'/></svg>");
+}
+
+#keynotes .carousel-control-next-icon {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2320284f'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+#keynotes .fa {
+  font-size: 35px;
+  margin-right: 15px;
+}
+
+#keynotes .links  a {
+  color: #e6be89;
+  text-decoration: none;
+}
+
+#keynotes .carousel-control-prev, #keynotes .carousel-control-next{
+  width: 30px;
+}
+
+.schedule-interval {
+  white-space: nowrap;
+}
+
+.schedule-title {
+  font-weight: bold;
+}
+
+.schedule-title > a {
+  color: #336d9a;
+}
+
+.schedule-author {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.table-v-align {
+  vertical-align: middle;
+}
+
+.table-schedule > thead > tr > th {
+  background-color: #20284f;
+  color: white;
+}
+
+.table-schedule > tbody > tr > td{
+  background-color: #c1d2e8;
+}
+
+.table-schedule > tbody > tr > td:first-child {
+  background-color: #20284f;
+  color: white;
+}
+
+.table-schedule > tbody > tr > td:is(.schedule-title) {
+  border-bottom: none;
+}
+
+.btn-toggle {
+  background-color: #20284f;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.btn-toggle:hover, .active-toggle {
+  background-color: #c1d2e8;
+  color: black;
+}
+
+.toggle {
+  display: none;
+}
+
+
+.wave-apoio {
+  background-image: url(../images/apoio/onda-apoio.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #1F284E;
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 25s -2s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+
+
+#apoio {
+  background: #c1d2e8 !important;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+#apoio strong {
+  text-align: center;
+  color: #202850;
+}
+
+
+.wave-prata {
+  background-image: url(../images/patrocinadores/onda-prata.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #1F284E;
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 20s -2s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+
+#prata {
+  background: #c1d2e8 !important;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+#prata  .section-header h2 {
+  color: #202850;
+}
+
+#pre-prata .container {
+  background-color: #336d9a !important;
+}
+
+#pre-prata  .section-header{
+  background-color: #c1d2e8;
+}
+
+#pre-prata .ocean{
+  background-color: #c1d2e8;
+}

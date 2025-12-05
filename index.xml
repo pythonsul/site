@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python Sul 2026 - Porto Alegre on Python Sul 2026 - Londrina, PR</title><link>https://sul.python.org.br/</link><description>Recent content in Python Sul 2026 - Porto Alegre on Python Sul 2026 - Londrina, PR</description><generator>Hugo</generator><language>pt-BR</language><lastBuildDate>Mon, 15 Sep 2025 23:45:10 -0300</lastBuildDate><atom:link href="https://sul.python.org.br/index.xml" rel="self" type="application/rss+xml"/><item><title>Porque submeter a tua palestra?</title><link>https://sul.python.org.br/porque-submeter-a-tua-palestra/</link><pubDate>Mon, 15 Sep 2025 23:45:10 -0300</pubDate><guid>https://sul.python.org.br/porque-submeter-a-tua-palestra/</guid><description>&lt;h2 id="tu-deve-estar-pensando-">Tu deve estar pensando &amp;hellip;&lt;/h2>
+&lt;p>&lt;em>“Bah, Capaz! Isso aí não é pra mim não.”&lt;/em> Mas eu posso garantir que é. Todo mundo tem alguma coisa que domina legal pra compartilhar com os outros. Falta só aquele pontapé inicial.&lt;/p>
+&lt;hr>
+&lt;h2 id="mas-peraí-que-não-me-apresentei-ainda">Mas peraí que não me apresentei ainda!&lt;/h2>
+
+&lt;div class="person-card">
+ &lt;div class="person-card-image">
+ 
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ &lt;figure class="">
+ &lt;picture>
+ 
+ &lt;source srcset="https://sul.python.org.br/images/posts/porque-submeter/vinicius-ferreira_hu_666b36faaf007161.webp" type="image/webp" media="(min-width: 1024px)">
+ &lt;source srcset="https://sul.python.org.br/images/posts/porque-submeter/vinicius-ferreira_hu_9892dee8bb5af94c.webp" type="image/webp" media="(max-width: 1024px)">
+ &lt;source srcset="https://sul.python.org.br/images/posts/porque-submeter/vinicius-ferreira_hu_3b8c63c71bcbac0.webp" type="image/webp" media="(max-width: 800px)">
+
+ 
+ &lt;source srcset="https://sul.python.org.br/images/posts/porque-submeter/vinicius-ferreira_hu_35ee1fbae03643d4.jpg" type="image/jpeg" media="(min-width: 1024px)">
+
+ 
+ &lt;img
+ src="https://sul.python.org.br/images/posts/porque-submeter/vinicius-ferreira_hu_35ee1fbae03643d4.jpg"
+ alt="Vinícius Gubiani Ferreira"
+ width="1400"
+ height="1400"
+ sizes="(min-width: 1024px) 1400px, (min-width: 800px) 1000px, 600px"
+ loading="lazy"
+ decoding="async"
+ />
+ &lt;/picture>
+ &lt;/figure>
+
+
+ &lt;/div>
+ &lt;div class="person-card-info">
+ 
+ &lt;h3 class="person-card-name">Vinícius Gubiani Ferreira&lt;/h3>
+ 
+ 
+ &lt;p class="person-card-role">Oi, meu nome é Vinícius. E eu sou um cara que nem você que está lendo isso (só com mais experiência como palestrante).&lt;/p></description></item><item><title>Código de Conduta</title><link>https://sul.python.org.br/codigo-de-conduta/</link><pubDate>Tue, 05 Aug 2025 03:00:00 +0000</pubDate><guid>https://sul.python.org.br/codigo-de-conduta/</guid><description>&lt;p>A conferência &lt;strong>Python Sul&lt;/strong> é um ambiente amistoso, de boa convivência, inclusivo e livre de intimidação, onde todas as pessoas são bem-vindas e a civilidade é exigida.&lt;/p>
+&lt;p>Com esta finalidade, a organização do evento conta com uma &lt;strong>Equipe de Resposta&lt;/strong> que atua para garantir um ambiente com essas qualidades.&lt;/p>
+&lt;h2 id="por-isso">Por isso:&lt;/h2>
+&lt;ul>
+&lt;li>Não é tolerado nenhum tipo de assédio, discriminação inapropriada ou humilhação pública;&lt;/li>
+&lt;li>Não é tolerado o descumprimento das leis brasileiras;&lt;/li>
+&lt;li>Toda pessoa presente no evento, independente do seu papel, está sujeita a estas regras;&lt;/li>
+&lt;/ul>
+&lt;h2 id="desta-forma-entendemos-que">Desta forma, entendemos que:&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Assédio&lt;/strong> é a ação de insistir, perseguir ou coagir outra pessoa a um comportamento involuntário.&lt;/li>
+&lt;li>&lt;strong>Discriminação inapropriada&lt;/strong> é o ato de separar, injuriar ou humilhar alguém promovendo sua exclusão por atributo particular da mesma.&lt;/li>
+&lt;li>&lt;strong>Humilhação pública&lt;/strong> é o ato de submeter, rebaixar, ridicularizar ou promover o vexame de outro publicamente.&lt;/li>
+&lt;/ul>
+&lt;h2 id="público-alvo-e-adequação">Público alvo e adequação&lt;/h2>
+&lt;p>O público alvo do evento também inclui crianças e adolescentes, por isso buscamos manter um ambiente apropriado para todas as faixas etárias. Sendo assim, &lt;strong>linguagem e imagens sexualizadas&lt;/strong> não são adequadas para palestras e ações promocionais de patrocinadores.&lt;/p></description></item><item><title>Sobre a Python Sul</title><link>https://sul.python.org.br/sobre-a-python-sul/</link><pubDate>Thu, 19 Apr 2018 03:00:00 +0000</pubDate><guid>https://sul.python.org.br/sobre-a-python-sul/</guid><description>&lt;h2 id="sobre-o-evento">Sobre o evento&lt;/h2>
+&lt;p>A conferência Python Sul é um evento regional que reúne entusiastas da linguagem de programação Python. Ela abrange os estados do Rio Grande do Sul, Santa Catarina e Paraná, unindo diversas comunidades locais em um evento anual.&lt;/p>
+&lt;p>Tendo a sua primeira edição realizada em 2017, a cada ano o evento é realizado em uma nova cidade sede da região sul do Brasil. Neste evento, programadores, cientistas e curiosos se encontram para contribuir com projetos de código aberto, aproximar desenvolvedores de organizações e o mais importante, colocar pessoas de grande potencial em contato para que surjam grandes ideias e contribuições para a sociedade.&lt;/p></description></item><item><title/><link>https://sul.python.org.br/anos-anteriores/2017/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sul.python.org.br/anos-anteriores/2017/</guid><description/></item><item><title/><link>https://sul.python.org.br/anos-anteriores/2018/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sul.python.org.br/anos-anteriores/2018/</guid><description/></item><item><title/><link>https://sul.python.org.br/anos-anteriores/2019/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sul.python.org.br/anos-anteriores/2019/</guid><description/></item><item><title/><link>https://sul.python.org.br/anos-anteriores/2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sul.python.org.br/anos-anteriores/2020/</guid><description/></item><item><title/><link>https://sul.python.org.br/anos-anteriores/2021/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sul.python.org.br/anos-anteriores/2021/</guid><description/></item><item><title/><link>https://sul.python.org.br/anos-anteriores/2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sul.python.org.br/anos-anteriores/2023/</guid><description/></item><item><title/><link>https://sul.python.org.br/anos-anteriores/2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sul.python.org.br/anos-anteriores/2024/</guid><description/></item><item><title/><link>https://sul.python.org.br/anos-anteriores/2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sul.python.org.br/anos-anteriores/2024/</guid><description/></item></channel></rss>
