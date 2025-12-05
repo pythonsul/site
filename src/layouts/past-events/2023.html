@@ -1,0 +1,684 @@
+{{ $baseURL := .Permalink }}
+{{ $images := printf "%simages" $baseURL }}
+{{ $css := printf "%scss" $baseURL }}
+{{ $js := printf "%sjs" $baseURL }}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+{{/* Include the wayback header partial */}}
+{{ partial "core/wayback-header.html" . }}
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Python Sul 2023</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta
+    content="Python Sul 2023, evento python, python, pythonsul, comunidade python, python rio grande do sul, comunidade"
+    name="keywords">
+  <meta
+    content="Evento da comunidade Python do sul do pais, com intuito de popularizar e disseminar o conhecimento da linguagem python"
+    name="description">
+
+  {{/* Canonical URL for SEO */}}
+  <link rel="canonical" href="{{ $baseURL }}">
+
+  <!-- Favicons -->
+  <link href="{{ $images }}/favicon.png" rel="icon">
+  <link href="{{ $images }}/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <meta property="og:title" content="Python Sul 2023">
+  <meta property="og:type" content="Python Sul 2023">
+  <meta property="og:description"
+    content="Evento da comunidade Python do Sul, com intuito de popularizar e disseminar o conhecimento da linguagem python.">
+  <meta property="og:image" content="theme/img/share.png?v2020">
+  <meta property="og:url" content="">
+  <meta property="og:image:alt" content="logo Python Sul">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200px">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts -->
+  <link href="{{ $css }}/css.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{{ $css }}/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{{ $css }}/font-awesome.min.css" rel="stylesheet">
+  <link href="{{ $css }}/animate.min.css" rel="stylesheet">
+  <link href="{{ $css }}/venobox.css" rel="stylesheet">
+  <link href="{{ $css }}/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{{ $css }}/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+      Theme Name: TheEvent
+      Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+      Author: BootstrapMade.com
+      License: https://bootstrapmade.com/license/
+    ======================================================= -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</head>
+
+<body><button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>
+
+  <!--==========================
+    Header
+    ============================-->
+  <header id="header" class="header-scrolled">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <a href="{{ $baseURL }}" class="scrollto"><img src="{{ $images }}/logo.png" alt="logo-Python Sul"
+            title="logo-Python Sul"></a>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+          <li class="menu-active"><a href="{{ $baseURL }}#intro">Início</a></li>
+          <li><a href="{{ $baseURL }}#about">Sobre</a></li>
+          <li><a href="{{ $baseURL }}#schedule">Agenda</a></li>
+          <li><a href="{{ $baseURL }}#inscricao">Inscrição</a></li>
+          <li><a href="{{ $baseURL }}#supporters">Patrocinadores</a></li>
+          <li><a href="{{ $baseURL }}#contact">Contato</a></li>
+          <li class="buy-tickets"><a href="" target="_blank">Inscrever-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--==========================
+    Intro Section
+    ============================-->
+  <section id="intro">
+    <div class="intro-container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+      <img src="{{ $images }}/logo.png" alt="logo-Python Sul" class="img-fluid" style="width: 50%"><br>
+      <h1 class="mb-4 pb-0">
+        <span style="display: none;">Python Sul</span>
+      </h1>
+      <p class="mb-1 pb-0">22/09/2023 até 23/09/2023</p>
+      <p class="mb-4 pb-0"><small>UNIVALI campus Balneário Camboriú, Santa Catarina</small></p>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Sobre o evento</h2>
+            <p>
+              Evento da comunidade Python do sul do país, com intuito de popularizar e disseminar o
+              conhecimento da linguagem python.
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <h3>Quando </h3>
+            <p>22 e 23 de Setembro, das 08:30 as 18:00</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>Onde </h3>
+            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.041357465406!2d-51.15019854999999!3d-29.163453499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ebdfe6be2163d%3A0x63adee0321bf5366!2sUCS%20-%20Bloco%2058!5e0!3m2!1spt-BR!2sbr!4v1677013756575!5m2!1spt-BR!2sbr"
+              target="_blank" class="">
+              <p>UNIVALI campus Balneário Camboriú, Santa Catarina</p>
+            </a>
+          </div><a
+            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.041357465406!2d-51.15019854999999!3d-29.163453499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ebdfe6be2163d%3A0x63adee0321bf5366!2sUCS%20-%20Bloco%2058!5e0!3m2!1spt-BR!2sbr!4v1677013756575!5m2!1spt-BR!2sbr"
+            target="_blank" class="">
+          </a>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!--==========================
+        Inscricao Section
+        ============================-->
+    <section id="inscricao" class="pt-4 mt-4 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+      <div class="container">
+        <div class="section-header">
+          <h2>Inscrição</h2>
+          <p>
+            <a href="" target="_blank">
+              [Inscreva-se Agora]
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ==========================
+      Speakers Section
+    ============================ -->
+    <section id="speakers" class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+      <div class="container">
+        <!-- <div class="section-header">
+                    <h2>Palestrantes</h2>
+                    <p>Venha nos ajudar a fazer um evento incrível!</p>
+                    <p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScME6nnUgllIcuq0FDVpdoqtp5-Aft8xbBW1q5GOl_HyDn44w/viewform" target="_blank">[call for papers]</a>
+                    </p>
+                </div> -->
+        <div class="row">
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      Schedule Section
+    ============================-->
+    <section id="schedule" class="section-with-bg">
+      <div class="container wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+        <div class="section-header">
+          <h2>Agenda</h2>
+          <p>Incentivamos a todos a doarem 2kg de alimentos não perecíveis</p>
+        </div>
+
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="{{ $baseURL }}#day-1" role="tab" data-toggle="tab">Dia 22/09/2023</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ $baseURL }}#day-2" role="tab" data-toggle="tab">Dia 23/09/2023</a>
+          </li>
+        </ul>
+
+        <h3 class="sub-heading">Grade sujeita a alterações!</h3>
+
+        <div class="tab-content row justify-content-center">
+          <!-- Schdule Day 1 -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+            <a href="{{ $baseURL }}/Abertura.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>08:30</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Abertura</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/keynote-1.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>09:00</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Keynote</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/palestra-1.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>10:00</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Palestra 1</h4>
+                  <p>host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/coffe-1.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>10:40</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Coffee Break</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/palestra-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>11:10</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Palestra 2</h4>
+                  <p>host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/almoco-1.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>11:50</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Almoço</h4>
+                  <p>host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/palestra-3.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>13:30</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Palestra 3</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/palestra-4.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>14:10</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Palestra 4</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/lightningtalk.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>14:50</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Lightning talk</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/coffe-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>15:20</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Coffee Break</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/keynote.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>15:50</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Keynote</h4>
+                  <p>Keynote</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/palestra-5.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>16:50</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Palestra 5</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/palestra-6.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>17:30</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Palestra 6</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/encerramento.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>18:30</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Encerramento</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-2">
+            <a href="{{ $baseURL }}/coffe-1-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>09:00</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Coffee Break</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/palestra-1-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>09:40</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Palestra 1</h4>
+                  <p>host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/palestra-2-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>10:20</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Palestra 2</h4>
+                  <p>host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/keynote-1-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>11:00</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Keynote</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/almoco-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>11:50</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Almoço</h4>
+                  <p>host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/palestra-3-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>13:30</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Palestra 3</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/palestra-4-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>14:10</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Palestra 4</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/lightningtalk-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>14:50</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Lightning talk</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/coffe-2-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>15:20</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Coffee Break</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/keynote-2-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>15:50</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Keynote</h4>
+                  <p>Keynote</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/palestra-5-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>16:50</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Palestra 5</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/palestra-6-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>17:30</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Palestra 6</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ $baseURL }}/encerramento-2.html">
+              <div class="row schedule-item">
+                <div class="col-md-2">
+                  <time><strong>18:30</strong></time>
+                </div>
+                <div class="col-md-10">
+                  <h4>Encerramento</h4>
+                  <p>Host</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!--==========================
+      Sponsors Section
+    ============================-->
+    <section id="supporters" class="section-with-bg wow fadeInUp"
+      style="visibility: visible; animation-name: fadeInUp;">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Patrocinadores Diamante</h2>
+        </div>
+        <div class="row no-gutters clearfix" style="justify-content: center;">
+        </div>
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>Patrocinadores Ouro</h2>
+        </div>
+        <div class="row no-gutters supporters-wrap clearfix" style="justify-content: center;">
+        </div>
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>Patrocinadores Prata</h2>
+        </div>
+        <div class="row no-gutters supporters-wrap clearfix" style="justify-content: center;">
+        </div>
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>Apoiadores</h2>
+        </div>
+        <div class="row no-gutters supporters-wrap clearfix" style="justify-content: center;">
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://instagram.com/_weeb.design" data-toggle="tooltip" data-placement="top" title=""
+                target="_blank" data-original-title="Desing de negocios web">
+                <img src="{{ $images }}/patrocinadores/weeb.jpg" class="img-fluid" alt="Logo Weeb">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+        Subscribe Section
+        ============================-->
+    <section id="subscribe">
+      <div class="container wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+        <div class="section-header">
+          <h2>Código de Conduta</h2>
+          <p>
+            Queremos que todas as pessoas sejam aceitas e bem-vindas. Portanto, solicitamos que leiam nosso
+            <a href="https://python.org.br/cdc/" target="_blank"><strong>Código de Conduta</strong></a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+        Contact Section
+        ============================-->
+    <section id="contact" class="section-bg wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Contato</h2>
+          <p>Para Patrocinios ou duvidas sobre o evento entre em contato conosco</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Telegram</h3>
+              <p><a href="https://t.me/SergioCasas">Sergio Casas</a></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:pythonsul@gmail.com">pythonsul@gmail.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+
+  <!--==========================
+        Footer
+    ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img src="{{ $images }}/logo.png" alt="logo-Python Sul">
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Site Map</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="{{ $baseURL }}#intro">Início</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{ $baseURL }}#about">Sobre</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{ $baseURL }}#schedule">Agenda</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{ $baseURL }}#inscricao">Inscrição</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{ $baseURL }}#supporters">Patrocinadores</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{ $baseURL }}#contact">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Anos Anteriores</h4>
+            <ul>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contato</h4>
+            <p>
+              <strong>Email:</strong> pythonsul@gmail.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/pythonsul" target="_blank" class="facebook"><i
+                  class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/pythonsul" class="instagram" target="_blank"><i
+                  class="fa fa-instagram"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">© Copyright <strong>TheEvent</strong>. All Rights Reserved</div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="{{ $js }}/jquery.min.js"></script>
+  <script src="{{ $js }}/jquery-migrate.min.js"></script>
+  <script src="{{ $js }}/bootstrap.bundle.min.js"></script>
+  <script src="{{ $js }}/easing.min.js"></script>
+  <script src="{{ $js }}/hoverIntent.js"></script>
+  <script src="{{ $js }}/superfish.min.js"></script>
+  <script src="{{ $js }}/wow.min.js"></script>
+  <script src="{{ $js }}/venobox.min.js"></script>
+  <script src="{{ $js }}/owl.carousel.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{{ $js }}/main.js"></script>
+
+
+  <nav id="mobile-nav">
+    <ul class="" style="touch-action: pan-y;" id="">
+      <li class="menu-active"><a href="#intro">Início</a></li>
+      <li><a href="{{ $baseURL }}#about">Sobre</a></li>
+      <li><a href="{{ $baseURL }}#schedule">Agenda</a></li>
+      <li><a href="{{ $baseURL }}#inscricao">Inscrição</a></li>
+      <li><a href="{{ $baseURL }}#supporters">Patrocinadores</a></li>
+      <li><a href="{{ $baseURL }}#contact">Contato</a></li>
+      <li class="buy-tickets"><a href="" target="_blank">Inscrever-se</a></li>
+    </ul>
+  </nav>
+  <div id="mobile-body-overly"></div>
+</body>
+
+</html>

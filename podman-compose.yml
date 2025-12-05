@@ -1,0 +1,29 @@
+# ------------------------------------------------------------------------------
+# Podman Compose configuration file for running a Hugo site with Podman.
+# Note: For Docker compatibility, use `docker-compose` instead.
+#
+# services:
+#   hugo:
+#     build: Builds the Hugo service image from the current directory.
+#     volumes:
+#       - Mounts the current directory to /site inside the container with SELinux support (Z).
+#     ports:
+#       - Maps host port 1313 to container port 1313 for local development access.
+#     command:
+#       - Runs 'make serve' to start the Hugo development server.
+#
+# Usage:
+#   - Run `podman-compose up` to build and start the Hugo development server.
+#   - Access the site at http://localhost:1313.
+# ------------------------------------------------------------------------------
+
+version: "3.8"
+
+services:
+  hugo:
+    build: .
+    volumes:
+      - ./:/site:Z
+    ports:
+      - "1313:1313"
+    command: ["make", "serve"]

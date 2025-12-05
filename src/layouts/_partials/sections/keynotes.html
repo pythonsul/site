@@ -1,0 +1,50 @@
+{{ $currentLang := .Site.Language.Lang }}
+
+{{ range $lang, $data := .Site.Data.event.keynotes }}
+  {{ if eq $lang $currentLang }}
+
+    {{ $section := $data }}
+    <section id="keynotes" class="keynotes-section">
+      <div class="container">
+        <h2 class="keynotes-title">
+          {{ $section.title | safeHTML }}
+        </h2>
+
+        <div class="keynotes-grid">
+          {{ range $section.keynotes_list }}
+            <article class="keynote-card">
+              <div class="keynote-avatar">
+                {{ partial "core/image.html" (dict "src" .photo "alt" .name "avatar" true "className" "avatar") }}
+              </div>
+              <div class="keynote-info">
+                <h3 class="keynote-name">{{ .name }}</h3>
+                <p class="keynote-bio">
+                  {{ .bio | safeHTML }}
+                </p>
+                <div class="keynote-external-links">
+                  {{ range $name, $value := .external_links }}
+                    <a href="{{ $value }}" class="keynote-external-link" target="_blank" rel="noopener" aria-label="{{ $name }}">
+                      {{ partial (printf "svg/icons/%s.svg" $name ) }}
+                    </a>
+                  {{ end }}
+                </div>
+                <a href="{{ .link }}" class="keynote-link btn outline">
+                  {{ partial "svg/icons/plus.svg" }}
+                  {{ i18n "keynotes_more_info" }}
+                </a>
+              </div>
+            </article>
+          {{ end }}
+        </div>
+
+        <div class="keynotes-cta">
+          <a href="#" class="btn btn-accent" target="_blank" rel="noopener">
+            {{ T "register_now" }}
+            {{ partial "svg/icons/external-link.svg" }}
+          </a>
+        </div>
+      </div>
+    </section>
+
+  {{ end }}
+{{ end}}

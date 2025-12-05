@@ -1,0 +1,627 @@
+{{ $baseURL := .Permalink }}
+{{ $images := printf "%simages" $baseURL }}
+{{ $css := printf "%scss" $baseURL }}
+{{ $js := printf "%sjs" $baseURL }}
+{{ $lib := printf "%slib" $baseURL }}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+{{/* Include the wayback header partial */}}
+{{ partial "core/wayback-header.html" . }}
+
+<head>
+  <meta charset="utf-8">
+  <title>Python Sul 2020 - Jaguará do Sul</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="python, python sul, evento, palestras, jaraguá do sul" name="keywords">
+  <meta content="Evento da comunidade python que acontece em jaraguá do sul em 2021" name="description">
+
+  <!-- Favicons -->
+  <link href="{{ $images }}/favicon.png" rel="icon">
+  <link href="{{ $images }}/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{{ $lib }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{{ $lib }}/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="{{ $lib }}/animate/animate.min.css" rel="stylesheet">
+  <link href="{{ $lib }}/venobox/venobox.css" rel="stylesheet">
+  <link href="{{ $lib }}/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{{ $css }}/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128014134-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-128014134-1');
+  </script>
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="{{  $baseURL }}/#main">C<span>o</span>nf</a></h1>-->
+        <a href="{{  $baseURL }}/#intro" class="scrollto"><img src="{{ $images }}/pythonsul_icon.png"
+            alt="logo-PythonSul" title="logo-PythonSul"></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="{{  $baseURL }}/#intro">Início</a></li>
+          <li><a href="{{  $baseURL }}/#about">Sobre</a></li>
+          <li><a href="{{  $baseURL }}/#keynotes">Keynotes</a></li>
+          <li><a href="{{  $baseURL }}/#schedule">Agenda</a></li>
+          <li><a href="{{  $baseURL }}/#supporters">Patrocinadores</a></li>
+          <li><a href="{{  $baseURL }}/#contact">Contato</a></li>
+          <li><a href="" target="_blank">Ingressos</a></li>
+          <!-- <li class="buy-tickets"><a href="{{  $baseURL }}/#buy-tickets">Inscrever-se</a></li> -->
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <img src="{{ $images }}/logo python sul Jaragua 2020-02.png" alt="logo-Python_Sul_2020" class="img-fluid"
+        style="max-width: 700px;"><br>
+      <h1 class="mb-4 pb-0">
+        <!-- <span style="display: none;">Python Sul</span>
+        <span>Python Sul 2020</span> -->
+      </h1>
+      <p class="mb-4 pb-0">Em decorrência da pandemia de COVID-19, a Python Sul de Jaraguá do Sul/SC ocorrerá apenas em
+        2021</p>
+      <a href="https://speakerfight.com/events/python-sul-2020-tutoriais/" target="_blank">SUBMETER TUTORIAL</a>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-lg-4">
+            <h2>Sobre o evento</h2>
+            <p>Evento da comunidade Python da região sul do Brasil, com intuito de popularizar e disseminar o conhecimento da linguagem.</p>
+          </div> -->
+          <div class="col-lg-6">
+            <h3>Palestras</h3>
+            <!--             <p>Dias 14/08 e 15/08 - <a href="{{  $baseURL }}/#tickets"><strong>Ingressos à venda</strong></a><br>Centro de Inovação de Jaraguá do Sul</p> -->
+          </div>
+          <div class="col-lg-6">
+            <h3>Tutoriais</h3>
+            <!--             <p>Dia 16/08 - <strong>GRATUITO</strong><br>Instituto Federal de Santa Catarina (IFSC)</p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      Keynotes Section
+    ============================-->
+    <section id="keynotes" class=" wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Keynotes</h2>
+          <div class="row" style="justify-content: center;">
+            <div class="col-lg-6 col-md-6">
+              <div class="keynote">
+                <h3>Talita Rossari</h3>
+                <img src="{{ $images }}/speakers/talita_2.jpg" alt="keynote-talita-rossari" class="img-fluid">
+                <div class="details">
+                  <p>Bora conversar?</p>
+                  <div class="social">
+                    <a href="https://github.com/talitarossari" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/talitarossari" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/talitarossari/" target="_blank"><i
+                        class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="keynote">
+                <h3>Augusto Goulart</h3>
+                <img src="{{ $images }}/speakers/augusto_goulart.jpeg" alt="keynote-augusto-goulart" class="img-fluid">
+                <div class="details">
+                  <p>Refatorando sua Carreira - Python Para Quem tem Contas a Pagar</p>
+                  <div class="social">
+                    <a href="https://github.com/augustogoulart" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/gus_goulart" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/augustogoulart/" target="_blank"><i
+                        class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="keynote">
+                <h3>Eduardo Mendes</h3>
+                <img src="{{ $images }}/speakers/eduardo_mendes.jpg" alt="keynote-eduardo-mendes" class="img-fluid">
+                <div class="details">
+                  <p>A importância de ser prudente</p>
+                  <div class="social">
+                    <a href="https://github.com/dunossauro" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/dunossauro" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/dunossauro/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="keynote">
+                <h3>Jessica Temporal</h3>
+                <img src="{{ $images }}/speakers/jessica_temporal.jpg" alt="keynote-jessica-temporal" class="img-fluid">
+                <div class="details">
+                  <p>Ciência de dados que alimenta o Brasil</p>
+                  <div class="social">
+                    <a href="https://github.com/jtemporal" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/jesstemporal" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/jessicatemporal/" target="_blank"><i
+                        class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!--==========================
+      Speakers Section
+    ============================-->
+    <section id="speakers" class="section-with-bg wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tutoriais</h2>
+          <p>
+            <a href="https://speakerfight.com/events/python-sul-2020-tutoriais/" target="_blank"
+              style="color:red;">[call for papers]</a>
+          </p>
+          <p>Venha nos ajudar a fazer um evento incrível!</p>
+        </div>
+
+        <div class="row">
+        </div>
+      </div>
+
+    </section>
+
+    <!--==========================
+      Tickets Section
+    ============================-->
+    <section id="tickets" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ingressos</h2>
+          <br>
+          <p><a href="https://www.eventbrite.com.br/e/python-sul-2020-jaragua-do-sul-tickets-89422684657"
+              target="_blank">Compre seu ingresso!</a></p>
+          <br>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      Schedule Section
+    ============================-->
+    <section id="schedule" class="section-with-bg">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2>Agenda</h2>
+          <p>Incentivamos a todos a doarem 1kg de alimentos não perecíveis</p>
+        </div>
+
+        <!-- <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="{{  $baseURL }}/#day-1" role="tab" data-toggle="tab">Dia 14/03/2020</a>
+          </li>
+        </ul> -->
+
+        <h3 class="sub-heading">Grade em desenvolvimento</h3>
+
+        <div class="tab-content row justify-content-center">
+
+          <!-- Schdule Day 1 -->
+          <!-- <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>08:30</time></div>
+                  <div class="col-md-10">
+                    <h4>Abertura</h4>
+                  </div>
+                </div>
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>12:00</time></div>
+                  <div class="col-md-10">
+                    <h4>Almoço</h4>
+                  </div>
+                </div>
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>10:30</time></div>
+                  <div class="col-md-10">
+                    <h4>Coffee Break</h4>
+                  </div>
+                </div>
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>15:45</time></div>
+                  <div class="col-md-10">
+                    <h4>Coffee Break</h4>
+                  </div>
+                </div>
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>08:00</time></div>
+                  <div class="col-md-10">
+                    <h4>Credenciamento</h4>
+                  </div>
+                </div>
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>17:30</time></div>
+                  <div class="col-md-10">
+                    <h4>Encerramento</h4>
+                  </div>
+                </div>
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>11:30</time></div>
+                  <div class="col-md-10">
+                    <h4>Lightning talk</h4>
+                  </div>
+                </div>
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>08:50</time></div>
+                  <div class="col-md-10">
+                    <h4>Palestra 1</h4>
+                  </div>
+                </div>
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>09:40</time></div>
+                  <div class="col-md-10">
+                    <h4>Palestra 2</h4>
+                  </div>
+                </div>
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>13:30</time></div>
+                  <div class="col-md-10">
+                    <h4>Palestra 3</h4>
+                  </div>
+                </div>
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>14:15</time></div>
+                  <div class="col-md-10">
+                    <h4>Palestra 4</h4>
+                  </div>
+                </div>
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>15:00</time></div>
+                  <div class="col-md-10">
+                    <h4>Palestra 5</h4>
+                  </div>
+                </div>
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>11:15</time></div>
+                  <div class="col-md-10">
+                    <h4>Pocket Talk</h4>
+                  </div>
+                </div>
+        </div> -->
+
+        </div>
+
+    </section>
+
+    <!--==========================
+      Sponsors Section
+    ============================-->
+    <section id="supporters" class="wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Quer Patrocinar?</h2>
+          <div class="sponsorship-proposal">
+            <h3><a class="sponsors__call-to-action__links"
+                href="https://docs.google.com/presentation/d/1uSqHhXTP-z0joq5HuuX0U38bcGn6WxXlTtVNGZQhjV8/htmlpresent"
+                target="_blank">Proposta de Patrocínio</a></h3>
+            <h3><a class="sponsors__call-to-action__links"
+                href="https://docs.google.com/presentation/d/1UpH-mGfC0BJPmZ2J284y8DZFb2KaVco63M083d8APC4/htmlpresent"
+                target="_blank">Sponsorship Proposal</a></h3>
+          </div>
+        </div>
+        <br>
+        <br>
+        <!-- <div class="row">
+          <p><a class="sponsors__call-to-action__links" href="https://docs.google.com/presentation/d/1UpH-mGfC0BJPmZ2J284y8DZFb2KaVco63M083d8APC4/htmlpresent" target="_blank">Sponsorship Proposal</a></p>
+        </div> -->
+
+        <div class="section-header">
+          <h2>Patrocinadores Ouro</h2>
+          <div class="row no-gutters supporters-wrap clearfix" style="justify-content: center;">
+            Entre em contato para ser o primeiro patrocinador Ouro
+          </div>
+        </div>
+        <!-- <div class="row no-gutters supporters-wrap clearfix" style="justify-content: center;">
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{{ $images }}/patrocinadores/garage-geek.png" class="img-fluid" alt="logo-garage-geek">
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Patrocinadores Prata</h2>
+          <div class="row no-gutters supporters-wrap clearfix" style="justify-content: center;">
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo">
+                <a href="https://magrathealabs.com/" target="_blank">
+                  <img src="{{ $images }}/patrocinadores/logotipo-magrathea-black-high.png" class="img-fluid"
+                    alt="logo-magrathea-labs">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>Patrocinadores Bronze</h2>
+          <div class="row no-gutters supporters-wrap clearfix" style="justify-content: center;">
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo">
+                <a href="https://www.python.pro.br" target="_blank">
+                  <img src="{{ $images }}/patrocinadores/logo_pythonpro.png" class="img-fluid" alt="logo-python-pro">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo">
+                <a href="https://www.globo.com" target="_blank">
+                  <img src="{{ $images }}/patrocinadores/logos globo-02.png" class="img-fluid" alt="logo-globo.com">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>Apoiadores</h2>
+          <div class="row no-gutters supporters-wrap clearfix" style="justify-content: center;">
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo">
+                <a href="http://www.novalehub.com.br" target="_blank">
+                  <img src="{{ $images }}/patrocinadores/logo-novale-2.png" class="img-fluid" alt="logo-novale-hub"
+                    style="padding: 2rem;">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo">
+                <a href="https://associacao.python.org.br/" target="_blank">
+                  <img src="{{ $images }}/patrocinadores/apyb_logo.png" class="img-fluid" alt="logo-apyb">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo">
+                <a href="https://www.facebook.com/tijgs" target="_blank">
+                  <img src="{{ $images }}/patrocinadores/logo-tijgs.png" class="img-fluid" alt="logo-tijgs">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo">
+                <a href="https://salutho.com/" target="_blank">
+                  <img src="{{ $images }}/patrocinadores/salutho-200-200.jpg" class="img-fluid" alt="logo-salutho">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo">
+                <a href="http://hotelnelo.com.br/" target="_blank">
+                  <img src="{{ $images }}/patrocinadores/hotel_nelo.jpg" class="img-fluid" alt="logo-hotel-nelo">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!--==========================
+      Subscribe Section
+    ============================-->
+    <section id="subscribe">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2>Código de Conduta</h2>
+          <div class="tab-content row justify-content-center">
+            <p>
+              Queremos que todas as pessoas sejam aceitas e bem-vindas. Portanto, solicitamos que leiam nosso <a
+                href="https://python.org.br/cdc/" target="_blank"><strong>Código de Conduta</strong></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Contato</h2>
+          <p>Para Patrocinios ou duvidas sobre o evento entre em contato conosco</p>
+
+          <div class="row contact-info">
+
+            <div class="col-md-4">
+              <div class="contact-address">
+                <i class="ion-ios-location-outline"></i>
+                <h3>Telegram</h3>
+                <p><a href="https://t.me/franciscoalface">@franciscoalface</a></p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="contact-phone">
+                <i class="ion-ios-telephone-outline"></i>
+                <h3>Telefone/whatsapp</h3>
+                <p><a href="tel:(47) 996 528 859">(47) 996 528 859</a></p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="contact-email">
+                <i class="ion-ios-email-outline"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:pythonsul@gmail.com">pythonsul@gmail.com</a></p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img src="{{ $images }}/pythonsul_icon.png" alt="logo-PyCaxias">
+            <p>
+              <strong>Python Sul 2021</strong>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Site Map</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="/">Início</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{  $baseURL }}/#about">Sobre</a></li>
+              <li><i class="fa fa-angle-right"></i> <a
+                  href="https://www.eventbrite.com.br/e/python-sul-2020-jaragua-do-sul-tickets-89422684657"
+                  target="_blank">Ingressos</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{  $baseURL }}/#keynotes">Keynotes</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{  $baseURL }}/#schedule">Agenda</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{  $baseURL }}/#speakers">Palestrantes</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{  $baseURL }}/#supporters">Patrocinadores</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{  $baseURL }}/#contact">Contato</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="https://python.org.br/cdc/" target="_blank">CDC - Codigo de
+                  conduta</a></li>
+            </ul>
+          </div>
+
+          <!-- <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Anos Anteriores</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="{{  $baseURL }}/#">2014</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{  $baseURL }}/#">2015</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{  $baseURL }}/#">2016</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{  $baseURL }}/#">2018</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{{  $baseURL }}/#">2019</a></li>
+            </ul>
+          </div> -->
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contato</h4>
+            <p>
+              <strong>Phone:</strong> (47) 996 528 859<br>
+              <strong>Email:</strong> pythonsul@gmail.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="https://www.twitter.com/pythonsul" target="_blank" class="twitter"><i
+                  class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/pythonsul" target="_blank" class="facebook"><i
+                  class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/pythonsul/" class="instagram" target="_blank" class="instagram"><i
+                  class="fa fa-instagram"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="{{  $baseURL }}/#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="{{ $lib }}/jquery/jquery.min.js"></script>
+  <script src="{{ $lib }}/jquery/jquery-migrate.min.js"></script>
+  <script src="{{ $lib }}/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ $lib }}/easing/easing.min.js"></script>
+  <script src="{{ $lib }}/superfish/hoverIntent.js"></script>
+  <script src="{{ $lib }}/superfish/superfish.min.js"></script>
+  <script src="{{ $lib }}/wow/wow.min.js"></script>
+  <script src="{{ $lib }}/venobox/venobox.min.js"></script>
+  <script src="{{ $lib }}/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="{{ $js }}/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{{ $js }}/main.js"></script>
+</body>
+
+</html>

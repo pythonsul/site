@@ -1,0 +1,104 @@
+[
+  {
+    "language": "pt-br",
+    "badge": "Grade de palestras disponível",
+    "title": "Confira a programação completa e garanta seu ingresso",
+    "description": "A programação da PySul 2026 já está disponível! Cada palestra foi escolhida para inspirar, informar e fortalecer a comunidade Python. Veja os horários e prepare-se para participar.",
+    "helper": "Ao comprar um ingresso você apoia a realização da PySul 2026 e ajuda a manter o evento acessível para toda a comunidade.",
+    "schedule": {
+      "title": "Programação",
+      "description": "Confira a lista completa de palestras e horários. <br>Entre no grupo no WhatsApp ou Telegram e siga o Instagram para acompanhar as próximas novidades."
+    },
+    "cta": {
+      "label": "Comprar ingresso",
+      "link": "#"
+    },
+    "tickets": [
+      {
+        "name": "Cancioneira (meia-entrada)",
+        "tag": "50% off",
+        "description": "Quero acompanhar as palestras e faço parte do grupo com direito à meia-entrada."
+      },
+      {
+        "name": "Vivente mateador (inteira)",
+        "description": "Quero acompanhar as palestras, compartilhar o mate e garantir meu certificado."
+      },
+      {
+        "name": "Cusco de estância (inteira com camiseta)",
+        "description": "Quero acompanhar as palestras + todos os benefícios da modalidade padrão e garantir minha camiseta."
+      },
+      {
+        "name": "Chimarrão de ouro (Também quero apoiar)",
+        "description": "Quero apoiar o evento e a comunidade, com agradecimento e brinde exclusivo ao final."
+      }
+    ]
+  },
+  {
+    "language": "en",
+    "badge": "Talk schedule available",
+    "title": "Check out the full schedule and secure your ticket",
+    "description": "The PySul 2026 program is now live! Each talk was carefully selected to inspire, inform, and strengthen the Python community. Explore the schedule and get ready to join us.",
+    "helper": "By purchasing a ticket, you support PySul 2026 and help keep the event accessible for the entire community.",
+    "schedule": {
+      "title": "Schedule",
+      "description": "View the complete list of talks and times. <br>Join our WhatsApp or Telegram groups and follow us on Instagram for the latest updates."
+    },
+    "cta": {
+      "label": "Buy ticket",
+      "link": "#"
+    },
+    "tickets": [
+      {
+        "name": "Cancioneira (half-price ticket)",
+        "tag": "50% off",
+        "description": "I want to attend the talks and I’m eligible for the half-price ticket."
+      },
+      {
+        "name": "Vivente Mateador (regular ticket)",
+        "description": "I want to attend the talks, share some mate, and get my participation certificate."
+      },
+      {
+        "name": "Cusco de Estância (regular + T-shirt)",
+        "description": "I want to attend the talks, enjoy all regular benefits, and get an exclusive T-shirt."
+      },
+      {
+        "name": "Chimarrão de Ouro (supporter ticket)",
+        "description": "I want to support the event and community, with a thank-you and an exclusive gift at the end."
+      }
+    ]
+  },
+  {
+    "language": "es",
+    "badge": "Agenda de charlas disponible",
+    "title": "Consultá la programación completa y asegurá tu entrada",
+    "description": "La programación de PySul 2026 ya está disponible. Cada charla fue seleccionada para inspirar, informar y fortalecer a la comunidad Python. Revisá los horarios y preparate para participar.",
+    "helper": "Al comprar una entrada apoyás la realización de PySul 2026 y ayudás a mantener el evento accesible para toda la comunidad.",
+    "schedule": {
+      "title": "Programación",
+      "description": "Consultá la lista completa de charlas y horarios. <br>Unite al grupo de WhatsApp o Telegram y seguí el Instagram para enterarte de las próximas novedades."
+    },
+    "cta": {
+      "label": "Comprar entrada",
+      "link": "#"
+    },
+    "tickets": [
+      {
+        "name": "Cancionera (media entrada)",
+        "tag": "50% off",
+        "description": "Quiero asistir a las charlas y formo parte del grupo con derecho a media entrada."
+      },
+      {
+        "name": "Viviente matero (entrada completa)",
+        "description": "Quiero participar en las charlas, compartir unos mates y asegurar mi certificado."
+      },
+      {
+        "name": "Cusco de estancia (entrada + remera)",
+        "description": "Quiero asistir a las charlas, disfrutar de todos los beneficios de la modalidad estándar y llevarme mi remera."
+      },
+      {
+        "name": "Mate de oro (también quiero apoyar)",
+        "description": "Quiero apoyar el evento y a la comunidad, con un agradecimiento y un regalo exclusivo al final."
+      }
+    ]
+  }
+]

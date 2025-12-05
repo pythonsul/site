@@ -1,0 +1,232 @@
+$layout-primary: map-get($pysul-layout, primary);
+$layout-bg-light: map-get($pysul-layout, bg-light);
+$layout-bg-muted: map-get($pysul-layout, bg-muted);
+$layout-text-dark: map-get($pysul-layout, text-dark);
+$layout-accent-mint: map-get($pysul-layout, accent-mint);
+$layout-social-gray: map-get($pysul-layout, social-gray);
+$layout-accent-green: map-get($pysul-layout, accent-green);
+$layout-white: map-get($pysul-layout, white);
+
+$theme-light: (
+
+  accent: $layout-primary,
+  accent-hover: $layout-primary,
+
+
+  bg: $layout-bg-light,
+  fg: $layout-white,
+  surface: $layout-white,
+  surface-hover: $layout-bg-muted,
+  bg-alt: $layout-accent-mint,
+
+
+  text: $layout-text-dark,
+  text-hover: $layout-primary,
+  text-description: $layout-social-gray,
+  text-secondary: $layout-social-gray,
+  text-secondary-hover: $layout-primary,
+  text-muted: $layout-social-gray,
+  text-on-accent: $layout-white,
+  text-strong: $layout-text-dark,
+
+
+  link: $layout-primary,
+  link-hover: $layout-primary,
+  link-secondary: $layout-social-gray,
+  link-inverted: $layout-white,
+  link-active: $layout-primary,
+  link-active-bg: rgba($layout-primary, 0.12),
+
+
+  border: $layout-bg-muted,
+  border-muted: $layout-bg-light,
+  shadow: 0 10px 30px rgba($layout-text-dark, 0.1),
+  shadow-rgba: rgba($layout-text-dark, 0.12),
+
+
+  footer-bg: $layout-text-dark,
+  footer-text: rgba($layout-white, 0.95),
+  footer-text-soft: rgba($layout-white, 0.75),
+  footer-text-hover: $layout-white,
+  footer-divider: rgba($layout-white, 0.2),
+
+
+  hero-bg-start: $layout-primary,
+  hero-bg-end: $layout-primary,
+  hero-image-caption: rgba($layout-white, 0.85),
+  hero-text: $layout-white,
+
+
+  header-bg: $layout-white,
+  header-border: $layout-bg-muted,
+  header-system-mode: linear-gradient(136deg, $layout-text-dark 50%, $layout-bg-light 50%),
+  header-dark-mode: $layout-text-dark,
+  header-light-mode: $layout-bg-light,
+  header-text: $layout-text-dark,
+  header-link-bg-hover: rgba($layout-primary, 0.12),
+  header-link-text-hover: $layout-primary,
+
+
+  about-bg: $layout-white,
+  about-text: $layout-text-dark,
+  about-card-bg: $layout-white,
+  about-card-icon-bg: rgba($layout-social-gray, 0.1),
+  about-card-title: $layout-text-dark,
+  about-card-text: $layout-social-gray,
+
+
+  cfp-bg: $layout-text-dark,
+  cfp-text: $layout-white,
+  cfp-card-bg: rgba($layout-white, 0.12),
+  cfp-card-icon-bg: rgba($layout-white, 0.25),
+  cfp-card-icon-color: $layout-white,
+
+
+  details-bg: $layout-text-dark,
+  details-card-bg: $layout-white,
+  details-title: $layout-white,
+  details-text: rgba($layout-text-dark, 0.9),
+  details-icon-bg: rgba($layout-white, 0.2),
+
+
+  keynotes-bg: $layout-text-dark,
+  keynotes-text: $layout-white,
+  keynote-card-bg: $layout-white,
+  keynote-card-border: transparent,
+  keynote-card-text: $layout-text-dark,
+  keynote-card-text-strong: $layout-text-dark,
+  keynote-card-text-muted: $layout-social-gray,
+
+
+  input-bg: $layout-white,
+  input-border: $layout-bg-muted,
+  input-border-hover: $layout-social-gray,
+  input-border-focus: $layout-primary,
+  input-text: $layout-text-dark,
+  input-placeholder: $layout-social-gray,
+
+
+  content-list-header: $layout-primary,
+  content-list-text: $layout-white,
+  content-card-bg: $layout-white,
+  content-list-search-icon: $layout-social-gray,
+  content-list-filter-label: $layout-text-dark,
+  content-list-title: $layout-text-dark,
+  content-list-count: $layout-social-gray,
+  content-list-separator: $layout-bg-muted,
+  content-list-ellipsis: $layout-white,
+  content-list-page-active-bg: $layout-primary,
+  content-list-page-active-border: $layout-primary,
+  content-list-page-active-text: $layout-white,
+
+
+  map-fallback: $layout-text-dark,
+
+
+  newsletter-bg: $layout-accent-mint,
+  newsletter-text: $layout-text-dark,
+
+
+  tier-diamond-start: $layout-text-dark,
+  tier-diamond-end: $layout-social-gray,
+  tier-gold-start: $layout-social-gray,
+  tier-gold-end: $layout-text-dark,
+  tier-silver-start: $layout-bg-muted,
+  tier-silver-end: $layout-bg-light,
+  tier-bronze-start: $layout-primary,
+  tier-bronze-end: $layout-primary,
+
+
+  single-post-bg: $layout-white,
+  single-post-text: $layout-text-dark,
+  single-post-title: $layout-text-dark,
+  single-post-description: $layout-social-gray,
+  single-post-separator: $layout-bg-muted,
+  single-post-header-bg: $layout-primary,
+  single-post-header-text: $layout-white,
+
+
+  code-bg: rgba($layout-text-dark, 0.05),
+  code-text: $layout-text-dark,
+
+  border-subtle: $layout-bg-muted,
+
+
+  category-career-border: $layout-primary,
+  category-career-bg: rgba($layout-primary, 0.12),
+
+  category-ai-border: $layout-text-dark,
+  category-ai-bg: rgba($layout-text-dark, 0.12),
+
+  category-data-science-border: $layout-social-gray,
+  category-data-science-bg: rgba($layout-social-gray, 0.12),
+
+  category-open-source-border: $layout-primary,
+  category-open-source-bg: rgba($layout-primary, 0.12),
+
+  category-testing-border: $layout-primary,
+  category-testing-bg: rgba($layout-primary, 0.12),
+
+  category-automation-border: $layout-text-dark,
+  category-automation-bg: rgba($layout-text-dark, 0.12),
+
+  category-software-engineering-border: $layout-social-gray,
+  category-software-engineering-bg: rgba($layout-social-gray, 0.12),
+
+  category-web-border: $layout-accent-mint,
+  category-web-bg: rgba($layout-accent-mint, 0.5),
+
+  category-database-border: $layout-text-dark,
+  category-database-bg: rgba($layout-bg-muted, 0.8),
+
+  category-lightning_talks-border: $layout-primary,
+  category-lightning_talks-bg: rgba($layout-primary, 0.12),
+
+  category-keynote-border: $layout-text-dark,
+  category-keynote-bg: rgba($layout-text-dark, 0.15),
+
+  category-lunch-border: $layout-text-dark,
+  category-lunch-bg: rgba($layout-bg-muted, 0.9),
+
+  schedule-bg: $layout-accent-mint,
+);
+
+$buttons-light: (
+  bg: $layout-primary,
+  bg-hover: $layout-primary,
+  bg-secondary: $layout-white,
+  bg-secondary-hover: $layout-bg-light,
+  bg-destructive: $layout-primary,
+  bg-destructive-hover: $layout-primary,
+  bg-outline-hover: rgba($layout-primary, 0.08),
+  bg-outline-inverted: transparent,
+  bg-outline-inverted-hover: rgba($layout-white, 0.25),
+  bg-accent: $layout-accent-green,
+  bg-accent-hover: $layout-accent-green,
+  bg-ghost: transparent,
+  bg-ghost-hover: rgba($layout-text-dark, 0.08),
+  bg-on-accent: $layout-white,
+  bg-on-accent-hover: $layout-bg-muted,
+
+  border-outline: $layout-primary,
+  border-outline-hover: $layout-primary,
+  border-outline-inverted: $layout-white,
+  border-outline-inverted-hover: $layout-white,
+
+  text: $layout-white,
+  text-hover: $layout-white,
+  text-secondary: $layout-text-dark,
+  text-secondary-hover: $layout-text-dark,
+  text-destructive: $layout-white,
+  text-destructive-hover: $layout-white,
+  text-outline: $layout-primary,
+  text-outline-hover: $layout-primary,
+  text-outline-inverted: $layout-white,
+  text-outline-inverted-hover: $layout-bg-light,
+  text-accent: $layout-white,
+  text-accent-hover: $layout-white,
+  text-ghost: $layout-text-dark,
+  text-ghost-hover: $layout-text-dark,
+  text-on-accent: $layout-primary,
+  text-on-accent-hover: $layout-primary,
+);

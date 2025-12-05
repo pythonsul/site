@@ -1,0 +1,21 @@
+{{ $currentLang := .Site.Language.Lang }}
+
+{{/* Loop through about section data for the current language */}}
+{{ range where .Site.Data.section.about "language" $currentLang }}
+<section class="about">
+  <div class="section-container about-container">
+    <div class="about-image">
+      <div class="event-mascot">
+        {{/* Render Caramelo SVG mascot */}}
+        {{ partial "svg/caramelo.svg" . }}
+      </div>
+    </div>
+    <div class="about-content">
+      {{/* Section title from data */}}
+      <h2 class="section-title">{{ .title }}</h2>
+      {{/* Section description from data */}}
+      <p class="section-description">{{ .description }}</p>
+    </div>
+  </div>
+</section>
+{{ end }}

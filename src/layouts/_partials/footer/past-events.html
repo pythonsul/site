@@ -1,0 +1,21 @@
+{{ $defaultLang := "pt-br" }}
+
+{{ $pages := where site.AllPages "Lang" $defaultLang }}
+{{ $pastEvents := sort (where $pages "Type" "past-events") ".Params.Identifier" "desc" }}
+
+<h3>{{ T "past_events" . }}</h3>
+<ul>
+  {{ range $pastEvents }}
+  <li>
+    <a href="{{ .Permalink }}" title="{{ .Title | safeHTML }}">
+      {{ with .Params.Identifier }}
+        {{ . }}
+      {{ end }}
+      -
+      {{ with .Params.City }}
+        {{ . }}
+      {{ end }}
+    </a>
+  </li>
+  {{ end }}
+</ul>

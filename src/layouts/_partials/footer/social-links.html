@@ -1,0 +1,16 @@
+{{/* Social media links */}}
+{{ $social := .social }}
+{{ $display := slice "linkedin" "instagram" "github" "youtube" }}
+
+<h3>{{ T "social_medias" . }}</h3>
+<ul>
+  {{ range $name, $value := $social }}
+    {{ if in $display $name }}
+      <li>
+        <a href="{{ $value }}" title="{{ $name | safeHTML }}">
+          {{ title ($name | safeHTML) }}
+        </a>
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>

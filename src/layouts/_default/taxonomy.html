@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="content-list-page">
+    <section class="page-header">
+        <div class="page-header__container">
+            <h1 class="page-header__title">
+                {{ .Title | safeHTML }}
+            </h1>
+        </div>
+    </section>
+
+    <section class="all-posts">
+        <div class="all-posts__header"></div>
+        <div class="card-list">
+            {{ if .Pages }}
+            {{ range .Pages.ByDate.Reverse }}
+            {{ partial "core/card.html" . }}
+            {{ end }}
+            {{ else }}
+            <p>No posts found in this taxonomy.</p>
+            {{ end }}
+        </div>
+    </section>
+</div>
+{{ end }}

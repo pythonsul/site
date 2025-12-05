@@ -1,0 +1,165 @@
+# Portuguese (Brazil) Translation File
+
+[address]
+other = "Endereço"
+
+[date]
+other = "Data"
+
+[how_to_get_there]
+other = "Como chegar"
+
+[local_map]
+other = "Mapa do local"
+
+[event_date_format]
+other = "{{ .Start }} a {{ .Finish }} de {{ .Month }} de {{ .Year }}"
+
+[past_events]
+other = "Outras Edições"
+
+[wayback_title]
+other = "Voltar para o site atual"
+
+[wayback_banner]
+other = "Você está acessando o site de uma edição anterior da Python Sul. Para voltar ao site atual, use o botão flutuante."
+
+[blog_post_date_format]
+other = "{{ .Day }} de {{ .Month }} de {{ .Year }}"
+
+[know_more_about]
+other = "Saiba mais sobre"
+
+[site_description]
+other = "A PySul é uma comunidade dedicada a promover o uso e desenvolvimento de Python no Sul do Brasil.<br> Junte-se a nós para aprender, compartilhar e crescer juntos na linguagem Python."
+
+[want_to_contribute]
+other = "Como participar"
+
+[want_to_contribute_description]
+other = "Quer contribuir com conteúdo, melhorar o site ou ajudar na organização do evento?<br> Veja como:"
+
+[contribute]
+other = "Contribuir"
+
+[code_of_conduct]
+other = "Código de conduta"
+
+[stay_connected]
+other = "Saiba das novidades"
+
+[about]
+other = "Sobre"
+
+[categories]
+other = "Categorias"
+
+[related_posts]
+other = "Posts Relacionados"
+
+[social_medias]
+other = "Redes Sociais"
+
+[cfp]
+other = "Submissão de Palestras"
+
+[header_cta]
+other = "Inscreva-se Agora"
+
+[color_mode_system]
+other = "Sistema"
+
+[color_mode_dark]
+other = "Modo escuro"
+
+[color_mode_light]
+other = "Modo claro"
+
+[read_more]
+other = "Continuar lendo"
+
+[supporters_section_title]
+other = "Apoiadores"
+
+[supporters_section_description]
+other = "Todos os grupos, comunidades, eventos e instituições que apoiam nosso evento."
+
+[sponsor_tier_silver]
+other = "Patrocinadores Prata"
+
+[sponsor_tier_bronze]
+other = "Patrocinadores Bronze"
+
+[keynotes_more_info]
+other = "Mais detalhes aqui"
+
+[register_now]
+other = "Inscreva-se agora"
+
+[all_posts]
+other = "Todas postagens"
+
+
+[schedule_friday_21]
+other = "Sexta-Feira - 21"
+
+[schedule_saturday_22]
+other = "Sábado - 22"
+
+[schedule_sunday_23]
+other = "Domingo - 23"
+
+[web]
+other = "Web"
+
+[data_science]
+other = "Ciência de Dados"
+
+[automation]
+other = "Automação"
+
+[devops]
+other = "DevOps"
+
+[lightning_talks]
+other = "Palestras Relâmpago (Lightning Talks)"
+
+[workshop]
+other = "Tutorial"
+
+[lunch]
+other = "Almoço"
+
+[open_source]
+other = "Open Source"
+
+[career]
+other = "Carreira"
+
+[database]
+other = "Banco de Dados"
+
+[ai]
+other = "IA e Machine Learning"
+
+[keynote]
+other = "palestra convidada"
+
+[software_engineering]
+other = "Engenharia de Software"
+
+[testing]
+other = "Testes e Qualidade"
+
+[section_schedule_title]
+other = "Programação"
+
+[section_schedule_description]
+other = "Confira a programação completa do evento, incluindo palestras, workshops e atividades especiais planejadas para cada dia."
+
+
+[section_speakers_title]
+other = "Palestrantes"
+
+[section_speakers_description]
+other = "Conheça os palestrantes que compartilharão seus conhecimentos e experiências durante o evento."

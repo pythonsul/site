@@ -1,0 +1,155 @@
+$layout-primary: map-get($pysul-layout, primary);
+$layout-white: map-get($pysul-layout, white);
+
+.sponsors {
+  @extend .section;
+  background-color: var(--color-bg);
+  text-align: center;
+
+  &__container {
+    @extend .section-container;
+    gap: $space-8;
+  }
+
+  &__intro {
+    @include flex-column-center;
+    justify-content: center;
+    gap: $space-3;
+  }
+
+  &__icon {
+    @include flex-center;
+    width: $space-8;
+    height: $space-8;
+    border-radius: 999px;
+    background-color: rgba($layout-primary, 0.15);
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      color: $layout-primary;
+    }
+  }
+
+  .section-title {
+    margin: 0;
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .section-description {
+    margin: 0;
+    color: var(--color-text);
+  }
+
+  &__tiers {
+    width: 100%;
+    display: grid;
+    gap: $space-5;
+  }
+}
+
+
+.sponsor-tier {
+  @include flex-column-center;
+  gap: $space-4;
+  padding: $space-5;
+  background-color: var(--color-content-card-bg);
+  border-radius: $radius-4;
+  border: 1px solid var(--color-border-muted);
+  box-shadow: 0 12px 24px rgba($black, 0.08);
+
+  &__title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-strong);
+  }
+
+  &__logos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: $space-4;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+.sponsor-logo {
+  @include flex-center;
+  padding: $space-4;
+  background-color: $white;
+  border: 1px solid var(--color-border-muted);
+  border-radius: $radius-3;
+  box-shadow: 0 10px 25px rgba($black, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba($black, 0.12);
+  }
+
+  img {
+    max-height: 3rem;
+    width: auto;
+  }
+}
+
+
+.sponsors__cta {
+  @include flex-column-center;
+  gap: $space-4;
+  padding: $space-8 $space-6;
+  width: 100vw;
+  margin-inline: calc((100vw - 100%) / -2);
+  background-color: $layout-primary;
+  color: $layout-white;
+  border-radius: 0;
+  box-shadow: 0 20px 45px rgba($layout-primary, 0.4);
+
+  &-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &-text {
+    margin: 0;
+    max-width: 55ch;
+    line-height: 1.6;
+  }
+
+  &-actions {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: $space-4;
+
+    .btn {
+      min-width: 16rem;
+      background-color: $layout-white;
+      color: $layout-primary;
+      border: 2px solid rgba($white, 0.4);
+      font-weight: 600;
+      text-transform: none;
+
+      svg {
+        stroke: currentColor;
+      }
+
+      &:hover {
+        background-color: rgba($layout-white, 0.9);
+        color: $layout-primary;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    padding-block: $space-10;
+  }
+}

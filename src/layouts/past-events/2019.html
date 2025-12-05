@@ -1,0 +1,439 @@
+{{ $baseURL := .Permalink }}
+{{ $images := printf "%simages" $baseURL }}
+{{ $css := printf "%scss" $baseURL }}
+{{ $js := printf "%sjs" $baseURL }}
+
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="pt-br">
+
+{{/* Include the wayback header partial */}}
+{{ partial "core/wayback-header.html" . }}
+
+<head>
+  <link target="_blank" href="https://fonts.googleapis.com/css?family=Advent+Pro:500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pythonsul">
+  <meta name="twitter:image" content="{{ $images }}/0600b980e0a3269432be92707c706da5.png">
+  <meta name="twitter:description" content="A PythonBrasil é o maior evento sobre linguagem de programação Python do Brasil. Este ano organizada pela comunidade Python de NATAL/RN com o apoio da APyB (Associação Python Brasil)."-->
+  <meta property="og:url" content="{{ $baseURL }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Python Sul 2019 - Curitiba">
+  <meta property="og:description"
+    content="A conferência Python Sul é um evento regional da linguagem de programação Python, reunindo as comunidades do Rio Grande do Sul, Santa Catarina e Paraná.">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image" content="{{ $images }}/072de0c8eba15776de5dde36e53f8199.png">
+  <link rel="manifest" href="{{ $baseURL }}/manifest.json">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ $images }}/cc3708b4900e1f1331becf63253c9c97.png" />
+  <meta charset="UTF-8">
+  <title>Python Sul 2019 - Curitiba</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="theme-color" content="#102E46" />
+  <link href="{{ $css }}/47d82e2bc0f74d5d29e7.css" rel="stylesheet">
+
+  {{/* Canonical URL for SEO */}}
+  <link rel="canonical" href="{{ $baseURL }}">
+</head>
+
+<body>
+  <!-- $ {require('templates/partials/loading-animation.html')} -->
+  <!-- $ {require('templates/partials/snackbar.html')} -->
+  <nav id="mobile-nav" class="header__nav-mobile">
+    <header class="header__nav-mobile__header">
+      <h1>Menu</h1>
+      <button class="mobile-nav-trigger--close" id="mobile-nav-close-trigger"></button>
+    </header>
+    <ul class="nav__items">
+      <a class="nav__anchor scroll" href="{{ $baseURL }}#keynotes">
+        <li class="nav__item">Keynotes</li>
+      </a>
+      <a class="nav__anchor scroll" href="{{ $baseURL }}#local">
+        <li class="nav__item">Local</li>
+      </a>
+      <!-- a class="nav__anchor" href="/evento" disabled><li class="nav__item">Evento</li></a -->
+      <!-- a class="nav__anchor" href="/programacao" disabled><li class="nav__item">Programação</li></a -->
+      <a class="nav__anchor" href="{{ $baseURL }}/documents/plano_de_patrocinio.pdf">
+        <li class="nav__item">Patrocinar</li>
+      </a>
+      <a class="nav__anchor" href="{{ $baseURL }}/documents/sponsorship_plan.pdf">
+        <li class="nav__item">Sponsor</li>
+      </a>
+      <!--a class="nav__anchor" href="http://blog.pythonbrasil.org.br" target="_blank" ><li class="nav__item">Blog</li></a-->
+      <!--li class="nav__item subscribe-button">
+        <a href="https://www.facebook.com/pg/pythonbrasil/videos/?ref=page_internal" target="_blank" class="pybr-button--light">
+          <i class="material-icons live-icon">fiber_manual_record</i>Assista ao vivo
+        </a>
+      </li-->
+    </ul>
+  </nav>
+  <div id="top" class="content-body">
+    <header class="header">
+      <nav class="header__nav">
+        <div class="header__mobile">
+          <!-- a href="/">
+            <img width="140px" src="{{ $images }}/19fd2f706aa097db8fadf629de04ac12.svg" alt="Logo Python">
+          </a -->
+          <button class="mobile-nav-trigger" id="mobile-nav-trigger"></button>
+        </div>
+        <ul class="nav__items">
+          <!-- li class="nav__item logo">
+            <a class="nav__anchor" href="/">
+              <img width="100%" height="41px" src="{{ $images }}/19fd2f706aa097db8fadf629de04ac12.svg" alt="Logo Python">
+            </a>
+          </li -->
+          <li class="nav__item"><a class="nav__anchor scroll" href="{{ $baseURL }}#keynotes">Keynotes</a></li>
+          <li class="nav__item"><a class="nav__anchor scroll" href="{{ $baseURL }}#location">Local</a></li>
+          <!-- li class="nav__item"><a class="nav__anchor" href="/evento">Evento</a></li -->
+          <li class="nav__item">
+            <a class="nav__anchor" href="{{ $baseURL }}/documents/plano_de_patrocinio.pdf">Patrocinar /</a>
+            <a class="nav__anchor" href="{{ $baseURL }}/documents/sponsorship_plan.pdf">Sponsorship</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--div class="app-banners">
+        <p>Baixe o app da Python Brasil 2018 para acompanhar a grade do evento em tempo real, escolher suas atividades favoritas e receber notificações. <p>
+        <div class="stores-banners">
+          <a target="_blank" href="https://play.google.com/store/apps/details?id=org.pythonbrasil.pybr2018">
+              <img src="{{ $images }}/4dfad6db7c9efb2ca4299679ee004ca9.png" alt="Baixe no Google Play">
+          </a>
+          <a target="_blank" href="https://itunes.apple.com/us/app/python-brasil-2018/id1439521365?ls=1&mt=8">
+              <img  class="apple" src="{{ $images }}/92a0921934e4be4b1a6b88fc9c830527.svg" alt="Baixe na AppStore">
+          </a>
+        </div>
+    </div-->
+    <section id="page-content" class="page-content">
+
+
+      <section class="content-wrapper" id="content">
+        <div>
+          <section class="jumbotron-wrapper">
+            <div class="jumbotron-container">
+              <div class="jumbotron">
+                <div class="jumbotron__main">
+                  <img class="jumbotron__logo d-none d-md-block" height="50%"
+                    src="{{ $images }}/51aa21155fc2c58b6f6b20c4aaa5f7e1.svg" alt="Logo Python Sul 2019">
+                  <img class="jumbotron__logo d-md-none" height="100%"
+                    src="{{ $images }}/51aa21155fc2c58b6f6b20c4aaa5f7e1.svg" alt="Logo Python Sul 2019">
+                  <a href="" target="_blank"
+                    class="pybr-button--dark d-none d-sm-block buy-ticket">
+                    <span class="d-block"><strong>INGRESSOS</strong></span>
+                  </a>
+                  <a href="https://speakerfight.com/events/pythonsul-2019-curitiba/" target="_blank"
+                    class="pybr-button--dark d-none d-sm-block">
+                    Envie sua palestra
+                  </a>
+
+                </div>
+                <div class="jumbotron__side">
+                  <img class="d-none d-sm-block" width="auto" height="80%"
+                    src="{{ $images }}/47786a45c3e90d8ce503393d22ff9f9b.svg"
+                    alt="de 29 a 31 de Agosto de 2019 em Curitiba, Paraná">
+                  <img class="d-sm-none pybr-date" src="{{ $images }}/47786a45c3e90d8ce503393d22ff9f9b.svg"
+                    alt="de 29 a 31 de Agosto de 2019 em Curitiba, Paraná">
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section id="about" class="about-wrapper">
+          <div class="about-container">
+            <div class="about">
+              <header class="section-header-wrapper">
+                <div class="section-header">
+                  <h1 class="section-title--left">
+                    O evento
+                  </h1>
+                </div>
+              </header>
+              <div class="about__article__body">
+                <p>
+                  A conferência Python Sul é um evento regional da linguagem de programação Python,
+                  reunindo as comunidades do Rio Grande do Sul, Santa Catarina e Paraná.
+                  É um evento recente, sendo que a primeira edição foi realizada em 2017, e será
+                  anualmente realizada em uma cidade selecionado em um dos estados da região.
+                  No ano de 2019, iremos realizar a terceira edição da Python Sul de 12 a 14 de setembro
+                  em Curitiba/PR com o objetivo de promover a comunidade local e proporcionar um evento
+                  para a comunidade sul do Brasil, uma vez que a Python Brasil irá ocorrer em Ribeirão
+                  Preto/SP.
+                </p>
+                <!-- div class="about-button-area">
+              <a href="/evento#location" class="scroll about-button pybr-button--white">
+                Conheça o local
+              </a>
+            </div -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="keynotes" class="keynotes-wrapper">
+          <div class="keynotes-container">
+            <div class="keynotes">
+              <header class="section-header-wrapper">
+                <div class="section-header">
+                  <h1 class="section-title--left">
+                    Keynotes
+                  </h1>
+                </div>
+              </header>
+              <article class="keynote_article">
+                <div class="keynote_picture keynote_picture-1">
+                  <img src="{{ $images }}/6599f4604a5b73cc62b315943ffc6a4c.jpg" width="100%" alt="Keynote">
+                </div>
+                <div class="keynote_content-wrapper">
+                  <h2 class="keynote-title">Thais Viana</h2>
+                  <h3 class="keynote-subtitle">Sócia e desenvolvedora no studio hub9</h3>
+                  <div class="keynote-text">
+                    <p>
+                      Bacharel em Ciência da Computação pela UFRJ (Universidade
+                      Federal do Rio de Janeiro) e mestre em Modelos e Arquiteturas
+                      de Sistemas Inteligentes pelo PPGI-UFRJ (Programa de Pós
+                      Graduação em Informática), onde pesquisou sobre dados abertos
+                      e otimização de integração de modelos não relacionais, com
+                      foco em ontologias. Entusiasta em tecnologia e apaixonada por
+                      desafios ingressou no PythonRio e PyLadies Rio à quatro anos
+                      ajudando na luta pelo empoderamento digital de minorias.
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article class="keynote_article">
+                <div class="keynote_picture keynote_picture-2">
+                  <img src="{{ $images }}/e7dd85762f9d8b5d578ace2ca02c5357.jpg" width="100%" alt="Keynote">
+                </div>
+                <div class="keynote_content-wrapper">
+                  <h2 class="keynote-title">Melissa Mendonça</h2>
+                  <h3 class="keynote-subtitle">Professora e pesquisadora na UFSC</h3>
+                  <div class="keynote-text">
+                    <p>
+                      Professora no Departamento de Matemática na Universidade Federal
+                      de Santa Catarina (UFSC), pesquisadora em Matemática Aplicada
+                      com foco em Otimização, Análise Numérica e Álgebra Linear Numérica.
+                      Desenvolvedora de Software Científico. Entusiasta de Python,
+                      LaTeX e software livre em geral.
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article class="keynote_article">
+                <div class="keynote_picture keynote_picture-3">
+                  <img src="{{ $images }}/bf659213cdcf5ceccb1d82834ccd9ec1.jpg" width="100%" alt="Keynote">
+                </div>
+                <div class="keynote_content-wrapper">
+                  <h2 class="keynote-title">Mario Sérgio</h2>
+                  <h3 class="keynote-subtitle">Gerente de Inovação Cívica @ Open Knowledge Brasil</h3>
+                  <div class="keynote-text">
+                    <p>
+                      Mário Sérgio é gerente do programa de Inovação Cívica da Open
+                      Knowledge Brasil. Atual presidente da Associação Python Brasil
+                      (APyB). Em 2016 foi o responsável pela organização da Conferência
+                      Python Brasil[12], que teve sede em Florianópolis-SC. Em 2017
+                      foi nomeado fellow member da Python Software Foundation nos
+                      Estados Unidos.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="location-wrapper">
+          <a id="location" class="anchor" aria-hidden="true"></a>
+          <div class="location-container">
+            <div class="location">
+              <header class="section-header-wrapper">
+                <div class="section-header--right">
+                  <h1 class="section-title--right">
+                    LOCAL
+                  </h1>
+                </div>
+              </header>
+              <div class="location__info">
+                <article class="location__info__article">
+                  <header class="article__header">
+                    <h1 class="article__header__title">
+                      <a class="unicuritiba-website" target="_blank"
+                        href="https://www.unicuritiba.edu.br/">Unicuritiba</a>
+                    </h1>
+                    <p class="article__header__subtitle">
+                      R. Chile, 1678 - Rebouças, Curitiba - PR
+                    </p>
+                  </header>
+                </article>
+                <div class="unicuritiba-banner">
+                  <img class="img-fluid" src="{{ $images }}/acb6ea4b57af364f827eefae7739625e.jpg"
+                    alt="Fachada da Unicuritiba">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="map-wrapper">
+          <a id="map" class="anchor" aria-hidden="true"></a>
+          <div class="map-container">
+            <div class="map">
+              <header class="section-header-wrapper">
+                <div class="section-header">
+                  <h1 class="section-title--left">
+                    MAPA DO EVENTO
+                  </h1>
+                </div>
+              </header>
+              <div class="unicuritiba-banner">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.6376317801282!2d-49.26739088449961!3d-25.450375683779054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce48ae04a7f33%3A0xc8a284291f753e0f!2sUniversity+Centre+of+Curitiba!5e0!3m2!1sen!2sbr!4v1565910861156!5m2!1sen!2sbr"
+                  width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="sponsors" class="sponsors-wrapper">
+          <div class="sponsors-container">
+            <div class="sponsors">
+              <header class="section-header-wrapper">
+                <div class="section-header">
+                  <h1 id="diamond" class="section-title--left">
+                    Patrocinadores
+                  </h1>
+                </div>
+              </header>
+              <!-- div class="sponsors__platinum sponsor_box">
+            <h2 class="sponsor-category-title">
+              PLATINA
+            </h2>
+            <ul class="sponsors__list">
+              <li class="sponsor" id="gold">
+                <a class="partner" target="_blank" href="URL">
+                  <img src="$ {require('img/logo') }" width="100%" alt="Logo">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="sponsors__gold sponsor_box">
+            <h2 class="sponsor-category-title">
+              OURO
+            </h2>
+            <ul class="sponsors__list">
+              <li class="sponsor" id="silver">
+                <a class="partner" target="_blank" href="URL">
+                  <img src="$ {require('img/logo') }" width="100%" alt="Logo">
+                </a>
+              </li>
+            </ul>
+          </div -->
+              <div class="sponsors__silver sponsor_box">
+                <h2 class="sponsor-category-title">
+                  BRONZE
+                </h2>
+                <ul class="sponsors__list">
+                  <li class="sponsor">
+                    <a class="partner" target="_blank" href="https://olist.com/">
+                      <img src="{{ $images }}/f1271f125cd37c77a0dac0ea8adbc95a.png" width="100%" alt="Logo">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="partners" class="partners-wrapper" style="padding-top: 10px; padding-bottom: 30px;">
+          <div class="partners-container">
+            <div class="partners">
+              <header class="section-header-wrapper">
+                <div class="section-header--right">
+                  <h1 id="diamond" class="section-title--right">
+                    PARCEIROS
+                  </h1>
+                </div>
+              </header>
+              <div class="partner-list">
+                <a class="partner" target="_blank" href="https://www.unicuritiba.edu.br/">
+                  <img src="{{ $images }}/90fb2b819cb6a3693b0db467bcd5be50.png" alt="Logo">
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+              <nav class="footer__nav">
+                <ul class="footer__nav__menu">
+                  <h4 class="footer__nav__menu__title">
+                    Sobre
+                  </h4>
+                  <li class="footer__nav__menu__item">
+                    <a class="scroll" href="{{ $baseURL }}#location">Local</a>
+                  </li>
+                  <li class="footer__nav__menu__item">
+                    <a class="scroll" href="{{ $baseURL }}#keynotes">Keynotes</a>
+                  </li>
+                  <li class="footer__nav__menu__item">
+                    <a href="{{ $baseURL }}/evento" disabled>O Evento</a>
+                  </li>
+                  <!-- li class="footer__nav__menu__item">
+                  <a href="/programacao">Programação</a>
+                </li -->
+                  <li class="footer__nav__menu__item">
+                    <a href="{{ $baseURL }}/codigo-de-conduta" disabled>Código de conduta</a>
+                  </li>
+                </ul>
+                <ul class="footer__nav__menu">
+                  <h4 class="footer__nav__menu__title">
+                    Patrocínio
+                  </h4>
+                  <li class="footer__nav__menu__item">
+                    <a href="{{ $baseURL }}/quero-patrocinar" disabled>Quero patrocinar</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-xl-4 col-lg-12 col-md-12 offset-lg-1">
+              <div class="footer__actions">
+                <a href="" target="_blank"
+                  class="pybr-button--light button-bg--dark">
+                  Compre o seu ingresso
+                </a>
+                <nav class="social__nav">
+                  <ul class="social__nav__menu">
+                    <!-- li class="social__nav__menu__item">
+                    <a target="_blank" href="https://www.facebook.com/pythonbrasil/">
+                      <img height="100%" src="{{ $images }}/8a84d937145140ca758b360009fa410d.svg" />
+                    </a>
+                  </li -->
+                    <li class="social__nav__menu__item">
+                      <a target="_blank" href="https://twitter.com/pythonsul">
+                        <img height="100%" src="{{ $images }}/bccf71d1f7059651960c22c8acfa48b5.svg" />
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="python-logo col-lg-1 d-none d-xl-block">
+              <img src="{{ $images }}/4e6b2b0a4cf005bfe965e63660f050b0.svg" width="100%" alt="Python Logo">
+            </div>
+            <div class="footer-note col-12">
+              <p>
+                Python Sul is a non-profit volunteer-driven conference for promoting the open-source Python programming
+                language. It is supported by the Brazilian Python Association (APyB) and by the Python Software
+                Foundation (PSF).
+              </p>
+              <!-- p>
+              Google Play e o logotipo do Google Play são marcas registradas da Google LLC.
+            </p -->
+            </div>
+          </div>
+        </div>
+      </footer>
+  </div>
+  <script type="text/javascript" src="{{ $js }}/main.aab7a0488c22596242be.js"></script>
+</body>
+
+</html>

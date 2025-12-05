@@ -1,0 +1,180 @@
+$layout-primary: map-get($pysul-layout, primary);
+
+.buy-ticket {
+  @include responsive-container;
+  padding-block: $space-8;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: $box-shadow-strong;
+  overflow: hidden;
+
+  @media (min-width: $breakpoint-lg) {
+    padding-block: $space-10;
+  }
+
+  &__container {
+    display: grid;
+    gap: $space-8;
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      gap: $space-10;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    max-width: 60ch;
+  }
+
+  &__badge {
+    width: fit-content;
+    padding: $space-1 $space-3;
+    border-radius: $radius-100;
+    background-color: rgba(map-get($blue, 600), 0.1);
+    color: map-get($blue, 700);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: clamp(1.75rem, calc(1.5rem + 1vw), 2.25rem);
+    font-weight: 700;
+    color: var(--color-text-strong);
+    line-height: 1.2;
+  }
+
+  &__description {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--color-text);
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    margin-top: $space-2;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      align-items: center;
+      gap: $space-6;
+    }
+  }
+
+  &__cta {
+    padding-inline: $space-6;
+  }
+
+  &__helper {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+
+    @media (min-width: $breakpoint-md) {
+      max-width: 42ch;
+    }
+  }
+
+  &__aside {
+    display: grid;
+    gap: $space-5;
+  }
+
+  &__card {
+    padding: $space-6;
+    border-radius: $radius-6;
+    background: linear-gradient(135deg, rgba(map-get($py-teal, 500), 0.08), rgba(map-get($blue, 600), 0.12));
+    border: 1px solid var(--color-border-subtle);
+    box-shadow: $box-shadow-md;
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+
+    &-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--color-text-strong);
+    }
+
+    &-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+  }
+
+  &__tickets {
+    display: grid;
+    gap: $space-4;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: $space-5;
+    }
+  }
+}
+
+.ticket-card {
+  padding: $space-5 $space-4;
+  border-radius: $radius-5;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  box-shadow: $box-shadow-light;
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $box-shadow-strong-hover;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-3;
+  }
+
+  &__name {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--color-text-strong);
+    margin: 0;
+  }
+
+  &__tag {
+    padding: $space-1 $space-3;
+    border-radius: $radius-100;
+    background-color: rgba($layout-primary, 0.15);
+    color: $layout-primary;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  &__description {
+    font-size: 0.975rem;
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticket-card {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{{ $currentLang := .Site.Language.Lang }}
+
+{{/* Loop through CFP sections for the current language */}}
+{{ range where .Site.Data.section.cfp "language" $currentLang }}
+
+<section class="cfp-section" id="cfp">
+  <div class="section-container cfp-section__container">
+
+    {{/* Section header: Title and description */}}
+    <div class="cfp-section__header">
+      <h2 class="section-title">
+        {{ .title | safeHTML }}
+      </h2>
+      <p class="section-description">
+        {{ .description | safeHTML }}
+      </p>
+    </div>
+
+    {{/* Main content: How to apply and submission formats */}}
+    <div class="cfp-section__main-content">
+      <div class="content-card" data-event-listener="collapse-toggle">
+        <div class="card-collapse">
+          {{ partial "svg/icons/chevron-down.svg" }}
+        </div>
+        <h3>{{ .howToApply.title | safeHTML }}</h3>
+        <ul class="card-items collapse-content" data-collapse-visible="false">
+          {{ range .howToApply.items }}
+          <li>{{ . | safeHTML }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="content-card" data-event-listener="collapse-toggle">
+        <div class="card-collapse">
+          {{ partial "svg/icons/chevron-down.svg" }}
+        </div>
+        <h3>{{ .submissionFormats.title | safeHTML }}</h3>
+        {{ range .submissionFormats.items }}
+        <div class="format-item card-items collapse-content" data-collapse-visible="false">
+          <h4>{{ .title | safeHTML }}</h4>
+          <p>{{ .description | safeHTML }}</p>
+        </div>
+        {{ end }}
+      </div>
+      <div class="content-card cfp-deadlines" data-event-listener="collapse-toggle">
+        <div class="card-collapse">
+          {{ partial "svg/icons/chevron-down.svg" }}
+        </div>
+        <h3>{{ .submissionDeadline.title | safeHTML }}</h3>
+        {{ range .submissionDeadline.items }}
+        <div class="format-item card-items collapse-content" data-collapse-visible="false">
+          <h4>{{ .title | safeHTML }} </h4>
+          <p>{{ .date | safeHTML }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    {{/* Info boxes: Submission deadlines and related info */}}
+    <div class="cfp-section__info-boxes">
+      {{ range .submissionDeadline.items }}
+      <div class="info-box">
+        <div class="info-box__icon">
+          {{ partial (printf "%s" (.icon)) }}
+        </div>
+        <h4>{{ .title | safeHTML }} </h4>
+        <p>{{ .date | safeHTML }}</p>
+      </div>
+      {{ end }}
+    </div>
+
+    {{/* Call to action buttons and contact info */}}
+    <div class="cfp-section__cta">
+      <a href="{{ .cta.link }}" class="btn on-accent" target="_blank" rel="noopener noreferrer">
+        {{ .cta.text | safeHTML }}
+        {{ partial "svg/icons/external-link.svg" }}
+      </a>
+      <a href="mailto:" class="cta-link">
+        {{ replace .cta.footer "{{ Email }}" "sul@python.org.br" | safeHTML }}
+      </a>
+    </div>
+  </div>
+</section>
+
+{{ end }}

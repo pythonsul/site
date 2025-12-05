@@ -1,0 +1,1113 @@
+{{ $baseURL := .Permalink }}
+{{ $images := printf "%simages" $baseURL }}
+{{ $css := printf "%scss" $baseURL }}
+{{ $js := printf "%sjs" $baseURL }}
+
+<!DOCTYPE html>
+<html lang="pt-br" prefix="og: http://ogp.me/ns#">
+
+{{/* Include the wayback header partial */}}
+{{ partial "core/wayback-header.html" . }}
+
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="utf-8">
+  <title>Python Sul 2024 - Florianópolis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="Python Sul 2024, evento python, python, pythonsul, comunidade python, python rio grande do sul, comunidade">
+  <meta name="description"
+    content="Evento da comunidade Python do sul do país, com intuito de popularizar e disseminar o conhecimento da linguagem Python.">
+
+  {{/* Canonical URL for SEO */}}
+  <link rel="canonical" href="{{ $baseURL }}">
+
+  <!-- Favicons -->
+  <link rel="icon" href="{{ $images }}/favicon.png">
+  <link rel="apple-touch-icon" href="{{ $images }}/apple-touch-icon.png">
+
+  <!-- Open Graph / Social Meta Tags -->
+  <meta property="og:title" content="Python Sul 2024 - Florianópolis">
+  <meta property="og:type" content="website">
+  <meta property="og:description"
+    content="Evento regional da comunidade Python do Sul, com intuito de popularizar e disseminar o conhecimento da linguagem Python.">
+  <meta property="og:image" content="{{ $images }}/share.png?v=2024-1">
+  <meta property="twitter:image" content="{{ $images }}/share.png?v=2024-1">
+  <meta property="og:url" content="{{ $baseURL }}/?v-2024-1">
+  <meta property="og:image:alt" content="Logo Python Sul">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200px">
+  <meta property="og:image:height" content="630">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ribeye&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="{{ $css }}/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ $css }}/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ $css }}/animate.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ $css }}/venobox.css" type="text/css">
+  <link rel="stylesheet" href="{{ $css }}/owl.carousel.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ $css }}/style.css">
+
+  <!-- Template Info -->
+  <!-- 
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  -->
+
+  <!-- Google Tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVJ6KP09NE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-RVJ6KP09NE');
+  </script>
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+    ============================-->
+  <header id="header">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <a href="{{ $baseURL }}" class="scrollto"><img src="{{ $images }}/logo-header.png"
+            alt="Logo mini Python Sul - 2024" title="Logo mini Python Sul - 2024"></a>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Início</a></li>
+          <li><a href="#pre-about">Sobre</a></li>
+          <li><a href="#pre-keynotes">Keynotes</a></li>
+          <li><a href="#pre-lineup">Cronograma</a></li>
+          <li><a href="#pre-location">Local</a></li>
+          <li><a href="#pre-sponsorship">Patrocínio</a></li>
+          <li><a href="#pre-code-conduct">Código de Conduta</a></li>
+          <li><a href="{{ $baseURL }}/blog">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--==========================
+    Intro Section
+    ============================-->
+  <section id="intro" class="pre-wave-intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" id="center-bg-img">
+          <div class="text-center intro-container">
+            <img class="img-fluid" src="{{ $images }}/logo-main.svg" alt="Logo padrão Python Sul - 2024"
+              title="Logo padrão Python Sul - 2024">
+            <div id="tickets">
+              <a href="{{ $baseURL }}">
+                <button type="button" class="btn btn-lg bt-tickets">Garanta seu ingresso</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row row-wave">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean-intro">
+                <div class="wave-intro"></div>
+                <div class="wave-intro"></div>
+                <div class="wave-intro"></div>
+                <div class="wave-intro"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </section>
+  <main id="main">
+
+    <section id="pre-about" class="pre-wave">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean">
+                <div class="wave"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--==========================
+      About Section
+    ============================-->
+
+    <section id="about">
+      <div class="container content">
+        <div class="row">
+          <div class="col-12">
+            <h2>Sobre o evento</h2>
+            <p>
+              A conferência Python Sul é um evento regional que reúne entusiastas da linguagem de programação Python.
+              Ela abrange os estados do Rio Grande do Sul, Santa Catarina e Paraná, unindo diversas comunidades locais
+              em um evento anual.
+            </p>
+            <p>
+              Tendo a sua primeira edição realizada em 2017, a cada ano o evento é realizado em
+              uma nova cidade sede da região sul do Brasil. Neste evento, programadores, cientistas e curiosos se
+              encontram para contribuir com projetos de código aberto, aproximar desenvolvedores de organizações e o
+              mais importante, colocar pessoas de grande potencial em contato para que surjam grandes ideias e
+              contribuições para a sociedade.
+            </p>
+            <p>
+              Embora sediada na região sul do Brasil, a Python Sul não se limita a
+              região e envolve pessoas de tecnologia de todo o Brasil e até mesmo de países vizinhos.
+            </p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+    <section id="pre-keynotes" class="pre-wave">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean">
+                <div class="wave"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=====================
+        keynotes section 
+        =======================-->
+    <section id="keynotes">
+      <div class="container content">
+        <div class="row">
+          <div class="col-12">
+            <h2 class=" text-center">KEYNOTES</h2>
+            <br>
+            <div class="row">
+              <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-1"></div>
+                      <div class="col-4">
+                        <img src="{{ $images }}/keynotes/leticia-coelho.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="col-6">
+                        <h3>Letícia Coelho</h3>
+                        <p>Engenheira de Software que trabalha ativamente nas comunidades tech, divulgando e criando
+                          conteúdos simplificados para facilitar e incentivar a entrada de novos integrantes para a área
+                          como Engenheira Coelho.</p>
+                        <div class="links">
+                          <a href="https://www.linkedin.com/in/engenheiracoelho" target="_blank" class="linkedin">
+                            <i class="fa fa-linkedin"></i>
+                          </a>
+                          <a href="https://www.instagram.com/engenheira.coelho/" target="_blank" class="instagram">
+                            <i class="fa fa-instagram"></i>
+                          </a>
+                          <a href="https://x.com/EngineerRabbit" target="_blank" class="twitter">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-1"></div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-1"></div>
+                      <div class="col-6">
+                        <h3>Diego Cardoso</h3>
+                        <p>Engenheiro de computação especializado em engenharia de software, com mais de 17 anos de
+                          experiência em TI. Atua como Tech Lead na ThoughtWorks, onde lidera projetos com foco especial
+                          na experiência dos desenvolvedores e no desenvolvimento de plataformas.</p>
+                        <div class="links">
+                          <a href="https://www.linkedin.com/in/diego-cardoso-garcia" target="_blank" class="linkedin">
+                            <i class="fa fa-linkedin"></i>
+                          </a>
+                          <a href="https://www.instagram.com/dcg.cardoso/" target="_blank" class="instagram">
+                            <i class="fa fa-instagram"></i>
+                          </a>
+                          <a href="https://twitter.com/diego_cgarcia" target="_blank" class="twitter">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <img src="{{ $images }}/keynotes/diego-cardoso.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="col-1"></div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-1"></div>
+                      <div class="col-4">
+                        <img src="{{ $images }}/keynotes/alex-rios.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="col-6">
+                        <h3>Alex Rios</h3>
+                        <p>Engenheiro de computação com mais de 16 anos de experiência. Autor e revisor de livros
+                          técnicos, palestrante e organizador de comunidades ligadas a software virtuais em Curitiba, em
+                          especial ligadas a Golang.</p>
+                        <div class="links">
+                          <a href="https://www.linkedin.com/in/the-alex-rios/" target="_blank" class="linkedin">
+                            <i class="fa fa-linkedin"></i>
+                          </a>
+                          <a href="https://www.instagram.com/alextrending/" target="_blank" class="instagram">
+                            <i class="fa fa-instagram"></i>
+                          </a>
+                          <a href="https://twitter.com/alextrending" target="_blank" class="twitter">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-1"></div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-1"></div>
+                      <div class="col-6">
+                        <h3>Roberta Duarte</h3>
+                        <p>Física e doutoranda em Astrofísica na USP. Fez a Primeira Simulação de um Buraco Negro por um
+                          Inteligência Artificial utilizando Python e trabalha utilizando métodos de IA dentro da Física
+                          e Astronomia.</p>
+                        <div class="links">
+                          <a href="https://www.linkedin.com/in/roberta-duarte-7313b7196" target="_blank"
+                            class="linkedin">
+                            <i class="fa fa-linkedin"></i>
+                          </a>
+                          <a href="https://www.instagram.com/import_robs" target="_blank" class="instagram">
+                            <i class="fa fa-instagram"></i>
+                          </a>
+                          <a href="https://twitter.com/import_robs" target="_blank" class="twitter">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <img src="{{ $images }}/keynotes/roberta-duarte.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="col-1"></div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="pre-lineup" class="pre-wave">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean">
+                <div class="wave"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=====================
+        c4p section 
+        =======================-->
+    <section id="c4p">
+      <div class="container content text-center">
+        <div class="row">
+          <div class="col">
+            <h2>CRONOGRAMA</h2>
+            <button class="btn btn-toggle active-toggle" type="button" data-target="#day1">Sexta - 13/09/2024</button>
+            <button class="btn btn-toggle" type="button" data-target="#day2">Sábado - 14/09/2024</button>
+            <button class="btn btn-toggle" type="button" data-target="#day3">Domingo - 15/09/2024</button>
+            <div class="toggle table-responsive" id="day1">
+              <table class="table table-v-align table-schedule table-striped">
+                <thead>
+                  <tr>
+                    <th><i class="fa fa-clock-o" aria-hidden="true"></i> Horário</th>
+                    <th><i class="fa fa-map-marker" aria-hidden="true"></i> Sala 129</th>
+                    <th><i class="fa fa-map-marker" aria-hidden="true"></i> Sala 130</th>
+                    <th><i class="fa fa-map-marker" aria-hidden="true"></i> Sala 131</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="schedule-interval">09:00 - 12:00 </br> (3h)</td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/EJMCYR/" target="_blank">Introdução ao
+                        Python Científico e para Data Science</a>
+                      <br>
+                      <span class="schedule-author">Melissa Weber Mendonça</span>
+                    </td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/PZ8HRT/" target="_blank">Django Girls
+                        Florianópolis 2024</a>
+                      <br>
+                      <span class="schedule-author">Django Girls Florianópolis</span>
+                    </td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/PHWVFZ/" target="_blank">Chatbots
+                        Inteligentes: Da Construção à Customização com Python</a>
+                      <br>
+                      <span class="schedule-author">Açucena Soares, José Henrique Luckmann</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">12:00 - 14:00 </br> (2h)</td>
+                    <td class="schedule-title" colspan="3">Almoço</td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">14:00 - 17:00 </br> (3h)</td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/8GVVMS/" target="_blank">Tutorial:
+                        Implementando a Busca de Imagens em banco de dados vetoriais</a>
+                      <br>
+                      <span class="schedule-author">Alex Salgado</span>
+                    </td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/PZ8HRT/" target="_blank">Django Girls
+                        Florianópolis 2024</a>
+                      <br>
+                      <span class="schedule-author">Django Girls Florianópolis</span>
+                    </td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/FSRGL9/" target="_blank">Primeira
+                        Contribuição para o Open Source</a>
+                      <br>
+                      <span class="schedule-author">Maria Antônia Maia, Camila Maia</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="toggle table-responsive" id="day2">
+              <table class="table table-v-align table-schedule table-striped">
+                <thead>
+                  <tr>
+                    <th><i class="fa fa-clock-o" aria-hidden="true"></i> Horário</th>
+                    <th><i class="fa fa-map-marker" aria-hidden="true"></i> Auditório</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="schedule-interval">08:15 - 09:15 </br> (1h)</td>
+                    <td class="schedule-title">Credenciamento</td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">09:15 - 09:30 </br> (15min)</td>
+                    <td class="schedule-title">Abertura</td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">09:30 - 10:00 </br> (30min)</td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/UL8HH9/" target="_blank">Ambiente seguro
+                        para deployar seu Python com Terraform e Aquasec</a>
+                      <br>
+                      <span class="schedule-author">Camilla Martins</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">10:05 - 10:45 </br> (40min)</td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/F8QYJR/" target="_blank">Sumarização de
+                        artigos científicos usando E-utilities e API GPT</a>
+                      <br>
+                      <span class="schedule-author">Esther Reis, Santiago Caneppa</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">10:45 - 11:00 </br> (15min)</td>
+                    <td class="schedule-title">Palestras relâmpago</td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">11:00 - 12:00 </br> (1h)</td>
+                    <td class="schedule-title">
+                      <a href="#pre-keynotes">Keynote</a>
+                      <br>
+                      <span class="schedule-author">Diego Cardoso</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">12:00 - 13:45 </br> (1h45min)</td>
+                    <td class="schedule-title" colspan="2">Almoço</td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">13:45 - 14:25 </br> (40min)</td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/QZCGMJ/" target="_blank">Acelerando o
+                        Desenvolvimento de Software</a>
+                      <br>
+                      <span class="schedule-author">Jéssica Pauli de Castro Bonson</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">14:30 - 14:50 </br> (20min)</td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/KG8QQL/" target="_blank">Pela Comunidade,
+                        Para a Comunidade</a>
+                      <br>
+                      <span class="schedule-author">Fernando Masanori Ashikaga</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">14:55 - 15:35 </br> (40min)</td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/CXD7CU/" target="_blank">Como e porque
+                        aprender a programar com Open Source</a>
+                      <br>
+                      <span class="schedule-author">Maria Antônia Maia</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">15:35 - 16:05 </br> (30min)</td>
+                    <td class="schedule-title">Coffee break</td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">16:05 - 16:30 </br> (25min)</td>
+                    <td class="schedule-title">Palestras relâmpago</td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">16:30 - 17:30 </br> (1h)</td>
+                    <td class="schedule-title">
+                      <a href="#pre-keynotes">Keynote</a>
+                      <br>
+                      <span class="schedule-author">Alex Rios</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">17:30 - 17:40 </br> (10min)</td>
+                    <td class="schedule-title">Encerramento</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="toggle table-responsive" id="day3">
+              <table class="table table-v-align table-schedule table-striped">
+                <thead>
+                  <tr>
+                    <th><i class="fa fa-clock-o" aria-hidden="true"></i> Horário</th>
+                    <th><i class="fa fa-map-marker" aria-hidden="true"></i> Auditório</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="schedule-interval">09:15 - 09:30 </br> (15min)</td>
+                    <td class="schedule-title">Abertura</td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">09:30 - 10:00 </br> (30min)</td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/UCHUP3/" target="_blank">PEP 683: Objetos
+                        imortais - Uma nova abordagem no gerenciamento de memória</a>
+                      <br>
+                      <span class="schedule-author">Vinícius Gubiani Ferreira</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">10:05 - 10:45 </br> (40min)</td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/TUGRMR/" target="_blank">Desculpa Python,
+                        Não Sou Eu, É Você</a>
+                      <br>
+                      <span class="schedule-author">Julio Biason</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">10:45 - 11:00 </br> (15min)</td>
+                    <td class="schedule-title">Palestras relâmpago</td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">11:00 - 12:00 </br> (1h)</td>
+                    <td class="schedule-title">
+                      <a href="#pre-keynotes">Keynote</a>
+                      <br>
+                      <span class="schedule-author">Roberta Duarte</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">12:00 - 13:45 </br> (1h45min)</td>
+                    <td class="schedule-title" colspan="2">Almoço</td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">13:45 - 14:15 </br> (30min)</td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/U3R8XB/" target="_blank">Estudo de caso:
+                        Investigação de exportação ilegal de madeira</a>
+                      <br>
+                      <span class="schedule-author">Nandara</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">14:20 - 14:40 </br> (20min)</td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/7YAVZX/" target="_blank">Como Acelerar o
+                        Processamento de Dados sem Sair do Pandas</a>
+                      <br>
+                      <span class="schedule-author">Guilherme Bernieri</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">14:45 - 15:15 </br> (30min)</td>
+                    <td class="schedule-title">
+                      <a href="https://talks.python.org.br/pythonsul-2024/talk/JUNVAZ/" target="_blank">Python
+                        Performance Review</a>
+                      <br>
+                      <span class="schedule-author">Fabiano Weimar</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">15:15 - 15:45 </br> (30min)</td>
+                    <td class="schedule-title">Coffee break</td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">15:45 - 16:25 </br> (40min)</td>
+                    <td class="schedule-title">Palestras relâmpago</td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">16:25 - 17:25 </br> (1h)</td>
+                    <td class="schedule-title">
+                      <a href="#pre-keynotes">Keynote</a>
+                      <br>
+                      <span class="schedule-author">Coelho</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="schedule-interval">17:25 - 17:45 </br> (20min)</td>
+                    <td class="schedule-title">Encerramento</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="pre-location" class="pre-wave">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean">
+                <div class="wave"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=====================
+        location section 
+        =======================-->
+    <section id="location">
+      <div class="container content">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h2>LOCAL DO EVENTO</h2>
+            <p>
+              A PySul será sediada no Centro Universitário CESUSC - UNICESUSC, em um dos bairros mais tradicionais de
+              Florianópolis: Santo Antônio de Lisboa.
+              <br>
+              Esperamos que vocês possam aproveitar a região para absorver a cultura local!
+            </p>
+            <p>
+              <b>Endereço:</b>
+              <br>Centro Universitário CESUSC - UNICESUSC
+              <br>Rodovia José Carlos Daux (SC-401), 9301 - Km 10
+              <br>Santo Antônio de Lisboa - Florianópolis - Santa Catarina
+              <br>CEP 88050-001
+            </p>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.007378812135!2d-48.517169923682886!3d-27.500145976301752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527468b52090801%3A0xb067ed420bbae02b!2sFaculdade%20Cesusc%20(Sede%20SC%20401)!5e0!3m2!1spt-BR!2sbr!4v1712533662452!5m2!1spt-BR!2sbr"
+              width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section id="pre-sponsorship" class="pre-wave">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean">
+                <div class="wave"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--==========================
+        sponsorship Section
+        ============================-->
+    <section id="sponsorship">
+      <div class="container content">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+
+              <h2>Patrocine a Python Sul 2024</h2>
+              <p>
+                <a href="https://bit.ly/plano-patrocinio-pysul24" target="_blank">
+                  <button type="button" class="btn btn-lg bt-sponsorship">Baixe aqui o plano de patrocínio em
+                    pt-br.</button>
+                </a>
+                <br />
+                <a href="https://bit.ly/sponsorship-pysul24" target="_blank">
+                  <button type="button" class="btn btn-lg bt-sponsorship">Download the sponsorship plan in en
+                    here.</button>
+                </a>
+              </p>
+              </br>
+              </br>
+              <h2 id="patrocinadores">Patrocinadores</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="pre-diamond" class="pre-wave">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean">
+                <div class="wave-diamond"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="diamond">
+      <div class="container content">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <h2>Diamante</h2>
+                    <br>
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                          <img id="data-rudder" src="{{ $images }}/patrocinadores/data-rudder.png"
+                            alt="Logo data rudder" title="Logo data rudder" class="img-fluid">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                          <img id="psf" src="{{ $images }}/patrocinadores/psf.png" alt="Logo psf" title="Logo psf"
+                            class="img-fluid">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                          <img id="esss" src="{{ $images }}/patrocinadores/esss.png" alt="Logo data rudder"
+                            title="Logo ESSS" class="img-fluid">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pre-ouro" class="pre-wave">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean">
+                <div class="wave-ouro"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ouro">
+      <div class="container content">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <h2>OURO</h2>
+                    <br>
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                          <img id="elastic" src="{{ $images }}/patrocinadores/elastic.png" alt="Logo Elastic"
+                            title="Logo Elastic" class="img-fluid">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="pre-prata" class="pre-wave">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean">
+                <div class="wave-prata"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prata">
+      <div class="container content">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <h2>PRATA</h2>
+                    <br>
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-4">
+                          <img id="bobbytes" src="{{ $images }}/patrocinadores/bobbytes.png" alt="Logo BobBytes"
+                            title="Logo BobBytes" class="img-fluid">
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-4">
+                          <img id="bobbytes" src="{{ $images }}/patrocinadores/pythonic.png" alt="Logo Pythonic Café"
+                            title="Logo Pythonic Café" class="img-fluid">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pre-sponsor" class="pre-wave">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean">
+                <div class="wave-sponsor"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sponsor">
+      <div class="container content">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <h2>Padrinhos & Madrinhas & Nadrinhes</h2>
+                    <br>
+                    <div class="row justify-content-center">
+                      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                        <div class="row justify-content-center">
+                          <img id="jairo-jair" src="{{ $images }}/patrocinadores/jairo-jair.png"
+                            alt="Foto do Jairo Jair" title="Foto do Jairo Jair" class="img-fluid">
+                          <strong>Jairo Jair</strong>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                        <div class="row justify-content-center">
+                          <img id="jessica-temporal" src="{{ $images }}/patrocinadores/jessica-temporal.png"
+                            alt="Foto da Jessica Temporal" title="Foto da Jessica Temporal" class="img-fluid">
+                          <strong>Jessica Temporal</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="pre-apoio" class="pre-wave">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean">
+                <div class="wave-apoio"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="apoio">
+      <div class="container content">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <h2>Apoio</h2>
+                    <br>
+                    <div class="row justify-content-center">
+                      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                        <div class="row justify-content-center">
+                          <img id="unicesusc" src="{{ $images }}/apoio/unicesusc.png" alt="logo da UNICESUSC"
+                            title="logo da UNICESUSC" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                        <div class="row justify-content-center">
+                          <img id="apyb" src="{{ $images }}/apoio/apyb.png" alt="logo da APyB" title="logo da APyB"
+                            class="img-fluid">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pre-code-conduct" class="pre-wave">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean">
+                <div class="wave"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--==========================
+        code-conduct Section
+        ============================-->
+    <section id="code-conduct">
+      <div class="container content">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+
+              <h2>Código de Conduta</h2>
+              <p>
+                Queremos que todas as pessoas sejam aceitas e bem-vindas. Portanto, solicitamos que leiam nosso
+                <a href="https://python.org.br/cdc/" target="_blank"><strong>Código de Conduta</strong></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="pre-contact" class="pre-wave">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="ocean">
+                <div class="wave"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--==========================
+        Contact Section
+        ============================-->
+    <section id="contact" class="section-bgUp">
+      <div class="container content">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <h2>Contato</h2>
+              <p>Para patrocínios ou dúvidas sobre o evento entre em contato conosco através dos nossos canais</p>
+            </div>
+
+            <div class="row contact-info">
+
+              <div class="col-md-6">
+                <div class="contact-address">
+                  <i class="ion-ios-location-outline"></i>
+                  <h3>Telegram</h3>
+                  <p><a href="https://t.me/PythonSulBR"><i class="fa fa-telegram" aria-hidden="true"></i> Canal Python
+                      Sul</a></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="contact-email">
+                  <i class="ion-ios-email-outline"></i>
+                  <h3>Email</h3>
+                  <p><a href="mailto:sul@python.org.br"><i class="fa fa-envelope" aria-hidden="true"></i>
+                      sul@python.org.br</a></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+
+  </main>
+
+
+  <!--==========================
+        Footer
+    ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <div class="pre-image">
+              <img class="center-block" src="{{ $images }}/logo-header.png" alt="Logo mini Python Sul - 2024"
+                title="Logo mini Python Sul - 2024">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h1>Site Map</h1>
+            <ul>
+              <li><i class="fa fa-angle-right"></i><a href="#intro">Início</a></li>
+              <li><i class="fa fa-angle-right"></i><a href="#pre-about">Sobre</a></li>
+              <li><i class="fa fa-angle-right"></i><a href="#pre-keynotes">Keynotes</a></li>
+              <li><i class="fa fa-angle-right"></i><a href="#pre-lineup">Cronograma</a></li>
+              <li><i class="fa fa-angle-right"></i><a href="#pre-location">Local</a></li>
+              <li><i class="fa fa-angle-right"></i><a href="#pre-sponsorship">Patrocínio</a></li>
+              <li><i class="fa fa-angle-right"></i><a href="#pre-code-conduct">Código de Conduta</a></li>
+              <li><i class="fa fa-angle-right"></i><a href="/blog">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h1>Anos Anteriores</h1>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="/2023" target="_blank">2023</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h1>Contato</h1>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:sul@python.org.br">sul@python.org.br</a>
+              <br>
+            </p>
+
+            <div class="social-links">
+
+              <a aria-label="Link para o instagram da Python Sul" href="https://www.instagram.com/pythonsul"
+                target="_blank" class="instagram">
+                <i class="fa fa-instagram"></i>
+              </a>
+              <a aria-label="Link para o twitter da Python Sul" href="https://twitter.com/PythonSul" target="_blank"
+                class="twitter">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a aria-label="Link para o telegram da Python Sul" href="https://t.me/PythonSulBR" target="_blank"
+                class="telegram">
+                <i class="fa fa-telegram"></i>
+              </a>
+              <a aria-label="Link para o linkedin da Python Sul" href="https://www.linkedin.com/in/python-sul/"
+                target="_blank" class="linkedin">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="{{ $js }}/jquery.min.js"></script>
+  <script src="{{ $js }}/jquery-migrate.min.js"></script>
+  <script src="{{ $js }}/bootstrap.bundle.min.js"></script>
+  <script src="{{ $js }}/easing.min.js"></script>
+  <script src="{{ $js }}/hoverIntent.js"></script>
+  <script src="{{ $js }}/superfish.min.js"></script>
+  <script src="{{ $js }}/venobox.min.js"></script>
+  <script src="{{ $js }}/owl.carousel.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{{ $js }}/main.js"></script>
+</body>
+
+</html>

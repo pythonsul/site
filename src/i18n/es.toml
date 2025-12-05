@@ -1,0 +1,163 @@
+## Español (Argentina) Translation File
+
+[address]
+other = "Dirección"
+
+[date]
+other = "Fecha"
+
+[how_to_get_there]
+other = "Cómo llegar"
+
+[local_map]
+other = "Mapa local"
+
+[event_date_format]
+other = "{{ .Start }} a {{ .Finish }} de {{ .Month }} de {{ .Year }}"
+
+[past_events]
+other = "Ediciones Pasadas"
+
+[wayback_title]
+other = "Volver al sitio actual"
+
+[wayback_banner]
+other = "Estás accediendo al sitio de una edición anterior de Python Sul. Para volver al sitio actual, utiliza el botón flotante."
+
+[blog_post_date_format]
+other = "{{ .Day }} de {{ .Month }} de {{ .Year }}"
+
+[know_more_about]
+other = "Conoce más sobre"
+
+[site_description]
+other = "PySul es una comunidad dedicada a promover el uso y desarrollo de Python en el sur de Brasil.<br> Únete a nosotros para aprender, compartir y crecer juntos en el lenguaje Python."
+
+[want_to_contribute]
+other = "Cómo participar"
+
+[want_to_contribute_description]
+other = "¿Quieres contribuir con contenido, mejorar el sitio o ayudar en la organización del evento?<br> Descubre cómo:"
+
+[contribute]
+other = "Contribuir"
+
+[code_of_conduct]
+other = "Código de Conducta"
+
+[stay_connected]
+other = "Mantente conectado"
+
+[about]
+other = "Sobre"
+
+[categories]
+other = "Categorías"
+
+[related_posts]
+other = "Publicaciones Relacionadas"
+
+[social_medias]
+other = "Redes Sociales"
+
+[cfp]
+other = "Llamado a Propuestas"
+
+[header_cta]
+other = "Regístrate Ahora"
+
+[color_mode_system]
+other = "Sistema"
+
+[color_mode_dark]
+other = "Modo oscuro"
+
+[color_mode_light]
+other = "Modo claro"
+
+[read_more]
+other = "Seguir leyendo"
+
+[supporters_section_title]
+other = "Nuestros Apoyadores"
+
+[supporters_section_description]
+other = "Todos los grupos, comunidades, eventos e instituciones que apoyan nuestro evento."
+
+[sponsor_tier_silver]
+other = "Patrocinadores Silver"
+
+[sponsor_tier_bronze]
+other = "Patrocinadores Bronze"
+
+[keynotes_more_info]
+other = "Más detalles aquí"
+
+[register_now]
+other = "Regístrate ahora"
+
+[all_posts]
+other = "Todas postagens"
+
+[schedule_friday_21]
+other = "Viernes - 21"
+
+[schedule_saturday_22]
+other = "Sábado - 22"
+
+[schedule_sunday_23]
+other = "Domingo - 23"
+
+[web]
+other = "Web"
+
+[data_science]
+other = "Ciencia de Datos"
+
+[automation]
+other = "Automatización"
+
+[devops]
+other = "DevOps"
+
+[lightning_talks]
+other = "Charlas Relámpago (Lightning Talks)"
+
+[workshop]
+other = "Taller"
+
+[lunch]
+other = "Almuerzo"
+
+[open_source]
+other = "Código Abierto (Open Source)"
+
+[career]
+other = "Carrera Profesional"
+
+[database]
+other = "Bases de Datos"
+
+[ai]
+other = "IA y Machine Learning"
+
+[keynote]
+other = "Charla Principal"
+
+[software_engineering]
+other = "Ingeniería de Software"
+
+[testing]
+other = "Pruebas y Calidad"
+
+[section_schedule_title]
+other = "Agenda"
+
+[section_schedule_description]
+other = "Consulta la agenda completa del evento, incluyendo charlas, talleres y actividades especiales para cada día."
+
+[section_speakers_title]
+other = "Oradores"
+
+[section_speakers_description]
+other = "Conoce a los oradores que compartirán sus conocimientos y experiencias durante el evento."

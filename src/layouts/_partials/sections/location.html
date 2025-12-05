@@ -1,0 +1,70 @@
+{{/* Get current language, event, location, and date data */}}
+{{ $currentLang := .Site.Language.Lang }}
+{{ $event := .Site.Data.event }}
+{{ $location := $event.location }}
+{{ $date := $event.date }}
+
+{{/* Format event date for display */}}
+{{ $eventDate := dict
+  "Start"  (dateFormat "02" (time $date.start))
+  "Finish" (dateFormat "02" (time $date.finish))
+  "Month"  (title (dateFormat "January" (time $date.finish)))
+  "Year"   (dateFormat "2006" (time $date.finish))
+}}
+
+{{/* Render location section for the current language */}}
+{{ range where .Site.Data.section.location "language" $currentLang }}
+  <section id="local" class="location">
+    <div class="location__container">
+      <div class="location__heading">
+        {{ partial "svg/logos/coffee.svg" }}
+        <h2>{{ .title | safeHTML }}</h2>
+      </div>
+
+      <div class="location__grid">
+        <div class="location__details">
+          <div class="location__venue-block">
+            <h3 class="location__venue">
+              {{ $location.name | safeHTML }}
+            </h3>
+          </div>
+
+          <p class="location__description">
+            {{ .description | safeHTML }}
+          </p>
+
+          <ul class="location__info-list">
+            <li class="location__info-item">
+              <div class="location__info-icon">
+                {{ partial "svg/icons/map-pin.svg" }}
+              </div>
+              <div class="location__info-text">
+                <span class="location__info-label">
+                  {{ T "address" | safeHTML }}:
+                </span>
+                <span>{{ $location.address | safeHTML }}</span>
+              </div>
+            </li>
+            <li class="location__info-item">
+              <div class="location__info-icon">
+                {{ partial "svg/icons/calendar.svg" }}
+              </div>
+              <div class="location__info-text">
+                <span class="location__info-label">
+                  {{ T "date" | safeHTML }}:
+                </span>
+                <span>{{ i18n "event_date_format" $eventDate}}</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="location__map-card">
+          <div class="location__map-placeholder">
+            {{ partial "core/image.html" (dict "src" "images/map.png" "alt" "" ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

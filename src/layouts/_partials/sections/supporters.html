@@ -1,0 +1,28 @@
+{{ $supporters := .Site.Data.section.sponsors.supporters }}
+{{ $currentLang := .Site.Language.Lang }}
+
+<section class="supporters section" id="supporters">
+  <div class="section-container supporters__container">
+    <div class="supporters__header">
+      <h2 class="section-title">
+        <div class="coffee-icon">
+          {{ partial "svg/logos/coffee.svg" }}
+        </div>
+        {{ i18n "supporters_section_title" | safeHTML }}
+      </h2>
+      <p class="section-description">
+        {{ i18n "supporters_section_description" | safeHTML }}
+      </p>
+    </div>
+    <div class="supporters__logos">
+      {{ range $supporters }}
+      <div class="supporter-logo {{ .name | urlize }}">
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+          {{ $alt := index .alt $currentLang }}
+          {{ partial "core/image.html" (dict "src" .logo "alt" $alt ) }}
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

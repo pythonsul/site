@@ -1,0 +1,62 @@
+[
+  {
+    "language": "pt-br",
+    "title": "Python Sul 2026:<br>Vem pra Londrina!",
+    "description": "O maior evento de Python do Sul do Brasil, reunindo profissionais de IA, DevOps, ciência de dados e desenvolvimento em um encontro grandioso que vai elevar o nível da tecnologia no Sul do país.",
+    "imageCaption": "Participantes da edição anterior",
+    "cta": [
+      {
+        "type": "accent",
+        "text": "Inscreva-se Agora",
+        "link": "#",
+        "minBreakpoint": "small"
+      },
+      {
+        "type": "outline",
+        "text": "Submeter palestra",
+        "link": "#cfp",
+        "minBreakpoint": "desktop"
+      }
+    ]
+  },
+  {
+    "language": "en",
+    "title": "Python Sul 2026:<br>Join us in Londrina!",
+    "description": "The largest Python event in Southern Brazil, bringing together AI, DevOps, data science and development professionals in a grand gathering that will raise the level of technology across the region.",
+    "imageCaption": "Participants from the previous edition",
+    "cta": [
+      {
+        "type": "accent",
+        "text": "Register Now",
+        "link": "#",
+        "minBreakpoint": "small"
+      },
+      {
+        "type": "outline",
+        "text": "Submit a Talk",
+        "link": "#cfp",
+        "minBreakpoint": "desktop"
+      }
+    ]
+  },
+  {
+    "language": "es",
+    "title": "Python Sul 2026:<br>¡Venite a Londrina!",
+    "description": "El mayor evento de Python del sur de Brasil, que reúne a profesionales de IA, DevOps, ciencia de datos y desarrollo en un encuentro espectacular que va a elevar el nivel de la tecnología en la región.",
+    "imageCaption": "Participantes de la edición anterior",
+    "cta": [
+      {
+        "type": "accent",
+        "text": "Inscribite ahora",
+        "link": "#",
+        "minBreakpoint": "small"
+      },
+      {
+        "type": "outline",
+        "text": "Enviar charla",
+        "link": "#cfp",
+        "minBreakpoint": "desktop"
+      }
+    ]
+  }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "language": "pt-br",
+    "title": "Por que Londrina é o lugar perfeito para este evento?",
+    "description": "Londrina, no norte do Paraná, é uma cidade vibrante e inovadora, conhecida nacionalmente como a capital do café — um legado que marcou sua cultura e identidade até hoje. Essa herança acolhedora se conecta ao ecossistema moderno de tecnologia, com startups em crescimento, universidades fortes e comunidades ativas.\n\nCom boa infraestrutura, fácil acesso e um ambiente que favorece conexões, Londrina é estratégica para receber quem busca aprender, compartilhar e impulsionar a tecnologia no Sul do Brasil. Cada conversa vira oportunidade e toda palestra inspira novos caminhos. Vem pra Londrina!",
+    "image": "/images/fotolondrinatopo.png",
+    "imageCaption": "Letreiro “Eu amo Londrina” na orla do Lago Igapó.",
+    "cards": [
+      {
+        "title": "Capital do café",
+        "description": "Tradição acolhedora que moldou a identidade da cidade e cria um clima leve para o evento.",
+        "icon": "svg/logos/coffee.svg"
+      },
+      {
+        "title": "Ecossistema inovador",
+        "description": "Startups em ascensão, universidades presentes e comunidades tech ativas.",
+        "icon": "svg/icons/lightbulb.svg"
+      },
+      {
+        "title": "Infraestrutura estratégica",
+        "description": "Acesso facilitado, espaços modernos e logística ideal para receber participantes de toda a região.",
+        "icon": "svg/icons/map-pin.svg"
+      },
+      {
+        "title": "Comunidade acolhedora",
+        "description": "Ambiente colaborativo que transforma encontros em novas oportunidades.",
+        "icon": "svg/icons/heart-handshake.svg"
+      }
+    ]
+  },
+  {
+    "language": "en",
+    "title": "Why is Londrina the perfect place for this event?",
+    "description": "Londrina, in northern Paraná, is a vibrant and innovative city nationally known as Brazil’s coffee capital — a legacy that still shapes its culture. This welcoming heritage blends with a modern tech ecosystem filled with growing startups, strong universities, and active communities.\n\nWith good infrastructure, easy access, and an environment that encourages connections, Londrina is the ideal stage for people eager to learn, share, and boost technology across southern Brazil. Every conversation becomes an opportunity and each talk sparks new paths. Come to Londrina!",
+    "image": "/images/fotolondrinatopo.png",
+    "imageCaption": "“Eu amo Londrina” sculpture by Igapó Lake.",
+    "cards": [
+      {
+        "title": "Coffee capital",
+        "description": "A warm legacy that shapes the city’s identity and sets a welcoming tone for the event.",
+        "icon": "svg/logos/coffee.svg"
+      },
+      {
+        "title": "Innovative ecosystem",
+        "description": "Growing startups, strong universities, and active tech communities.",
+        "icon": "svg/icons/lightbulb.svg"
+      },
+      {
+        "title": "Strategic infrastructure",
+        "description": "Easy access, modern venues, and logistics suited for attendees from across the region.",
+        "icon": "svg/icons/map-pin.svg"
+      },
+      {
+        "title": "Welcoming community",
+        "description": "A collaborative environment that turns encounters into new opportunities.",
+        "icon": "svg/icons/heart-handshake.svg"
+      }
+    ]
+  },
+  {
+    "language": "es",
+    "title": "¿Por qué Londrina es el lugar perfecto para este evento?",
+    "description": "Londrina, en el norte de Paraná, es una ciudad vibrante e innovadora, conocida nacionalmente como la capital del café, un legado que sigue marcando su cultura. Esa herencia acogedora se conecta con un ecosistema tecnológico moderno, con startups en crecimiento, universidades fuertes y comunidades activas.\n\nCon buena infraestructura, fácil acceso y un ambiente que favorece las conexiones, Londrina es estratégica para recibir a quienes buscan aprender, compartir e impulsar la tecnología en el sur de Brasil. Cada charla abre oportunidades y cada presentación inspira nuevos caminos. ¡Ven a Londrina!",
+    "image": "/images/fotolondrinatopo.png",
+    "imageCaption": "Escultura “Eu amo Londrina” a la orilla del Lago Igapó.",
+    "cards": [
+      {
+        "title": "Capital del café",
+        "description": "Un legado cálido que define la identidad local y prepara el clima perfecto para el evento.",
+        "icon": "svg/logos/coffee.svg"
+      },
+      {
+        "title": "Ecosistema innovador",
+        "description": "Startups en expansión, universidades sólidas y comunidades tecnológicas activas.",
+        "icon": "svg/icons/lightbulb.svg"
+      },
+      {
+        "title": "Infraestructura estratégica",
+        "description": "Acceso sencillo, espacios modernos y logística pensada para toda la región.",
+        "icon": "svg/icons/map-pin.svg"
+      },
+      {
+        "title": "Comunidad acogedora",
+        "description": "Un ambiente colaborativo que transforma cada encuentro en nuevas oportunidades.",
+        "icon": "svg/icons/heart-handshake.svg"
+      }
+    ]
+  }
+]

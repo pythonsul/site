@@ -1,0 +1,946 @@
+{{ $baseURL := .Permalink }}
+{{ $images := printf "%simages" $baseURL }}
+{{ $css := printf "%scss" $baseURL }}
+{{ $js := printf "%sjs" $baseURL }}
+
+<html lang="pt-BR">
+
+{{/* Include the wayback header partial */}}
+{{ partial "core/wayback-header.html" . }}
+
+<head>
+  <link target="_blank" href="https://fonts.googleapis.com/css?family=Advent+Pro:500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Python Sul 2018 - Florianópolis</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:title" content="Python Sul 2018 - Florianópolis" />
+  <meta property="og:url" content="{{ $baseURL }}" />
+  <meta property="og:description"
+    content="A conferência Python Sul é um evento regional da linguagem de programação Python, reunindo as comunidades do Rio Grande do Sul, Santa Catarina e Paraná." />
+  <meta property="og:image" content="{{ $images }}/692ebf38d746bad5553713fd41edde77.png" />
+  <link rel="shortcut icon" href="{{ $images }}/f245bb0610a8c90f23979dbdf031f6fb.png" type="image/png" />
+  <link href="{{ $css }}/styles.css" rel="stylesheet">
+
+  {{/* Canonical URL for SEO */}}
+  <link rel="canonical" href="{{ $baseURL }}">
+</head>
+
+<body>
+  <nav id="mobile-nav" class="header__nav-mobile">
+    <header class="header__nav-mobile__header">
+      <h1>Menu</h1>
+      <button class="mobile-nav-trigger--close" id="mobile-nav-close-trigger"></button>
+    </header>
+    <ul class="nav__items">
+      <a class="nav__anchor scroll" href="{{ $baseURL }}#about">
+        <li class="nav__item">Evento</li>
+      </a>
+      <a class="nav__anchor scroll" href="{{ $baseURL }}#keynotes">
+        <li class="nav__item">Keynotes</li>
+      </a>
+      <a class="nav__anchor scroll" href="{{ $baseURL }}#schedule">
+        <li class="nav__item">Programação</li>
+      </a>
+      <a class="nav__anchor scroll" href="{{ $baseURL }}#location">
+        <li class="nav__item">Local</li>
+      </a>
+      <a class="nav__anchor scroll" href="{{ $baseURL }}#sponsors">
+        <li class="nav__item">Patrocinadores</li>
+      </a>
+      <li class="nav__item subscribe-button">
+        <a href="#" disabled class="pybr-button--blue">
+          Ingressos
+          <strong class="d-block">ESGOTADOS</strong>
+        </a>
+      </li>
+      <li class="nav__item subscribe-button">
+        <a target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdi_0LWcQbpLbr6G8pGUI43aDxrj6hAVU29vwvR88vS4N_r6g/viewform"
+          class="pybr-button--light">
+          Inscrições tutoriais
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div id="top" class="content-body">
+    <header class="header">
+      <nav class="header__nav">
+        <div class="header__mobile">
+          <a href="/">
+            <img width="40px" height="40px" src="{{ $images }}/118ad9795678677523c3f8228248df14.svg" alt="Logo Python">
+          </a>
+          <button class="mobile-nav-trigger" id="mobile-nav-trigger"></button>
+        </div>
+        <ul class="nav__items">
+          <li class="nav__item"><a class="nav__anchor scroll" href="{{ $baseURL }}#about">Evento</a></li>
+          <li class="nav__item"><a class="nav__anchor scroll" href="{{ $baseURL }}#keynotes">Keynotes</a></li>
+          <li class="nav__item"><a class="nav__anchor scroll" href="{{ $baseURL }}#schedule">Programação</a></li>
+          <li class="nav__item"><a class="nav__anchor scroll" href="{{ $baseURL }}#location">Local</a></li>
+          <li class="nav__item"><a class="nav__anchor scroll" href="{{ $baseURL }}#sponsors">Patrocinadores</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="page-content" class="page-content">
+
+      <section class="content-wrapper" id="content">
+        <div>
+          <section class="jumbotron-wrapper">
+            <div class="jumbotron-container">
+              <div class="jumbotron">
+                <div class="jumbotron__main">
+                  <img class="jumbotron__logo d-none d-md-block" height="auto"
+                    src="{{ $images }}/cd29336fd69df3770989f2677e102aed.svg" alt="Logo Python Sul 2018">
+                  <img class="jumbotron__logo d-md-none" height="100%"
+                    src="{{ $images }}/cd29336fd69df3770989f2677e102aed.svg" alt="Logo Python Sul 2018">
+                  <a href="#" disabled class="pybr-button--blue d-none d-sm-block" style="margin: 10px 0">
+                    Ingressos
+                    <strong class="d-block">ESGOTADOS</strong>
+                  </a>
+                  <a target="_blank"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdi_0LWcQbpLbr6G8pGUI43aDxrj6hAVU29vwvR88vS4N_r6g/viewform"
+                    class="pybr-button--light d-none d-sm-block">
+                    Inscrições tutoriais
+                  </a>
+                </div>
+                <div class="jumbotron__side">
+                  <img class="d-none d-sm-block" width="100%" src="{{ $images }}/e895ff0799d32d5b4116b08600b11719.svg"
+                    alt="de 6 a 8 de Abril de 2018 em Florianópolis, Santa Catarina">
+                  <img class="d-sm-none pybr-date" src="{{ $images }}/e895ff0799d32d5b4116b08600b11719.svg"
+                    alt="de 6 a 8 de Abril de 2018 em Florianópolis, Santa Catarina">
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section class="about-wrapper">
+          <a id="about" class="anchor" aria-hidden="true"></a>
+          <div class="about-container">
+            <div class="about">
+              <article class="about__article--left">
+                <header>
+                  <h1 class="about__article__section-title--left">
+                    FLORIPA/SC
+                  </h1>
+                </header>
+                <p class="about__article__body">
+                  Sede da <a href="http://2016.pythonbrasil.org.br/">Python Brasil 12</a>, <a
+                    href="http://scipyla.org/conf/2016/">SciPy Latin America 2016</a> e de uma incrível <a
+                    href="http://floripa.sc.python.org.br/">comunidade de Python</a> local, Florianópolis é conhecida
+                  por sua expansão na área de tecnologia e sua beleza natural, contando com um conjunto de 43 belíssimas
+                  praias. Esse potencial turistico da região coloca a conferência em uma esfera de muita expectativa.
+                </p>
+                <p>
+                  Tá com tempo e quer explorar Floripa? Aproveite e dê uma olhada no artigo da Python Brasil sobre as <a
+                    href="https://blog.pythonbrasil.org.br/dicas-da-cidade-florianopolis.html#article">dicas da
+                    cidade</a>, diversos pontos turísticos, praias, restaurantes e baladas pra você conhecer ;)
+                </p>
+              </article>
+              <article class="about__article--right">
+                <header>
+                  <h1 class="about__article__section-title--right">
+                    O EVENTO
+                  </h1>
+                </header>
+                <p class="about__article__body">
+                  A conferência Python Sul é um evento regional da linguagem de programação Python, reunindo as
+                  comunidades do Rio Grande do Sul, Santa Catarina e Paraná.
+                  É um evento recente, sendo que a primeira edição foi realizada em 2017, e será anualmente realizada em
+                  uma cidade selecionado em um dos estados da região.
+                  No ano de 2018, iremos realizar a segunda edição da Python Sul em Florianópolis, SC com o objetivo de
+                  promover a comunidade local e proporcionar um evento para a comunidade sul do Brasil, uma vez que a
+                  Python Brasil irá ocorrer em Natal/RN.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="keynotes-wrapper">
+          <a id="keynotes" class="anchor" aria-hidden="true"></a>
+          <div class="keynotes-container">
+            <div class="keynotes">
+              <header class="section-header-wrapper">
+                <div class="section-header">
+                  <h1 class="section-title--left">
+                    Keynotes
+                  </h1>
+                </div>
+              </header>
+              <section class="keynotes__list">
+
+                <article class="keynote__summary keynote-margin-spacer">
+                  <div class="keynote__summary__body">
+                    <header class="keynote__summary__title">
+                      Danilo “Mawkee” Martins
+                      <div>
+                        <a target="_blank" href="https://github.com/mawkee"><i class="fab fa-github"></i></a>
+                        <a target="_blank" href="https://twitter.com/mawkee"><i class="fab fa-twitter"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/mawkee"><i class="fab fa-linkedin"></i></a>
+                      </div>
+
+                    </header>
+                    <p class="keynote__summary__text">
+                      Desenvolvedor backend com background em telecomunicações,
+                      Danilo (também conhecido por Mawkee) é um entusiasta de
+                      tecnologias livres, aficcionado em programação, e nerd de
+                      sexto dan. Atualmente trabalha na Crave Food Services,
+                      startup no ramo de alimentações.
+
+                    </p>
+                  </div>
+                  <div class="keynote__summary__photo">
+                    <img class="keynote-img-fluid" src="{{ $images }}/b121db9ff2caa73d6539bcf2c9b92211.jpg"
+                      alt="Mawkee">
+
+                  </div>
+                </article>
+
+                <article class="keynote__summary keynote-margin-spacer">
+                  <div class="keynote__summary__body">
+                    <header class="keynote__summary__title">
+                      Nicolle Cysneiros
+                      <div>
+                        <a target="_blank" href="https://github.com/nicysneiros"><i class="fab fa-github"></i></a>
+                        <a target="_blank" href="https://twitter.com/nicysneiros"><i class="fab fa-twitter"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/nicollecysneiros"><i
+                            class="fab fa-linkedin"></i></a>
+                        <a target="_blank" href="https://medium.com/@nicolle.cysneiros"><i class="fas fa-link"></i></a>
+                      </div>
+
+                    </header>
+                    <p class="keynote__summary__text">
+                      Desenvolvedora fullstack @ Labcodes, trabalha principalmente
+                      com Python e Javascript. Faz parte do Grupo de Usuários
+                      Python de Pernambuco (PUG-PE) e do PyLadies Recife, é
+                      feminista e acredita na inclusão e empoderamento feminino
+                      através da tecnologia.
+
+                    </p>
+                  </div>
+                  <div class="keynote__summary__photo">
+                    <img class="keynote-img-fluid" src="{{ $images }}/4d0e7f96b0e4562e1ceff430db9c1a25.jpg"
+                      alt="Nicolle Cysneiros">
+
+                  </div>
+                </article>
+
+                <article class="keynote__summary keynote-margin-spacer">
+                  <div class="keynote__summary__body">
+                    <header class="keynote__summary__title">
+                      Renzo Nuccitelli
+                      <div>
+                        <a target="_blank" href="https://github.com/renzon"><i class="fab fa-github"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/renzonuccitelli"><i
+                            class="fab fa-linkedin"></i></a>
+                        <a target="_blank" href="https://blog.renzo.pro.br/"><i class="fas fa-link"></i></a>
+                      </div>
+
+                    </header>
+                    <p class="keynote__summary__text">
+                      Engenheiro de Computação formado pelo ITA. Especialista em
+                      programação web no Google App Engine, usa Python desde 2009.
+                      Foi Diretor de Tecnologia na startup de educação QMagico,
+                      Apaixonado por dar aulas, é professor da Fatec onde ministra
+                      as matérias de "Orientação a Objetos" e "Aplicações para
+                      Internet Utilizando Banco de Dados". Já palestrou em eventos
+                      como Pycon US, Google Developer Bus, DevFest, Rupy e Python
+                      Brasil. Escreve sobre tecnologia em seu blog.renzo.pro.br.
+                      Atualmente é Engenheiro de Qualidade na Red Hat.
+
+                  </div>
+                  <div class="keynote__summary__photo">
+                    <img class="keynote-img-fluid" src="{{ $images }}/2e3b4601a7c029e9992b403cd0642a55.png"
+                      alt="Renzo Nuccitelli">
+                  </div>
+                </article>
+
+                <article class="keynote__summary keynote-margin-spacer">
+                  <div class="keynote__summary__body">
+                    <header class="keynote__summary__title">
+                      Lais Varejão
+                      <div>
+                        <a target="_blank" href="https://twitter.com/laisvarejao"><i class="fab fa-twitter"></i></a>
+                        <a target="_blank" href="https://github.com/laisvarejao"><i class="fab fa-github"></i></a>
+                        <a target="_blank" href="https://laisvarejao.github.io/"><i class="fas fa-link"></i></a>
+                      </div>
+
+                    </header>
+                    <p class="keynote__summary__text">
+                      Olindense, vislumbra um futuro com mais mulheres na computação.
+                      Organizadora do Django Girls Recife. Alumna do Recurse Center,
+                      um retiro para programadores em Nova York. Engenheira de
+                      software por formação e entusiasta de Design. Atualmente é
+                      desenvolvedora full-stack e gerente de projetos na Vinta
+                      Software.
+
+                    </p>
+                  </div>
+                  <div class="keynote__summary__photo">
+                    <img class="keynote-img-fluid" src="{{ $images }}/9c3eeb03d6268c02ffc1d6b1f9208431.jpg"
+                      alt="Lais Varejão">
+
+                  </div>
+                </article>
+
+                <article class="keynote__summary keynote-margin-spacer">
+                  <div class="keynote__summary__body">
+                    <header class="keynote__summary__title">
+                      Filipe Fernandes
+                      <div>
+                        <a target="_blank" href="https://twitter.com/ocefpaf"><i class="fab fa-twitter"></i></a>
+                        <a target="_blank" href="https://github.com/ocefpaf"><i class="fab fa-github"></i></a>
+                        <a target="_blank" href="https://ocefpaf.github.io/homepage/"><i class="fas fa-link"></i></a>
+                      </div>
+
+                    </header>
+                    <p class="keynote__summary__text">
+                      Oceanógrafo Físico por treino, programador por acaso, educador
+                      por paixão Filipe trabalha para o U.S. Integrated Ocean Observing
+                      System (IOOS), uma força tarefa da NOAA que visa integrar
+                      pessoas e tecnologias para melhor desenvolver ferramentas de
+                      observação e modelagem oceânica, onde Python, R, e várias
+                      tecnologias de data server são centrais para seu sucesso. Em
+                      seu tempo livre Filipe se "diverte" distribuindo pacotes
+                      binários pelo conda-forge, e ensinado boas práticas de computação
+                      científica como instrutor do Software Carpentry.
+
+                    </p>
+                  </div>
+                  <div class="keynote__summary__photo">
+                    <img class="keynote-img-fluid" src="{{ $images }}/6a2dc980682866f91e746c0e237b3168.png"
+                      alt="Filipe Fernandes">
+
+                  </div>
+                </article>
+              </section>
+            </div>
+          </div>
+        </section>
+        <section class="schedule-wrapper">
+          <a id="schedule" class="anchor" aria-hidden="true"></a>
+          <div class="schedule-container">
+            <div class="schedule">
+              <header class="section-header-wrapper">
+                <div class="section-header">
+                  <h1 class="section-title--left">
+                    Programação
+                  </h1>
+                </div>
+              </header>
+              <div class="schedule-body">
+                <div class="btn-group-lg" role="group" aria-label="Selecione o dia">
+                  <button type="button" class="btn btn-primary tablink" onclick="switchToTab(event, 'day01')">
+                    Dia 06/04
+                  </button>
+                  <button type="button" class="btn btn-primary tablink" onclick="switchToTab(event, 'day02')">
+                    Dia 07/04
+                  </button>
+                  <button type="button" class="btn btn-primary tablink" onclick="switchToTab(event, 'day03')">
+                    Dia 08/04
+                  </button>
+                </div>
+
+                <div class="track tabcontent active" id="day01">
+                  <div class="track-leisure">
+                    <p class="hour"><time>08:30</time></p>
+                    <p class="talk">Abertura</p>
+                  </div>
+
+                  <div class="track-keynote">
+                    <p class="hour"><time>09:00</time></p>
+                    <p class="talk">Keynote</p>
+                    <p class="speaker">Filipe Fernandes</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>10:00</time></p>
+                    <p class="talk">Palestra PSF</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>10:10</time></p>
+                    <p class="talk">Como o maior portal de acesso aberto de periódicos científicos foi refeito
+                      utilizando python</p>
+                    <p class="speaker">Juan Funez</p>
+                  </div>
+
+                  <div class="track-leisure">
+                    <p class="hour"><time>10:50</time></p>
+                    <p class="talk">Coffee break</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>11:20</time></p>
+                    <p class="talk">Programação Assíncrona com Twisted</p>
+                    <p class="speaker">Tonny Dourado</p>
+                  </div>
+
+                  <div class="track-leisure">
+                    <p class="hour"><time>12:00</time></p>
+                    <p class="talk">Almoço</p>
+                  </div>
+
+                  <div class="track-keynote">
+                    <p class="hour"><time>13:30</time></p>
+                    <p class="talk">Keynote</p>
+                    <p class="speaker">Danilo "Mawkee" Martins</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>14:30</time></p>
+                    <p class="talk">Palestra Loadsmart</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>14:40</time></p>
+                    <p class="talk">Microservices em Python: intro, desafios e soluções</p>
+                    <p class="speaker">Guilherme Vierno</p>
+                  </div>
+
+                  <div class="track-leisure">
+                    <p class="hour"><time>15:20</time></p>
+                    <p class="talk">Coffee break</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>15:50</time></p>
+                    <p class="talk">Palestra relâmpago</p>
+                    <p class="speaker">Em breve</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>16:30</time></p>
+                    <p class="talk">Não é apenas futebol</p>
+                    <p class="speaker">Cássio Botaro</p>
+                  </div>
+
+                  <div class="track-keynote">
+                    <p class="hour"><time>17:10</time></p>
+                    <p class="talk">Keynote</p>
+                    <p class="speaker">Nicole Cysneiros</p>
+                  </div>
+
+                  <div class="track-leisure">
+                    <p class="hour"><time>18:10</time></p>
+                    <p class="talk">Fechamento do 1º dia</p>
+                  </div>
+                </div>
+
+                <div class="track tabcontent" id="day02">
+                  <div class="track-leisure">
+                    <p class="hour"><time>09:30</time></p>
+                    <p class="talk">Café da manhã</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>10:20</time></p>
+                    <p class="talk">Como levamos um projeto de final de semana para o Fantástico</p>
+                    <p class="speaker">Irio Musskopf</p>
+                  </div>
+
+                  <div class="track-keynote">
+                    <p class="hour"><time>11:00</time></p>
+                    <p class="talk">Keynote</p>
+                    <p class="speaker">Renzo Nuccitelli</p>
+                  </div>
+
+                  <div class="track-leisure">
+                    <p class="hour"><time>12:00</time></p>
+                    <p class="talk">Almoço</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>13:30</time></p>
+                    <p class="talk">Julia para pythonistas</p>
+                    <p class="speaker">Melissa Weber</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>14:10</time></p>
+                    <p class="talk">Palestra ESSS</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>14:20</time></p>
+                    <p class="talk">Que Teste Foi Esse? py.test para desenvolvimento fullstack</p>
+                    <p class="speaker">Igor Ghisi</p>
+                  </div>
+
+                  <div class="track-leisure">
+                    <p class="hour"><time>15:00</time></p>
+                    <p class="talk">Coffee break</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>15:30</time></p>
+                    <p class="talk">Explorando QuerySets do Django</p>
+                    <p class="speaker">Mariana Bedran Lesche</p>
+                  </div>
+
+                  <div class="track-talk">
+                    <p class="hour"><time>16:10</time></p>
+                    <p class="talk">Palestra relâmpago</p>
+                    <p class="speaker">Em breve</p>
+                  </div>
+
+                  <div class="track-keynote">
+                    <p class="hour"><time>17:00</time></p>
+                    <p class="talk">Keynote</p>
+                    <p class="speaker">Lais Varejão</p>
+                  </div>
+
+                  <div class="track-leisure">
+                    <p class="hour"><time>18:00</time></p>
+                    <p class="talk">Fechamento</p>
+                  </div>
+                </div>
+
+                <div class="track tabcontent" id="day03">
+                  <div class="tutorials-banner">
+                    <span>
+                      <strong>&#9888</strong>
+                    </span>
+                    <span>
+                      Os tutoriais são gratuitos mas a organização pede que você contribua
+                      doando 1Kg de alimento não perecível que será doado para uma instituição
+                      a ser definida.
+                    </span>
+
+                    <span>
+                      Veja a grade de horário por sala <a
+                        href="https://docs.google.com/spreadsheets/d/1Es1VLZ6LD2fTgZ_1p_54EQGvXhIAICeR7nYdRiFQc_0/edit?usp=sharing">aqui</a>
+                    </span>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>08:00</time></p>
+                    <p class="talk">Django Girls - Sala 1</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>08:00</time></p>
+                    <p class="talk">Python para Iniciantes - Sala 2</p>
+                    <p class="speaker">Mário Sérgioo</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>08:00</time></p>
+                    <p class="talk">Automação de Testes com Robot Framework - Sala 3</p>
+                    <p class="speaker">Mayara Fernandes e Johnatha Felix</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>08:00</time></p>
+                    <p class="talk">Open Spaces - Sala 4</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>08:00</time></p>
+                    <p class="talk">Continuação de Django Girls passados- Sala 5</p>
+                  </div>
+
+                  <div class="track-leisure">
+                    <p class="hour"><time>09:30</time></p>
+                    <p class="talk">Coffe-Break</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>10:00</time></p>
+                    <p class="talk">Django Girls - Sala 1</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>10:00</time></p>
+                    <p class="talk">A definir - Sala 2</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>10:00</time></p>
+                    <p class="talk">Automação de Testes com Robot Framework (continuação) - Sala 3</p>
+                    <p class="speaker">Mayara Fernandes e Johnatha Felix</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>10:00</time></p>
+                    <p class="talk">Open Spaces - Sala 4</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>10:00</time></p>
+                    <p class="talk">Continuação de Django Girls passados- Sala 5</p>
+                  </div>
+
+                  <div class="track-leisure">
+                    <p class="hour"><time>12:00</time></p>
+                    <p class="talk">Almoço</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>13:30</time></p>
+                    <p class="talk">Django Girls - Sala 1</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>13:30</time></p>
+                    <p class="talk">Do nada, tudo se constrói. Testes & Web - Sala 2</p>
+                    <p class="speaker">André Pastore</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>13:30</time></p>
+                    <p class="talk">Tutorial da cultura e diversidade surdas e LIBRAS- Sala 3</p>
+                    <p class="speaker">Amanda Groth</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>13:30</time></p>
+                    <p class="talk">Open Spaces - Sala 4</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>13:30</time></p>
+                    <p class="talk">Continuação de Django Girls passados- Sala 5</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>13:30</time></p>
+                    <p class="talk">Scrapy para Iniciantes - Sala 6</p>
+                    <p class="speaker">Rafael Calixto</p>
+                  </div>
+
+                  <div class="track-leisure">
+                    <p class="hour"><time>15:30</time></p>
+                    <p class="talk">Coffe-Break</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>16:00</time></p>
+                    <p class="talk">Django Girls - Sala 1</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>16:00</time></p>
+                    <p class="talk">Do nada, tudo se constrói. Testes & Web (continuação) - Sala 2</p>
+                    <p class="speaker">André Pastore</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>16:00</time></p>
+                    <p class="talk">Algo sobre chatbots, música e machine learning - Sala 3</p>
+                    <p class="speaker">Maicon Domingues</p>
+                  </div>
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>16:00</time></p>
+                    <p class="talk">Open Spaces - Sala 4</p>
+                  </div>
+
+
+                  <div class="track-tutorial">
+                    <p class="hour"><time>16:00</time></p>
+                    <p class="talk">Continuação de Django Girls passados- Sala 5</p>
+                  </div>
+
+                  <div class="track-leisure">
+                    <p class="hour"><time>18:00</time></p>
+                    <p class="talk">Encerramento</p>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="location-wrapper">
+          <a id="location" class="anchor" aria-hidden="true"></a>
+          <div class="location-container">
+            <div class="location">
+              <header class="section-header-wrapper">
+                <div class="section-header--right">
+                  <h1 class="section-title--right">
+                    LOCAIS
+                  </h1>
+                </div>
+              </header>
+              <div class="location__info">
+                <article class="location__info__article">
+                  <header class="article__header">
+                    <h1 class="article__header__title">
+                      Palestras e Keynotes - Softplan
+                    </h1>
+                    <p class="article__header__subtitle">
+                      Sapiens Parque - Av. Luiz Boiteux Piazza, 1302 - Canasvieiras, Florianópolis - SC
+                    </p>
+                  </header>
+                </article>
+                <div class="softplan-banner">
+                  <img class="img-fluid" src="{{ $images }}/678a3878418c36a1488deb0643f2bca6.jpg"
+                    alt="Fachada da Softplan">
+                  <a class="softplan-website" target="_blank" href="https://www.softplan.com.br/">
+                    https://www.softplan.com.br/
+                  </a>
+                </div>
+                <div class="cesusc-banner location-margin-spacer">
+                  <img class="img-fluid" src="{{ $images }}/eecc94f4e9c7ffa0f129be6ef237d8cd.jpg"
+                    alt="Campus do Cesusc">
+                  <a class="cesusc-website" target="_blank" href="https://www.cesusc.edu.br/">
+                    https://www.cesusc.edu.br/
+                  </a>
+                </div>
+                <article class="location__info__article location-margin-spacer">
+                  <header class="article__header">
+                    <h1 class="article__header__title">
+                      Tutoriais - CESUSC
+                    </h1>
+                    <p class="article__header__subtitle">
+                      Rod. SC-401, 9301 - Santo Antonio de Lisboa, Florianópolis - SC
+                    </p>
+                  </header>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="map-wrapper">
+          <a id="map" class="anchor" aria-hidden="true"></a>
+          <div class="map-container">
+            <div class="map">
+              <header class="section-header-wrapper">
+                <div class="section-header">
+                  <h1 class="section-title--left">
+                    MAPAS DO EVENTO
+                  </h1>
+                </div>
+              </header>
+              <article class="location__info__article">
+                <header class="article__header">
+                  <h1 class="article__header__title">
+                    Palestras e Keynotes - Softplan
+                  </h1>
+                </header>
+              </article>
+              <div class="softplan-banner">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113183.64191308165!2d-48.57500686133279!3d-27.562857760221057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527389201476aad%3A0x5dc5525817a364e!2sSoftplan+Planning+and+Systems!5e0!3m2!1sen!2sbr!4v1520096553758"
+                  width="550" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="cesusc-banner location-margin-spacer">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.007531600001!2d-48.51678368438558!3d-27.500141224583423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527468b52090801%3A0xb067ed420bbae02b!2sFaculdade+CESUSC!5e0!3m2!1sen!2sbr!4v1520096827828"
+                  width="550" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <article class="location__info__article location-margin-spacer">
+                <header class="article__header">
+                  <h1 class="article__header__title">
+                    Tutoriais - CESUSC
+                  </h1>
+                </header>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="sponsors-wrapper">
+          <a id="sponsors" class="anchor" aria-hidden="true"></a>
+          <div class="sponsors-container">
+            <div class="sponsors">
+              <header class="section-header-wrapper">
+                <div class="section-header--right">
+                  <h1 class="section-title--right">
+                    PATROCINADORES
+                  </h1>
+                </div>
+              </header>
+              <div class="sponsors__gold" id="gold">
+                <h2 class="sponsor-category-title">
+                  OURO
+                </h2>
+                <ul class="sponsors__list">
+                  <li class="sponsor">
+                    <a href="https://www.esss.co/en/" target="_blank"><img class="img-fluid"
+                        src="{{ $images }}/e660d15ac5dc7457ee43e161933658f9.png" alt="ESSS"></a>
+                  </li>
+                  <li class="sponsor">
+                    <a href="https://loadsmart.com/" target="_blank"><img class="img-fluid"
+                        src="{{ $images }}/31ceb82048a71d31bb4a71e6ea1295ca.png" alt="Loadsmart"></a>
+                  </li>
+                  <li class="sponsor">
+                    <a href="https://www.python.org/psf/" target="_blank"><img class="img-fluid"
+                        src="{{ $images }}/fd307db767bf0c014580e265b17660a9.png" alt="Python Software Foundation"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sponsors__silver" id="silver">
+                <h2 class="sponsor-category-title">
+                  PRATA
+                </h2>
+                <ul class="sponsors__list">
+                  <li class="sponsor">
+                    <a href="http://www.labcodes.com.br/" target="_blank"><img class="img-fluid"
+                        src="{{ $images }}/b8313e2fb5cd0a05fef5cfbccb861f41.png" alt="Labcodes"></a>
+                  </li>
+
+                  <li class="sponsor">
+                    <a href="https://www.vinta.com.br/" target="_blank"><img class="img-fluid"
+                        src="{{ $images }}/29dcfc2e570d5e0e263e96842f75cfab.png" alt="Vinta"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sponsors__bronze" id="bronze">
+                <h2 class="sponsor-category-title">
+                  BRONZE
+                </h2>
+                <ul class="sponsors__list">
+                  <li class="sponsor">
+                    <a href="http://www.novafibratelecom.com.br/" target="_blank">
+                      <img class="img-fluid" src="{{ $images }}/87e4dd54185011f8e88e44044902f839.png" alt="Nova Fibra">
+                    </a>
+                  </li>
+                  <li class="sponsor">
+                    <a href="https://www.geekhunter.com.br/" target="_blank">
+                      <img class="img-fluid" src="{{ $images }}/f5631907168ec2c9a3a0ee8e7dae7a30.png" alt="geekhunter">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sponsors__support">
+                <h2 class="sponsor-category-title">
+                  APOIO
+                </h2>
+                <ul class="sponsors__list">
+                  <li class="sponsor">
+                    <a href="https://www.softplan.com.br/" target="_blank">
+                      <img class="img-fluid" src="{{ $images }}/8cbedae6783cb18203846b97e33d13c1.png" alt="SOFTPLAN">
+                    </a>
+                  </li>
+                  <li class="sponsor">
+                    <a href="http://associacao.python.org.br/" target="_blank">
+                      <img class="img-fluid" src="{{ $images }}/e7253438d331158a30fcdedeab5e3e7f.png"
+                        alt="APYB - Associação Python Brasil">
+                    </a>
+                  </li>
+                  <li class="sponsor">
+                    <a href="http://byne.com.br/" target="_blank">
+                      <img class="img-fluid" src="{{ $images }}/fa7152f58a3bd1cecfe4e426fd4d860f.png" alt="Byne">
+                    </a>
+                  </li>
+                  <li class="sponsor">
+                    <a href="http://www.cesusc.edu.br/" target="_blank">
+                      <img class="img-fluid" src="{{ $images }}/a1ddffe175378661b3e5022c1b4563df.png"
+                        alt="Faculdade CESUSC">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sponsors__call-to-action">
+                <h2>QUERO PATROCINAR</h2>
+                <p><a class="sponsors__call-to-action__links"
+                    href="https://docs.google.com/presentation/d/1HBfvW7qiGIAub9-v9DlkVnE-QRXXS5Zesi85hg77JMs/htmlpresent"
+                    target="_blank">Proposta de Patrocínio</a></p>
+                <p><a class="sponsors__call-to-action__links"
+                    href="https://docs.google.com/presentation/d/1Nc_03WJsKGLUpcB5J4-2dqSFMNw43Scy4CMVJjTFcM8/htmlpresent"
+                    target="_blank">Sponsorship Proposal</a></p>
+                <p>Ou mande um email para <a href="mailto:pythonsul@gmail.com">pythonsul@gmail.com</a></p>
+                <!-- a href="/quero-patrocinar" id="beASponsor" class="call-to-sponsor pybr-button-large--light">
+              QUERO PATROCINAR
+            </a -->
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+            <nav class="footer__nav">
+              <ul class="footer__nav__menu">
+                <h4 class="footer__nav__menu__title">
+                  Sobre
+                </h4>
+                <li class="footer__nav__menu__item">
+                  <a class="scroll" href="{{ $baseURL }}#about">O Evento</a>
+                </li>
+                <li class="footer__nav__menu__item">
+                  <a class="scroll" href="{{ $baseURL }}#location">Local</a>
+                </li>
+                <li class="footer__nav__menu__item">
+                  <a class="scroll" href="{{ $baseURL }}#keynotes">Keynotes</a>
+                </li>
+                <li class="footer__nav__menu__item">
+                  <a class="scroll" href="{{ $baseURL }}#schedule">Programação</a>
+                </li>
+                <li class="footer__nav__menu__item">
+                  <a href="{{ $baseURL }}/codigo-de-conduta">Código de conduta</a>
+                </li>
+              </ul>
+              <ul class="footer__nav__menu">
+                <h4 class="footer__nav__menu__title">
+                  Patrocinadores
+                </h4>
+                <li class="footer__nav__menu__item">
+                  <a href="{{ $baseURL }}#gold">Ouro</a>
+                </li>
+                <li class="footer__nav__menu__item">
+                  <a href="{{ $baseURL }}#silver">Prata</a>
+                </li>
+                <li class="footer__nav__menu__item">
+                  <a href="{{ $baseURL }}#bronze">Bronze</a>
+                </li>
+                <!-- li class="footer__nav__menu__item">
+                  <a href="/quero-patrocinar">Seja um patrocinador</a>
+                </li -->
+              </ul>
+            </nav>
+          </div>
+          <div class="col-xl-4 col-lg-12 col-md-12 offset-lg-1">
+            <div class="footer__actions">
+              <a href="#" disabled class="pybr-button--blue" style="margin-bottom: 15px">
+                Ingressos
+                <strong class="d-block">ESGOTADOS</strong>
+              </a>
+              <a target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdi_0LWcQbpLbr6G8pGUI43aDxrj6hAVU29vwvR88vS4N_r6g/viewform"
+                class="pybr-button--light">
+                Inscrições tutoriais
+              </a>
+              <nav class="social__nav">
+                <ul class="social__nav__menu">
+                  <li class="social__nav__menu__item">
+                    <a target="_blank" href="https://www.facebook.com/pythonsul/">
+                      <img height="100%" src="{{ $images }}/2cc6a743c7862f7f61cf701bf74634c1.svg" />
+                    </a>
+                  </li>
+                  <li class="social__nav__menu__item">
+                    <a target="_blank" href="https://twitter.com/pythonsul">
+                      <img height="100%" src="{{ $images }}/92a2580670e714e441c5136815a8322a.svg" />
+                    </a>
+                  </li>
+                  <li class="social__nav__menu__item">
+                    <a target="_blank" href="https://t.me/PythonSulBR">
+                      <img height="100%" src="{{ $images }}/6c9aa092165e88fdedc109248dc3a3b7.svg" />
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="python-logo col-lg-1 d-none d-xl-block">
+            <img src="{{ $images }}/118ad9795678677523c3f8228248df14.svg" width="100%" alt="Python Logo">
+          </div>
+          <div class="footer-note col-12">
+            <p>
+              Python Sul is a non-profit volunteer-driven conference for promoting the open-source Python programming
+              language. It is supported by the Brazilian Python Association (APyB) and by the Python Software Foundation
+              (PSF).
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="{{ $js }}/bundle.js"></script>
+</body>
+
+</html>

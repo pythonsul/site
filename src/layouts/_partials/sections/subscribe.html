@@ -1,0 +1,40 @@
+{{ $currentLang := .Site.Language.Lang }}
+{{ $social := .Site.Data.event.social }}
+{{ $display := slice "telegram" "whatsapp" "instagram" }}
+
+{{/* Render the subscribe section */}}
+
+{{/* Get subscribe section data for current language */}}
+{{ range where .Site.Data.section.subscribe "language" $currentLang }}
+<section class="subscribe-newsletter-section">
+  <div class="section-container">
+    <div class="subscribe-newsletter-section__content subscribe-newsletter-section__content--copy">
+      <div class="subscribe-newsletter-section__text">
+        {{/* Section title */}}
+        <h2>{{ .title | safeHTML }}</h2>
+        {{/* Section description */}}
+        <p>{{ .description | safeHTML }}</p>
+      </div>
+      <div class="subscribe-newsletter-section__social">
+        {{ range $item, $value := $social }}
+          {{ if in $display $item }}
+            {{ $iconPath := printf "svg/icons/%s.svg" $item }}
+            <a
+              class="subscribe-newsletter-section__social-link"
+              href="{{ $value }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="{{ title $item }}"
+            >
+              {{ partial $iconPath }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    <div class="subscribe-newsletter-section__content subscribe-newsletter-section__content--logo">
+      {{ partial "svg/logos/event.svg" }}
+    </div>
+  </div>
+</section>
+{{ end }}

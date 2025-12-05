@@ -1,0 +1,56 @@
+
+$base-font-size: 1rem;
+$px-per-rem: 16px;
+$font-size: $base-font-size;
+$font-title-stack: "Ubuntu", "Roboto", sans-serif;
+$font-body-stack: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", sans-serif;
+
+:root {
+  --font-title: #{$font-title-stack};
+  --font-body: #{$font-body-stack};
+}
+
+@function font-size-from-factor($factor-value) {
+  @return $factor-value * $base-font-size;
+}
+
+@function font-size-from-px($px-value) {
+  @return ($px-value / $px-per-rem) * $base-font-size;
+}
+
+@mixin responsive-font($mobile, $tablet, $desktop) {
+  font-size: $mobile;
+  line-height: 1.2;
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: $mobile;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $tablet;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: $desktop;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    font-size: $desktop;
+  }
+
+  @media (min-width: $breakpoint-2xl) {
+    font-size: $desktop;
+  }
+}
+
+@mixin font-title($weight: 700) {
+  font-family: var(--font-title);
+  font-weight: $weight;
+  letter-spacing: -0.01em;
+}
+
+@mixin font-body($weight: 400) {
+  font-family: var(--font-body);
+  font-weight: $weight;
+  letter-spacing: -0.005em;
+}

@@ -1,0 +1,68 @@
+{
+  "meta": [
+    {
+      "language": "pt-br",
+      "title": "Patrocinadores",
+      "description": "Ajude a fazer da Python Sul 2026 um evento ainda mais incrível!",
+      "footer": {
+      "title": "Quer patrocinar a PySul 2026?",
+      "description": "Junte-se a nós e apoie a maior conferência Python do Sul do Brasil.<br> Diferentes níveis de patrocínio disponíveis."
+      }
+    },
+    {
+      "language": "en",
+      "title": "Sponsors",
+      "description": "Help make Python Sul 2026 an even more amazing event!",
+      "footer": {
+      "title": "Want to sponsor PySul 2026?",
+      "description": "Join us and support the largest Python conference in Southern Brazil.<br> Different sponsorship levels available."
+      }
+    },
+    {
+      "language": "es",
+      "title": "Patrocinadores",
+      "description": "¡Ayudanos a hacer de Python Sul 2026 un evento aún más increíble!",
+      "footer": {
+      "title": "¿Querés patrocinar la PySul 2026?",
+      "description": "Sumate a nosotros y apoyá la mayor conferencia de Python del Sur de Brasil.<br> Distintos niveles de patrocinio disponibles."
+      }
+    }
+  ],
+  "platinum": [],
+  "diamond": [],
+  "gold": [],
+  "silver": [],
+  "bronze": [],
+  "supporters": [
+    {
+      "name": "SENAI",
+      "url": "https://www.senaipr.org.br/londrina-1-9523-69459.shtml",
+      "logo": "/images/sponsors/senai.png",
+      "alt": {
+        "pt-br": "Logo do SENAI - Londrina",
+        "en": "SENAI Logo",
+        "es": "Logo de SENAI"
+      }
+    },
+    {
+      "name": "Cumbuca Dev",
+      "url": "https://cumbuca.dev/",
+      "logo": "/images/sponsors/cumbuca.png",
+      "alt": {
+        "pt-br": "Logo da Cumbuca Dev",
+        "en": "Cumbuca Dev Logo",
+        "es": "Logo de Cumbuca Dev"
+      }
+    },
+    {
+      "name": "Illum",
+      "url": "https://www.instagram.com/illumedesigngraficoeweb/",
+      "logo": "/images/sponsors/illum.png",
+      "alt": {
+        "pt-br": "Logo da Illum Design Gráfico e Web",
+        "en": "Illum Graphic and Web Design Logo",
+        "es": "Logo de Illum Diseño Gráfico y Web"
+      }
+    }
+  ]
+}

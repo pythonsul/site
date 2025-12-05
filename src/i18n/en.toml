@@ -1,0 +1,164 @@
+# English (United States) Translation File
+
+[address]
+other = "Address"
+
+[date]
+other = "Date"
+
+[how_to_get_there]
+other = "How to get there"
+
+[local_map]
+other = "Local Map"
+
+[event_date_format]
+other = "{{ .Start }} - {{ .Finish }} {{ .Month }}, {{ .Year }}"
+
+[past_events]
+other = "Past Editions"
+
+[wayback_title]
+other = "Return to Main Site"
+
+[wayback_banner]
+other = "You are accessing the site of a previous edition of Python Sul. To return to the current site, use the floating button."
+
+[blog_post_date_format]
+other = "{{ .Day }} {{ .Month }} {{ .Year }}"
+
+[know_more_about]
+other = "Know more about"
+
+[site_description]
+other = "PySul is a community dedicated to promoting the use and development of Python in southern Brazil.<br> Join us to learn, share, and grow together in the Python language."
+
+[want_to_contribute]
+other = "Como participar"
+
+[want_to_contribute_description]
+other = "Want to contribute content, improve the site, or help organize the event?<br> Find out how:"
+
+[contribute]
+other = "Contribute"
+
+[code_of_conduct]
+other = "Code of Conduct"
+
+[stay_connected]
+other = "Stay Updated"
+
+[about]
+other = "About"
+
+[categories]
+other = "Categories"
+
+[related_posts]
+other = "Related Posts"
+
+[social_medias]
+other = "Social Media"
+
+[cfp]
+other = "Call for Proposals"
+
+[header_cta]
+other = "Register Now"
+
+[color_mode_system]
+other = "System"
+
+[color_mode_light]
+other = "Light"
+
+[color_mode_dark]
+other = "Dark"
+
+[read_more]
+other = "Read more"
+
+[supporters_section_title]
+other = "Our Supporters"
+
+[supporters_section_description]
+other = "All the groups, communities, events, and institutions that support our event."
+
+[sponsor_tier_silver]
+other = "Sponsors Silver"
+
+[sponsor_tier_bronze]
+other = "Sponsors Bronze"
+
+[keynotes_more_info]
+other = "More details here"
+
+[register_now]
+other = "Register Now"
+
+
+[all_posts]
+other = "All posts"
+
+[schedule_friday_21]
+other = "Friday - 21"
+
+[schedule_saturday_22]
+other = "Saturday - 22"
+
+[schedule_sunday_23]
+other = "Sunday - 23"
+
+[web]
+other = "Web"
+
+[data_science]
+other = "Data Science"
+
+[automation]
+other = "Automation"
+
+[devops]
+other = "DevOps"
+
+[lightning_talks]
+other = "Lightning Talks"
+
+[workshop]
+other = "Workshop"
+
+[lunch]
+other = "Lunch"
+
+[open_source]
+other = "Open Source"
+
+[career]
+other = "Career Development"
+
+[database]
+other = "Databases"
+
+[ai]
+other = "AI and Machine Learning"
+
+[keynote]
+other = "Keynote Talk"
+
+[software_engineering]
+other = "Software Engineering"
+
+[testing]
+other = "Testing and Quality"
+
+[section_schedule_title]
+other = "Schedule"
+
+[section_schedule_description]
+other = "Check out the full schedule of talks, workshops, and activities planned for the event."
+
+[section_speakers_title]
+other = "Speakers"
+
+[section_speakers_description]
+other = "Meet the speakers who will share their knowledge and experiences during the event." 

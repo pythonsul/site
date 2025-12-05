@@ -1,0 +1,46 @@
+{{ $opts := dict 
+  "enableSourceMap" hugo.IsDevelopment
+  "targetPath" "css/main.css"
+  "outputStyle" (cond hugo.IsDevelopment "expanded" "compressed")
+ }}
+
+{{/* Fonts: Process and include custom font styles */}}
+{{- with resources.Get "fonts/fonts.scss" }}
+  {{ $opts := merge $opts (dict "targetPath" "css/fonts.css") }}
+  {{ $fonts := . | toCSS $opts }}
+
+  {{- if hugo.IsDevelopment }}
+    <link rel="stylesheet" href="{{ $fonts.Permalink }}">
+  {{- else }}
+    {{- with $fonts | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{/* Main SCSS: Process and include main stylesheet */}}
+{{- with resources.Get "scss/main.scss" -}}
+  {{ $opts := merge $opts (dict "targetPath" "css/main.css") }}
+  {{ $style := . | toCSS $opts }}
+
+  {{- if hugo.IsDevelopment }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+  {{- else -}}
+    {{- with $style | minify | fingerprint -}}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Custom CSS: Process and include custom overrides */}}
+{{- with resources.Get "custom.css" -}}
+  {{ $css := resources.Get "custom.css" }}
+
+  {{- if hugo.IsDevelopment -}}
+    <link rel="stylesheet" href="{{ $css.Permalink }}">
+  {{- else -}}
+    {{- with . | minify | fingerprint -}}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

@@ -1,0 +1,195 @@
+$layout-primary: map-get($pysul-layout, primary);
+$layout-white: map-get($pysul-layout, white);
+$layout-bg-muted: map-get($pysul-layout, bg-muted);
+
+.card {
+  @include flex-column-start;
+  position: relative;
+  min-height: 100%;
+  height: fit-content;
+  padding: 0;
+  overflow: hidden;
+  background: var(--color-content-card-bg);
+  border-radius: $radius-2;
+  box-shadow: $box-shadow-light;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: $box-shadow-md;
+    transform: translateY(-2px);
+
+    .card-header__title {
+      color: var(--color-accent);
+    }
+
+    .card-footer .read-more {
+      border-color: var(--color-button-border-outline);
+      color: var(--color-button-text-outline-hover);
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    min-height: 100%;
+  }
+}
+
+.card-image {
+  width: 100%;
+  padding-top: var(--image-aspect-ratio, 52.63%);
+  position: relative;
+  overflow: hidden;
+  background: $layout-bg-muted;
+
+  figure,
+  picture,
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+}
+
+.card-header {
+  @include flex-column-start;
+  gap: $space-2;
+  width: 100%;
+  padding: $space-2 $space-4;
+
+  &__meta {
+    @include flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    gap: $space-3;
+    margin-bottom: $space-2;
+    color: var(--color-text-secondary);
+
+    svg {
+      width: $space-4;
+      height: $space-4;
+      stroke: currentColor;
+    }
+
+    .publish-date,
+    .reading-time,
+    .author,
+    time {
+      @include flex-center;
+      gap: $space-1;
+      font-weight: 600;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: var(--color-text-secondary);
+    }
+
+    @media (min-width: $breakpoint-md) {
+      gap: $space-4;
+    }
+  }
+}
+
+.card-title,
+.card-header__title {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  @media (min-width: $breakpoint-xl) {
+    font-size: 1.2rem;
+  }
+}
+
+.card-content {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 0 $space-4 $space-4;
+
+  &__excerpt {
+    line-height: 1.5;
+    margin-bottom: $space-3;
+    color: var(--color-text-description);
+  }
+
+  @media (min-width: $breakpoint-md) {
+    @include flex-column-start;
+  }
+}
+
+.card-footer {
+  width: 100%;
+  padding: $space-3 $space-4;
+  @include flex-center;
+  .read-more {
+    @include flex-center;
+    width: 100%;
+    padding: $space-3;
+    border: 1px solid $layout-primary;
+    background: transparent;
+    color: $layout-primary;
+    border-radius: $radius-2;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+      background-color: $layout-primary;
+      color: $layout-white;
+    }
+  }
+}
+
+.card-badges {
+  position: absolute;
+  top: $space-3;
+  left: $space-3;
+  z-index: 10;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--category-design-text, $white);
+
+  .badge {
+    padding: ($space-1 * 1.5) $space-3;
+    background: var(--color-accent);
+    color: var(--text-on-accent);
+    border-radius: $radius-100;
+    font-weight: 600;
+  }
+}
+
+.card-collapse {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: $space-6;
+  height: $space-6;
+  @include flex-center;
+
+  svg {
+    width: $space-5;
+    height: $space-5;
+    stroke: var(--color-text);
+    transition: transform 0.2s, stroke 0.2s;
+  }
+
+  &.visible {
+    svg {
+      transform: rotate(180deg);
+      stroke: var(--color-accent);
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    display: none;
+  }
+}

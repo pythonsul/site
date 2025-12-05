@@ -1,0 +1,27 @@
+{{/* 
+Shortcode: gif
+Usage:
+  {{< gif src="/images/funny.gif" alt="Funny gif" width="400" >}}
+  {{< gif src="https://media.giphy.com/media/xyz/giphy.gif" alt="From Giphy" link="https://giphy.com/" >}}
+
+Parameters:
+  - src   → (required) path or URL to GIF
+  - alt   → (optional) alt text (accessibility)
+  - width → (optional) width in px or %, default "100%"
+  - link  → (optional) wraps the gif in a clickable <a>
+  - class → (optional) CSS class for styling
+*/}}
+
+{{ $src := .Get "src" }}
+{{ $alt := default "GIF" (.Get "alt") }}
+{{ $width := default "100%" (.Get "width") }}
+{{ $class := default "" (.Get "class") }}
+{{ $link := .Get "link" }}
+
+{{ if $link }}
+  <a href="{{ $link }}" target="_blank" rel="noopener">
+    <img src="{{ $src }}" alt="{{ $alt }}" width="{{ $width }}" class="{{ $class }}">
+  </a>
+{{ else }}
+  <img src="{{ $src }}" alt="{{ $alt }}" width="{{ $width }}" class="{{ $class }}">
+{{ end }}

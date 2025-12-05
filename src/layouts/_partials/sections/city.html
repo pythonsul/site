@@ -1,0 +1,26 @@
+{{ $currentLang := .Site.Language.Lang }}
+
+{{/* Loop through city sections for the current language */}}
+{{ range where .Site.Data.section.city "language" $currentLang }}
+<section class="city section" id="city">
+  <div class="city--heading">
+    <h2 class="section-title">
+      <div class="coffee-icon">
+        {{ partial "svg/logos/coffee.svg" }}
+      </div>
+      {{ .title }}
+    </h2>
+  </div>
+  <div class="section-container city--container">
+    <div class="city--content">
+      <div class="section-description">
+        {{ .description | markdownify }}
+      </div>
+    </div>
+
+    <div class="city--mascot">
+      {{ partial "core/image.html" (dict "src" .image "alt" .imageCaption ) }}
+    </div>
+  </div>
+</section>
+{{ end }}

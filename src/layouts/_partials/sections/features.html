@@ -1,0 +1,43 @@
+{{ $currentLang := .Site.Language.Lang }}
+
+{{/* Loop through features sections for the current language */}}
+{{ range where .Site.Data.section.features "language" $currentLang }}
+<section class="features section" id="about">
+  <div class="section-container features--container">
+    <div class="features--intro">
+      <div class="features--intro-text">
+        {{/* Section title */}}
+        <h2 class="section-title">
+          <div class="coffee-icon">
+            {{ partial "svg/logos/coffee.svg" }}
+          </div> 
+          {{ .title }}
+        </h2>
+
+        {{/* Section description */}}
+        <div class="section-description">
+          {{ .description | markdownify }}
+        </div>
+      </div>
+    </div>
+
+    {{/* Render feature cards */}}
+    <div class="features-cards">
+      {{ range .cards }}
+      <div class="card">
+        <div class="card-head">
+          <div class="icon-box">
+            {{ partial .icon }}
+          </div>
+          <h3 class="card-title">{{ .title }}</h3>
+        </div>
+
+        <p class="card-content">
+          {{ .description }}
+        </p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

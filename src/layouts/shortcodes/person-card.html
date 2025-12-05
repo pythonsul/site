@@ -1,0 +1,21 @@
+{{ if .IsNamedParams }}
+<div class="person-card">
+    <div class="person-card-image">
+        {{ $sourcePath := .Get "src" | default "/images/placeholder.png" }}
+        {{ $alt := .Get "alt" | default "Image placeholder" }}
+
+        {{ partial "core/image.html" (dict "src" $sourcePath "alt" $alt) }}
+    </div>
+    <div class="person-card-info">
+        {{ with .Get "name" }}
+            <h3 class="person-card-name">{{ . }}</h3>
+        {{ end }}
+        {{ with .Get "role" }}
+            <p class="person-card-role">{{ . }}</p>
+        {{ end }}
+        {{ with .Get "bio" }}
+            <p class="person-card-bio">{{ . }}</p>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

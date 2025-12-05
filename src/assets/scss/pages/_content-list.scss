@@ -1,0 +1,130 @@
+@import "./list/pagination";
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  align-items: stretch;
+  gap: $space-8;
+
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+}
+
+.content-list-page {
+  .page-header {
+    @include flex-center;
+    @include responsive-container;
+    padding-block: $space-10;
+    background-color: var(--color-content-list-header);
+    color: var(--color-content-list-text);
+
+    &__container {
+      @include flex-column-center;
+      text-align: center;
+      max-width: 48rem;
+    }
+
+    &__title {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    &__description {
+      margin: 0 auto;
+    }
+  }
+
+  .search-filter {
+    @include responsive-container;
+    padding-block: $space-8;
+
+    &__wrapper {
+      @include flex-column-start;
+      gap: $space-6;
+
+      @media (min-width: $breakpoint-lg) {
+        flex-direction: row;
+      }
+    }
+
+    &__search-bar {
+      @include flex-center;
+      position: relative;
+      flex: 1;
+      max-width: 28rem;
+      width: 100%;
+
+      svg {
+        position: absolute;
+        left: $space-3;
+        height: $space-3 * 1.5;
+        width: $space-3 * 1.5;
+        stroke: currentColor;
+      }
+    }
+
+    &__category-filter {
+      @include flex-center;
+      gap: $space-2;
+    }
+
+    &__filter-label {
+      @include flex-center;
+      gap: $space-2;
+      color: var(--color-content-list-filter-label);
+    }
+
+    &__filter-icon {
+      height: $space-3 * 1.5;
+      width: $space-3 * 1.5;
+    }
+
+    &__filter-text {
+      font-weight: 600;
+    }
+
+    &__category-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $space-2;
+
+      .btn {
+        border-radius: $radius-100;
+        padding: $space-2 $space-4;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .all-posts {
+    @include responsive-container;
+    margin-bottom: $space-11;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: $space-8;
+
+      @media (min-width: $breakpoint-lg) {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &__title {
+        font-weight: 700;
+        color: var(--color-content-list-title);
+      }
+
+      &__count {
+        color: var(--color-content-list-count);
+      }
+    }
+  }
+}

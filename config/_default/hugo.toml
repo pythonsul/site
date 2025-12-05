@@ -1,0 +1,38 @@
+baseURL = 'https://sul.python.org.br/'
+title = 'Python Sul 2026 - Londrina, PR'
+
+# Language configuration
+defaultContentLanguage = "pt-br"
+defaultContentLanguageInSubdir = false
+disableDefaultLanguageRedirect = true
+
+# Site configuration
+enableRobotsTXT = true
+
+ignoreLogs = ['warning-goldmark-raw-html']
+
+# sitemap configuration
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+
+# Output formats configuration
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML"]
+  rss = ["RSS"]
+
+# Search index configuration
+[outputformats.json]
+  basename = "index"
+  isPaintext = true
+  mediaType = "application/json"
+  notAlternative = true
+
+
+# Permalinks configuration
+[permalinks]
+  post = "/blog/:slug/"
+  page = "/:slug/"
+  section = "/:section/"

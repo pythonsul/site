@@ -1,0 +1,21 @@
+{{/* Assign the current section id to $id */}}
+{{ $id := .id }}
+
+{{/* Iterate over the menu items */}}
+{{ range .menu }}
+  {{/* Check if the menu item's id matches the current section id */}}
+  {{ if eq .id $id }}
+    {{/* Render the section title */}}
+    <h3>{{ .title }}</h3>
+    <ul>
+      {{/* Iterate over the items in the matched menu section */}}
+      {{ range .items }}
+        <li>
+          <a href="{{ .url }}" {{ if .external }}target="_blank" rel="noopener noreferrer"{{ end }}>
+            {{ .title }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+{{ end }}

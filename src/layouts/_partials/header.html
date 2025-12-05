@@ -1,0 +1,97 @@
+{{/* Initialize current page variable */}}
+{{ $currentPage := . }}
+{{ $currentLang := .Site.Language.Lang }}
+
+<header class="main-header">
+  <div class="main-header__nav-container">
+    {{/* Mobile menu toggle button */}}
+    <button id="mobile-menu-button" class="mobile-menu--toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle Mobile Menu">
+      {{ partial "svg/icons/menu.svg" }}
+    </button>
+    {{/* Desktop navigation menu */}}
+    <nav class="desktop-menu--content" aria-label="Main Desktop Navigation">
+      <div class="desktop-menu--wrapper">
+        {{/* Site logo linking to homepage */}}
+        <a href="{{ .Site.Home.RelPermalink }}" class="logo" title="{{ .Site.Title }}" aria-label="Home">
+          {{/* Show event logo or name */}}
+          {{ partial "svg/logos/event.svg" }}
+        </a>
+        <ul class="desktop-menu--links">
+          {{/* Render main navigation links with active state */}}
+          {{ range .Site.Menus.main }}
+          {{ $isActive := eq $currentPage.RelPermalink .URL }}
+          <li>
+            <a href="{{ .URL | absLangURL }}" class="{{ if $isActive }} active{{ end }}" aria-current="{{ if $isActive }}page{{ else }}false{{ end }}">
+              {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="desktop-menu--cta-options">
+        {{/* Call to action button for subscription */}}
+        {{ $ctaString := site.Data.event.cta.string }}
+        {{ $ctaLink := site.Data.event.cta.link }}
+        <a variant="button" class="btn" href="{{ $ctaLink }}?lang={{ $currentLang }}" target="_blank" rel="noopener">
+          {{ T $ctaString | safeHTML }}
+        </a>
+        <div class="main-header__options">
+          <div class="language-switcher dropdown" data-event-listener="dropdown">
+            {{/* Language switcher dropdown */}}
+            <button class="language-switcher__toggle dropdown-toggle ghost" id="language-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select Language">
+              {{ $flag := printf "svg/flags/%s.svg" $currentLang }}
+              {{ partial $flag }}
+            </button>
+            <div class="dropdown-menu language-switcher__menu" role="menu" aria-labelledby="language-toggle">
+              {{ range $.Site.Home.AllTranslations }}
+                <button class="language-switcher__item ghost" role="menuitem" data-event-listener="go-to-translated-page" data-lang="{{ .Language.Lang }}">
+                  {{ $flag := printf "svg/flags/%s.svg" .Language.Lang }}
+                  {{ partial $flag }}
+                  {{ .Language.LanguageName }}
+                </button>
+              {{ end }}
+            </div>
+          </div>
+          <!--div class="color-mode dropdown" data-event-listener="dropdown">
+            {{/* Color mode switcher dropdown */}}
+            <button class="color-mode__toggle dropdown-toggle ghost system" id="color-mode-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select Color Mode">
+              <div class="icon-box">
+                {{ partial "svg/icons/sun-moon.svg" }}
+                {{ partial "svg/icons/moon.svg" }}
+                {{ partial "svg/icons/sun.svg" }}
+              </div>
+            </button>
+            <div class="dropdown-menu color-mode__menu" role="menu" aria-labelledby="color-mode-toggle">
+              <button class="color-mode__item ghost system" data-event-listener="color-mode" data-mode="system" role="menuitem">
+                <div class="icon-box"></div>
+                <span>{{ T "color_mode_system" }}</span>
+              </button>
+              <button class="color-mode__item ghost dark" data-event-listener="color-mode" data-mode="dark" role="menuitem">
+                <div class="icon-box"></div>
+                <span>{{ T "color_mode_dark" }}</span>
+              </button>
+              <button class="color-mode__item ghost light" data-event-listener="color-mode" data-mode="light" role="menuitem">
+                <div class="icon-box"></div>
+                <span>{{ T "color_mode_light" }}</span>
+              </button>
+            </div>
+          </div -->
+        </div>
+      </div>
+    </nav>
+    {{/* Mobile navigation menu */}}
+    <nav id="mobile-menu" class="mobile-menu--content" aria-label="Main Mobile Navigation">
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}" variant="link">
+        {{ .Name }}
+      </a>
+      {{ end }}
+      {{/* Call to action button for subscription */}}
+      {{ $ctaString := site.Data.event.cta.string }}
+      {{ $ctaLink := site.Data.event.cta.link }}
+      <a variant="button" class="btn" href="{{ $ctaLink }}" target="_blank" rel="noopener">
+        {{ T $ctaString | safeHTML }}
+      </a>
+    </nav>
+  </div>
+</header>

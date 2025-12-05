@@ -1,0 +1,66 @@
+{{ $currentLang := .Site.Language.Lang }}
+{{ $eventData := .Site.Data.event }}
+
+{{ range where .Site.Data.section.buyticket "language" $currentLang }}
+<section class="buy-ticket" aria-labelledby="buy-ticket-title" id="buy-a-ticket">
+  <div class="buy-ticket__container">
+    <div class="buy-ticket__intro">
+      {{ with .badge }}
+        <span class="buy-ticket__badge">{{ . }}</span>
+      {{ end }}
+      <h2 id="buy-ticket-title" class="buy-ticket__title">
+        {{ .title }}
+      </h2>
+      <p class="buy-ticket__description">
+        {{ .description }}
+      </p>
+      <div class="buy-ticket__actions">
+        {{ with .cta }}
+          <a
+            class="btn accent buy-ticket__cta"
+            href="{{ with .link }}{{ . }}{{ else }}{{ $eventData.cta.link }}{{ end }}"
+            target="_blank"
+            rel="noopener"
+          >
+            {{ .label }}
+            {{ partial "svg/icons/external-link.svg" }}
+          </a>
+        {{ else }}
+          <a
+            class="btn accent buy-ticket__cta"
+            href="{{ $eventData.cta.link }}"
+            target="_blank"
+            rel="noopener"
+          >
+            Buy ticket
+          </a>
+        {{ end }}
+        {{ with .helper }}
+          <p class="buy-ticket__helper">{{ . }}</p>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="buy-ticket__aside">
+      {{ with .schedule }}
+        <article class="buy-ticket__card buy-ticket__card--schedule">
+          <h3 class="buy-ticket__card-title">{{ .title }}</h3>
+          <p class="buy-ticket__card-description">{{ .description | safeHTML }}</p>
+        </article>
+      {{ end }}
+
+      <div class="buy-ticket__tickets" role="list">
+        {{ range .tickets }}
+          <article class="ticket-card" role="listitem">
+            <div class="ticket-card__header">
+              <h3 class="ticket-card__name">{{ .name }}</h3>
+              {{ with .tag }}<span class="ticket-card__tag">{{ . }}</span>{{ end }}
+            </div>
+            <p class="ticket-card__description">{{ .description }}</p>
+          </article>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,299 @@
+a,
+a[type="link"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  padding: $space-3 $space-4;
+
+  color: var(--color-link);
+  font-weight: 500;
+
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+a:hover,
+a[type="link"]:hover {
+  color: var(--color-link-hover);
+}
+
+a.active,
+a[type="link"].active {
+  color: var(--color-link-active);
+  background-color: var(--color-link-active-bg);
+  border-radius: $radius-3;
+}
+
+
+
+
+
+
+button,
+a[type="button"],
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  padding: $space-3 $space-4;
+
+  white-space: nowrap;
+  border-radius: $radius-3;
+
+  @include font-body(600);
+  font-size: font-size-from-px(18px);
+  text-decoration: none;
+  text-align: center;
+
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+
+  cursor: pointer;
+
+  outline: none;
+  box-shadow: $box-shadow-md;
+
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+
+
+
+
+button svg,
+a[type="button"] svg,
+a.btn svg {
+  stroke: currentColor;
+  pointer-events: none;
+  width: $space-4;
+  height: $space-4;
+  flex-shrink: 0;
+}
+
+
+
+
+
+button:focus-visible,
+a[type="button"]:focus-visible,
+a.btn:focus-visible {
+  outline: none;
+  box-shadow: $box-shadow-md-hover;
+}
+
+
+
+
+
+button:disabled,
+a[type="button"]:disabled,
+a.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+
+
+
+
+button:hover,
+a[type="button"]:hover,
+a.btn:hover {
+  background-color: var(--color-button-bg-hover);
+  color: var(--color-button-text-hover);
+}
+
+button:hover svg,
+a[type="button"]:hover svg,
+a.btn:hover svg {
+  stroke: currentColor;
+}
+
+
+
+
+
+
+
+button.accent,
+a[type="button"].accent,
+a.btn.accent {
+  background-color: var(--color-button-bg-accent);
+  color: var(--color-button-text-accent);
+}
+
+button.accent:hover,
+a[type="button"].accent:hover,
+a.btn.accent:hover {
+  background-color: var(--color-button-bg-accent-hover);
+  color: var(--color-button-text-accent-hover);
+}
+
+button.accent svg,
+a[type="button"].accent svg,
+a.btn.accent svg,
+button.accent:hover svg,
+a[type="button"].accent:hover svg,
+a.btn.accent:hover svg {
+  stroke: currentColor;
+}
+
+
+
+button.outline,
+a[type="button"].outline,
+a.btn.outline {
+  color: var(--color-button-text-outline);
+  background-color: transparent;
+  border: 2px solid var(--color-button-border-outline);
+  box-shadow: none;
+
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+button.outline svg,
+a[type="button"].outline svg,
+a.btn.outline svg {
+  stroke: currentColor;
+  transition: stroke 0.2s ease-in-out;
+}
+
+button.outline:hover,
+a[type="button"].outline:hover,
+a.btn.outline:hover {
+  background-color: var(--color-button-bg-outline-hover);
+  border-color: var(--color-button-bg-outline-hover);
+  color: var(--color-button-text-outline-hover);
+}
+
+button.outline:hover svg,
+a[type="button"].outline:hover svg,
+a.btn.outline:hover svg {
+  stroke: currentColor;
+}
+
+
+
+button.outline.inverted,
+a[type="button"].outline.inverted,
+a.btn.outline.inverted {
+  color: var(--color-button-text-outline-inverted);
+  border-color: var(--color-button-border-outline-inverted);
+  background-color: var(--color-button-bg-outline-inverted);
+}
+
+button.outline.inverted svg,
+a[type="button"].outline.inverted svg,
+a.btn.outline.inverted svg {
+  stroke: currentColor;
+}
+
+button.outline.inverted:hover,
+a[type="button"].outline.inverted:hover,
+a.btn.outline.inverted:hover {
+  background-color: var(--color-button-bg-outline-inverted-hover);
+  border-color: var(--color-button-border-outline-inverted-hover);
+  color: var(--color-button-text-outline-inverted-hover);
+}
+
+button.outline.inverted:hover svg,
+a[type="button"].outline.inverted:hover svg,
+a.btn.outline.inverted:hover svg {
+  stroke: currentColor;
+}
+
+
+
+button.destructive,
+a[type="button"].destructive,
+a.btn.destructive {
+  background-color: var(--color-button-bg-destructive);
+}
+
+button.destructive:hover,
+a[type="button"].destructive:hover,
+a.btn.destructive:hover {
+  background-color: var(--color-button-bg-destructive-hover);
+}
+
+
+
+button.secondary,
+a[type="button"].secondary,
+a.btn.secondary {
+  background-color: var(--color-button-bg-secondary);
+  color: var(--color-button-text-secondary);
+}
+
+button.secondary:hover,
+a[type="button"].secondary:hover,
+a.btn.secondary:hover {
+  background-color: var(--color-button-bg-secondary-hover);
+}
+
+
+
+button.ghost,
+a[type="button"].ghost,
+a.btn.ghost {
+  background-color: var(--color-button-bg-ghost);
+  color: var(--color-button-text-ghost);
+  box-shadow: none;
+}
+
+button.ghost svg,
+a[type="button"].ghost svg,
+a.btn.ghost svg {
+  stroke: currentColor;
+}
+
+button.ghost:hover,
+a[type="button"].ghost:hover,
+a.btn.ghost:hover,
+button.ghost:active,
+a[type="button"].ghost:active,
+a.btn.ghost:active {
+  background-color: var(--color-button-bg-ghost-hover);
+  color: var(--color-button-text-ghost-hover);
+}
+
+button.ghost:hover svg,
+a[type="button"].ghost:hover svg,
+a.btn.ghost:hover svg,
+button.ghost:active svg,
+a[type="button"].ghost:active svg,
+a.btn.ghost:active svg {
+  stroke: currentColor;
+}
+
+button.ghost>*,
+a[type="button"].ghost>*,
+a.btn.ghost>* {
+  color: var(--color-button-text-ghost);
+}
+
+
+
+button.on-accent,
+a[type="button"].on-accent,
+a.btn.on-accent {
+  background-color: var(--color-button-bg-on-accent);
+  color: var(--color-button-text-on-accent);
+}
+
+button.on-accent:hover,
+a[type="button"].on-accent:hover,
+a.btn.on-accent:hover {
+  background-color: var(--color-button-bg-on-accent-hover);
+  color: var(--color-button-text-on-accent-hover);
+}
+
+button.on-accent svg,
+a[type="button"].on-accent svg,
+a.btn.on-accent svg,
+button.on-accent:hover svg,
+a[type="button"].on-accent:hover svg,
+a.btn.on-accent:hover svg {
+  stroke: currentColor;
+}

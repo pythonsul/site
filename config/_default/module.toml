@@ -1,0 +1,62 @@
+[[mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'content/data'
+  target = 'data'
+[[mounts]]
+  source = 'content/images'
+  target = 'assets/images'
+
+## mounts markdown content for each language
+[[mounts]]
+  lang = 'pt-br'
+  defaultContentLanguageInSubdir = false
+  source = 'content/markdown/portuguese'
+  target = 'content'
+[[mounts]]
+  disableWatch = false
+  lang = 'es'
+  source = 'content/markdown/spanish'
+  target = 'content'
+[[mounts]]
+  disableWatch = false
+  lang = 'en'
+  source = 'content/markdown/english'
+  target = 'content'
+
+## mounts website layouts and templates
+[[mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'src/layouts'
+  target = 'layouts'
+[[mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'src/i18n'
+  target = 'i18n'
+[[mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'src/archetypes'
+  target = 'archetypes'
+[[mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'src/assets'
+  target = 'assets'
+[[mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'src/static'
+  target = 'static'
+
+## mounts static fonts
+[[mounts]]
+  source = 'src/static/fonts'
+  target = 'assets/fonts'
+
+## mounts 2017 sass
+[[mounts]]
+  source = 'src/static/anos-anteriores/2017/sass'
+  target = 'assets/2017/sass'

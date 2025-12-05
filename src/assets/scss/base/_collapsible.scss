@@ -1,0 +1,13 @@
+.collapse {
+  &-content {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    max-height: 0;
+
+    &.visible {
+      display: block;
+      max-height: 500px;
+    }
+  }
+}

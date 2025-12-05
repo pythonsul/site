@@ -1,0 +1,68 @@
+[
+  {
+    "language": "pt-br",
+    "title": "O que esperar da PySul 2026?",
+    "description": "Prepare-se para o que temos de conteúdo, palestras e networking!",
+    "cards": [
+      {
+        "title": "Palestras sobre Python e IA",
+        "description": "Aprenda com especialistas sobre as últimas tendências em Python e Inteligência Artificial.",
+        "icon": "svg/icons/lightbulb.svg"
+      },
+      {
+        "title": "Networking com Profissionais",
+        "description": "Conecte-se com outros profissionais e entusiastas de Python.",
+        "icon": "svg/icons/code-xml.svg"
+      },
+      {
+        "title": "Workshops Práticos",
+        "description": "Participe de workshops práticos para aprimorar suas habilidades em Python.",
+        "icon": "svg/icons/code-xml.svg"
+      }
+    ]
+  },
+  {
+    "language": "en",
+    "title": "What to expect at PySul 2026?",
+    "description": "Get ready for our content, talks, and networking opportunities!",
+    "cards": [
+      {
+        "title": "Talks on Python and AI",
+        "description": "Learn from experts about the latest trends in Python and Artificial Intelligence.",
+        "icon": "svg/icons/lightbulb.svg"
+      },
+      {
+        "title": "Networking with Professionals",
+        "description": "Connect with other Python professionals and enthusiasts.",
+        "icon": "svg/icons/code-xml.svg"
+      },
+      {
+        "title": "Hands-on Workshops",
+        "description": "Join practical workshops to sharpen your Python skills.",
+        "icon": "svg/icons/code-xml.svg"
+      }
+    ]
+  },
+  {
+    "language": "es",
+    "title": "¿Qué esperar de PySul 2026?",
+    "description": "Preparáte para nuestro contenido, charlas y oportunidades para hacer networking!",
+    "cards": [
+      {
+        "title": "Charlas sobre Python e IA",
+        "description": "Aprendé de especialistas sobre las últimas tendencias en Python e Inteligencia Artificial.",
+        "icon": "svg/icons/lightbulb.svg"
+      },
+      {
+        "title": "Networking con profesionales",
+        "description": "Conectate con otros profesionales y entusiastas de Python.",
+        "icon": "svg/icons/code-xml.svg"
+      },
+      {
+        "title": "Workshops prácticos",
+        "description": "Participá en talleres prácticos para mejorar tus habilidades en Python.",
+        "icon": "svg/icons/code-xml.svg"
+      }
+    ]
+  }
+]

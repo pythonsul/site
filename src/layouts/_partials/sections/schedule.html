@@ -1,0 +1,91 @@
+{{ $content := .Site.Data.section.schedule }}
+
+<section id="schedule" class="schedule">
+    <div class="container">
+        <div class="schedule-header">
+            <h2 class="schedule-title">
+                {{ T "section_schedule_title" }}
+            </h2>
+            <p class="schedule-description">
+                {{ T "section_schedule_description" }}
+            </p>
+            <!--div class="schedule-filter">
+                <label for="schedule-filter-select" class="visually-hidden">{{ T "section_schedule_filter_label" }}</label>
+                <select id="schedule-filter-select" class="schedule-filter-select">
+                    <option value="all">{{ T "section_schedule_filter_all" }}</option>
+                    <option value="keynote">{{ T "keynote" }}</option>
+                    <option value="web">{{ T "web" }}</option>
+                    <option value="data-science">{{ T "data_science" }}</option>
+                    <option value="devops">{{ T "devops" }}</option>
+                    <option value="automation">{{ T "automation" }}</option>
+                    <option value="testing">{{ T "testing" }}</option>
+                    <option value="security">{{ T "security" }}</option>
+                </select>
+            </div-->
+        </div>
+        <div class="schedule-content">
+            <div class="header">
+                {{ range $content }}
+                <button class="schedule-tab-button" data-schedule-tab-target="{{ .day }}">
+                    {{ T (printf "schedule_%s" .day) }}
+                </button>
+                {{ end }}
+            </div>
+            <div class="body">
+                {{ range $content }}
+                <div class="schedule-tab-content {{ if eq .day "friday_21" }} active {{ end }}" data-schedule-tab-content="{{ .day }}">
+                    {{ range .sessions }}
+                    <div class="schedule-event {{ if .category }}category-{{ .category }}{{ end }} {{ if .type }}type-{{ .type }}{{ end }}">
+                        <div class="event-category">
+                            {{ if .category }}
+                                <span class="category-label category-{{ .category }}">
+                                    {{ T (printf .category) }}
+                                </span>
+                            {{ end }}
+                        </div>
+                        <div class="event-body">
+                            <h3 class="event-title">{{ .title }}</h3>
+                            {{- $speakers := slice -}}
+                            {{- with .speaker }}
+                                {{- if reflect.IsSlice . }}
+                                    {{- range . }}
+                                        {{- if reflect.IsMap . }}
+                                            {{- $speakers = $speakers | append . }}
+                                        {{- else }}
+                                            {{- $speakers = $speakers | append (dict "name" .) }}
+                                        {{- end }}
+                                    {{- end }}
+                                {{- else if reflect.IsMap . }}
+                                    {{- $speakers = $speakers | append . }}
+                                {{- else }}
+                                    {{- $speakers = $speakers | append (dict "name" .) }}
+                                {{- end }}
+                            {{- end }}
+
+                            <div class="event-time">
+                                {{ partial "svg/icons/clock.svg" }}
+                                <time class="start">{{ .start }}</time> – <time class="end">{{ .end }}</time>
+                                <span class="duration">({{ .duration }})</span>
+                            </div>
+
+                            {{ if gt (len $speakers) 0 }}
+                            <div class="event-speaker-container">
+                                {{- range $index, $speaker := $speakers }}
+                                <div class="event-speaker">
+                                    {{- with $speaker.photo }}
+                                    {{ partial "core/image.html" (dict "src" . "alt" $speaker.name "avatar" true "className" "speaker-photo") }}
+                                    {{- end }}
+                                    <span class="speaker-name">{{ $speaker.name }}</span>
+                                </div>
+                                {{- end }}
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

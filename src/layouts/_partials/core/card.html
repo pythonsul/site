@@ -1,0 +1,78 @@
+{{/* Card Layout Partial for Blog Posts */}}
+
+{{ $image := .Params.image | default "/images/placeholder.jpg" }}
+{{ $imageAlt := .Title | plainify }}
+{{ $author := .Params.author | default .Site.Params.defaultAuthor }}
+{{ $categories := .Params.categories }}
+
+{{ $date := dict
+  "Day"  (dateFormat "02" (time .Date))
+  "Month"  (title (dateFormat "January" (time .Date)))
+  "Year"   (dateFormat "2006" (time .Date))
+}}
+
+<article>
+  <a class="card" href="{{ .Permalink }}" title="{{ .Title | safeHTML }}">
+    {{/* Card main image and category badges */}}
+    <div class="card-image">
+      {{ partial "core/image.html" (dict "src" $image "alt" $imageAlt) }}
+
+      <div class="card-badges">
+        {{ if $categories }}
+          {{ range $categories }}
+            <span class="badge">{{ . | safeHTML }}</span>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="card-header">
+      <div class="card-header__meta">
+        {{/* Publish date with icon */}}
+        <div class="publish-date">
+          <time datetime='{{ .Date.Format "2006-01-02" }}'>
+            {{ partial "svg/icons/calendar.svg" }}
+            {{ i18n "blog_post_date_format" $date | safeHTML }}
+          </time>
+        </div>
+
+        {{/* Reading time with icon */}}
+        <div class="reading-time">
+          {{ partial "svg/icons/clock.svg" }}
+          <span>{{ .ReadingTime }} minuto{{ if gt .ReadingTime 1 }}s{{ end }}</span>
+        </div>
+
+        {{/* Author with icon */}}
+        <div class="author">
+          {{ partial "svg/icons/user-round.svg" }}
+          <span>{{ $author }}</span>
+        </div>
+      </div>
+
+      {{/* Card title */}}
+      <h3 class="card-header__title">
+        {{ .Title | safeHTML }}
+      </h3>
+    </div>
+
+    <div class="card-content">
+      <div class="card-content__excerpt">
+        {{/* Excerpt: Description, Summary, or Content */}}
+        {{ if .Description }}
+        {{ .Description | plainify | truncate 150 }}
+        {{ else if .Summary }}
+        {{ .Summary | plainify | truncate 150 }}
+        {{ else }}
+        {{ .Content | plainify | truncate 150 }}
+        {{ end }}
+      </div>
+    </div>
+
+    {{/* Read more footer */}}
+    <div class="card-footer">
+      <span class="read-more">
+        {{ T "read_more" }}
+      </span>
+    </div>
+  </a>
+</article>

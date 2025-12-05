@@ -1,0 +1,49 @@
+.person-card {
+  @include flex-center-align-start;
+  gap: $space-6;
+  max-width: 40rem;
+  padding: $space-4 0;
+
+
+  .person-card-name {
+    font-weight: 700;
+    color: var(--color-text);
+    margin-top: 0 !important;
+    margin-bottom: $space-1 !important;
+    text-align: left;
+  }
+
+  .person-card-role {
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-top: 0 !important;
+  }
+
+  .person-card-bio {
+    color: var(--color-text-secondary);
+    margin-top: $space-2 !important;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  picture {
+    display: flex;
+    height: 10rem;
+    width: 10rem;
+    overflow: hidden;
+  }
+
+  img {
+    margin: 0 !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  figcaption {
+    font-size: 0.875rem;
+    display: none;
+  }
+}

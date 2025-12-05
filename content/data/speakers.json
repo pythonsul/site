@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Alex Example",
+        "title": "Software Engineer | Speaker",
+        "bio": "Experienced software engineer specializing in backend systems and developer tooling. Uses this mock profile for demonstration and testing purposes only.",
+        "photo": "images/speakers/placeholder-01.jpg",
+        "talk_title": "Building Reliable Services: Patterns and Practices",
+        "talk_abstract": "An overview of practical patterns for designing and operating reliable backend services, including testing, monitoring, and incremental improvement strategies.",
+        "external_links": {
+            "linkedin": "https://example.com/alex-example",
+            "github": "https://example.com/alex-example",
+            "site": "https://example.com"
+        },
+        "mock": true
+    },
+    {
+        "name": "Jordan Sample",
+        "title": "Data Scientist | ML Practitioner",
+        "bio": "Data scientist focused on applied machine learning and reproducible analytics. This profile is synthetic and intended for informational use only.",
+        "photo": "images/speakers/placeholder-02.jpg",
+        "talk_title": "Applied Machine Learning Workflows",
+        "talk_abstract": "Covers end-to-end ML workflows: data preparation, model evaluation, deployment considerations, and monitoring in production environments.",
+        "external_links": {
+            "linkedin": "https://example.com/jordan-sample",
+            "github": "https://example.com/jordan-sample",
+            "site": "https://example.com"
+        },
+        "mock": true
+    },
+    {
+        "name": "Taylor Mock",
+        "title": "Developer Advocate | Technical Writer",
+        "bio": "Technical communicator and developer advocate who creates guides and tutorials for software platforms. Mock profile for documentation and testing.",
+        "photo": "images/speakers/placeholder-03.jpg",
+        "talk_title": "Creating Effective Technical Documentation",
+        "talk_abstract": "Guidelines and best practices for producing clear, useful technical documentation that helps users accomplish tasks and learn new tools.",
+        "external_links": {
+            "linkedin": "https://example.com/taylor-mock",
+            "github": "https://example.com/taylor-mock",
+            "site": "https://example.com"
+        },
+        "mock": true
+    },
+    {
+        "name": "Casey Demo",
+        "title": "DevOps Engineer | Site Reliability",
+        "bio": "Practitioner of infrastructure automation and reliability engineering. This entry is generated mock data for informational purposes only.",
+        "photo": "images/speakers/placeholder-04.jpg",
+        "talk_title": "Infrastructure as Code: Practical Approaches",
+        "talk_abstract": "Explores strategies for managing infrastructure using code, including versioning, testing, and safe deployment practices.",
+        "external_links": {
+            "linkedin": "https://example.com/casey-demo",
+            "github": "https://example.com/casey-demo",
+            "site": "https://example.com"
+        },
+        "mock": true
+    }
+]

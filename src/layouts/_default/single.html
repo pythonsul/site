@@ -1,0 +1,187 @@
+{{ define "main" }}
+
+{{ $date := dict
+  "Day" (dateFormat "02" (time .Date))
+  "Month" (title (dateFormat "January" (time .Date)))
+  "Year" (dateFormat "2006" (time .Date))
+}}
+
+<main class="single">
+  {{/* Page Header with Featured Image */}}
+  <!--section class="page-header">
+    {{ $image := .Params.image | default "/images/placeholder.jpg" }}
+    {{ $imageAlt := .Title | plainify }}
+    <div class="featured-image">
+      {{ partial "core/image.html" (dict "src" $image "alt" $imageAlt) }}
+    </div>
+  </section-->
+
+  <div class="hidden" data-content-key="{{ .Params.key }}"></div>
+
+  <article class="article">
+    <div class="article-wrapper">
+      <div class="article-content">
+        {{/* Article Header: Title, Description, Meta */}}
+        <header class="article-header">
+          <h1 class="article-title">
+            {{ .Title | safeHTML }}
+          </h1>
+          <p class="article-description">
+            {{ .Description | safeHTML }}
+          </p>
+
+          {{ if .Params.author }}
+          <div class="article-meta">
+            <span class="meta-item">
+              {{ $author := .Params.author | default .Site.Params.defaultAuthor }}
+              {{ $avatar := .Params.avatar | default (printf "images/authors/%s.png" (lower (replace $author " " "-"))) }}
+
+              <div class="meta__avatar">
+                {{/* Author Avatar */}}
+                {{ partial "core/image.html" (dict "src" $avatar "alt" $author "avatar" true) }}
+              </div>
+              <div class="wrapper">
+                {{/* Author Name */}}
+                <span class="meta__author">{{ $author }}</span>
+                {{/* Publication Date */}}
+                <span class="meta-date">
+                  {{ partial "svg/icons/calendar.svg" }}
+                  <time datetime="{{ .Date.Format " 2006-01-02" }}">
+                    {{ i18n "blog_post_date_format" $date | safeHTML }}
+                  </time>
+                </span>
+              </div>
+            </span>
+            {{/* Article Categories as Tags */}}
+            {{ with .Params.Categories }}
+            <ul class="article-tags">
+              {{ range . }}
+              <li class="tag tag--{{ . | urlize }}">
+                {{ partial "svg/icons/tag.svg" }} {{ . }}
+              </li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </div>
+          {{ end}}
+
+        </header>
+
+        {{/* Main Post Content */}}
+        <div class="post-content">
+          {{ .Content | safeHTML }}
+        </div>
+
+        {{/* Article Footer: Share Buttons */}}
+        <footer class="article-footer">
+          <div class="share-buttons">
+            <span class="share-buttons__label">Compartilhar:</span>
+            <div class="share-buttons__list">
+              {{/* LinkedIn Share */}}
+              <a class="btn outline" target="_blank"
+                href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | urlize }}">
+                LinkedIn
+                {{ partial "svg/icons/external-link.svg" }}
+              </a>
+              {{/* Facebook Share */}}
+              <a class="btn outline" target="_blank"
+                href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlize }}">
+                Facebook
+                {{ partial "svg/icons/external-link.svg" }}
+              </a>
+              {{/* Copy Link Button */}}
+              <button class="btn outline js-copy-link" data-link="{{ .Permalink | urlize }}">
+                Copiar Link
+                
+              </button>
+            </div>
+          </div>
+        </footer>
+      </div>
+      {{/* Sidebar with Community Info, Participation, News, and Categories */}}
+      <aside class="article-sidebar">
+        <div class="sidebar__section">
+          <h4 class="sidebar__title">
+            {{ T "know_more_about" | safeHTML }}
+          </h4>
+          <p class="sidebar__description">
+            {{ T "site_description" | safeHTML }}
+          </p>
+          <a href="/contribuir" class="sidebar__link">
+            {{ T "about" | safeHTML }}
+            {{ partial "svg/icons/external-link.svg" }}
+          </a>
+        </div>
+        <div class="sidebar__section">
+          <h4 class="sidebar__title">
+            {{ T "want_to_contribute" | safeHTML }}
+          </h4>
+          <p class="sidebar__description">
+            {{ T "want_to_contribute_description" | safeHTML }}
+          </p>
+          <a href="/codigo-de-conduta/" class="sidebar__link">
+            {{ T "code_of_conduct" | safeHTML }}
+            {{ partial "svg/icons/external-link.svg" }}
+          </a>
+          <a href="/contribuir" class="sidebar__link">
+            {{ T "contribute" | safeHTML }}
+            {{ partial "svg/icons/external-link.svg" }}
+          </a>
+        </div>
+        <div class="sidebar__section">
+          <h4 class="sidebar__title">
+            {{ T "stay_connected" | safeHTML }}
+          </h4>
+          <ul class="sidebar__categories">
+            {{ range $name, $value := .Site.Data.event.social }}
+              <li class="sidebar__category">
+                <a href="{{ $value }}" target="_blank" rel="noopener noreferrer" class="sidebar__link">
+                  {{ title ($name | safeHTML) }}
+                  {{ partial "svg/icons/external-link.svg" }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+        <div class="sidebar__section">
+          <h4 class="sidebar__title">
+            {{ T "categories" | safeHTML }}
+          </h4>
+          <ul class="sidebar__categories">
+            {{/* List all site categories */}}
+            {{ range .Site.Taxonomies.categories }}
+            <li class="sidebar__category">
+              <a href="{{ .Page.RelPermalink }}" class="sidebar__link">
+                {{ .Page.Title }}
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </article>
+
+  {{/* Related Posts Section */}}
+  <section class="related-posts">
+    <h2 class="section-title">
+      {{ T "related_posts" | safeHTML }}
+    </h2>
+    <div class="post-grid">
+      {{ range first 2 (where .Site.RegularPages "Section" "blog") }}
+      {{ if ne .Permalink $.Permalink }}
+      <div class="post-card">
+        {{ partial "core/card.html" . }}
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </section>
+
+  {{/* Additional Sections: Subscribe, Location, Sponsors */}}
+  {{ partial "sections/subscribe.html" .}}
+  {{ partial "sections/sponsors.html" . }}
+  {{ partial "sections/supporters.html" . }}
+  {{ partial "sections/location.html" . }}
+</main>
+{{ end }}

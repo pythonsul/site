@@ -1,0 +1,47 @@
+#!/bin/sh
+# Pre-push hook for Hugo site
+# Commit format: type: message
+# Allowed types: feat, fix, docs, style, refactor, test, chore
+
+echo "🚀 Running Hugo pre-push checks..."
+
+# === 1. Run Makefile's check task ===
+if ! make check; then
+    echo "❌ Hugo environment check failed. Push aborted."
+    exit 1
+fi
+
+# === 2. Build site using Makefile ===
+echo "🛠 Building Hugo site..."
+if ! make build; then
+    echo "❌ Hugo build failed. Push aborted."
+    exit 1
+fi
+
+# === 3. Commit message validation ===
+echo "🔍 Validating latest commit message..."
+
+while read local_ref local_sha remote_ref remote_sha
+do
+    # Get the latest commit SHA on the local branch (HEAD)
+    latest_commit="$local_sha"
+    
+    # Get the commit message subject
+    msg=$(git log --format=%s -n 1 "$latest_commit")
+    
+    # Check format: type: message
+    if ! echo "$msg" | grep -Eq '^(feat|fix|docs|style|refactor|test|chore): [a-zA-Z0-9].*'; then
+        echo "❌ Commit message does not follow required format:"
+        echo "   $msg"
+        echo "Expected: <type>: <message>"
+        echo "Allowed types: feat, fix, docs, style, refactor, test, chore"
+        
+        # Uncommit the latest commit but keep changes staged (soft reset)
+        git reset --soft HEAD~1
+        echo "⚠️ Latest commit has been uncommitted. Please fix the commit message and try again."
+        exit 1
+    fi
+done
+
+echo "✅ All checks passed. Pushing..."
+exit 0

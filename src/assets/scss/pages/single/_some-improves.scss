@@ -1,0 +1,69 @@
+.article-content {
+  margin: 0 auto;
+  width: 100%;
+
+  .post-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+}
+
+.share-buttons {
+  margin-top: 0;
+
+  .share-buttons__list {
+    .btn[href*="linkedin" i]:hover {
+      background-color: #0a66c2;
+      border-color: #0a66c2;
+      color: #fff;
+    }
+
+    .btn[href*="facebook" i]:hover {
+      background-color: #1877f2;
+      border-color: #1877f2;
+      color: #fff;
+    }
+
+    .js-copy-link:hover {
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+      color: var(--color-text-on-accent);
+    }
+  }
+}
+
+figure {
+  margin-bottom: $space-6;
+}
+
+figcaption {
+  margin-top: $space-2;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.image-banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 13 / 9;
+  border-radius: $radius-6;
+
+  img {
+    border-radius: $radius-6;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  figcaption {
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    position: absolute;
+    bottom: $space-2;
+    left: $space-4;
+    padding: $space-1 $space-2;
+    border-radius: $radius-3;
+  }
+}

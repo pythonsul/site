@@ -1,0 +1,24 @@
+[[main]]
+name = "Charlas"
+url = "#schedule"
+weight = 1
+
+[[main]]
+name = "Conversaciones"
+url = "#speakers"
+weight = 2
+
+[[main]]
+name = "Patrocinadores"
+url = "#sponsors"
+weight = 3
+
+[[main]]
+name = "Blog"
+url = "#blog"
+weight = 4
+
+[[main]]
+name = "Código de Conducta"
+url = "/codigo-de-conducta/"
+weight = 5

@@ -1,0 +1,145 @@
+{{ define "main" }}
+{{ $listPages := .RegularPagesRecursive }}
+{{ $paginator := .Paginate $listPages }}
+<div class="content-list-page">
+
+  <section class="page-header">
+    <div class="page-header__container">
+      <h1 class="page-header__title">
+        {{ .Title | safeHTML }}
+      </h1>
+      <p class="page-header__description">
+        {{ .Description | safeHTML }}
+      </p>
+    </div>
+  </section>
+
+  <!-- Search and Filter Section -->
+  <section class="search-filter">
+    <div class="search-filter__wrapper">
+      <!-- Search Bar -->
+      <div class="search-filter__search-bar">
+        {{ partial "svg/icons/search.svg" }}
+        <input type="text" placeholder="Buscar posts...">
+      </div>
+
+      <!-- Category Filter -->
+      {{ if ne .Type "past-events" }}
+      <div class="search-filter__category-filter">
+        <div class="search-filter__filter-label">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="search-filter__filter-icon">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+          </svg>
+          <span class="search-filter__filter-text">Filtrar por:</span>
+        </div>
+        {{ $categoryButtons := slice }}
+        {{ with .Site.Taxonomies.categories }}
+          {{ range $name, $taxonomy := . }}
+            {{ $pagesInList := intersect $taxonomy.Pages $listPages }}
+            {{ $count := len $pagesInList }}
+            {{ if gt $count 0 }}
+              {{ with $taxonomy.Page }}
+                {{ $categoryButtons = $categoryButtons | append (dict "name" $name "page" . "count" $count) }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ $categoryButtons = sort $categoryButtons "count" "desc" }}
+        {{ $visibleCategories := first 6 $categoryButtons }}
+        {{ $isTaxonomyPage := in (slice "taxonomy" "term") .Kind }}
+        <div class="search-filter__category-buttons">
+          <a class="btn accent{{ if not $isTaxonomyPage }} active{{ end }}" href="{{ .RelPermalink }}">Todos</a>
+          {{ range $visibleCategories }}
+            {{ $termName := .name }}
+            {{ $termPage := .page }}
+            {{ with $termPage }}
+              {{ $isActive := eq .RelPermalink $.RelPermalink }}
+              <a class="btn accent{{ if $isActive }} active{{ end }}" href="{{ .RelPermalink }}">
+                {{ with .LinkTitle }}{{ . }}{{ else }}{{ title $termName }}{{ end }}
+              </a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Blog posts -->
+  <section class="all-posts">
+    <div class="all-posts__header">
+      <h2 class="all-posts__title">
+        {{ i18n "all_posts" }}
+      </h2>
+      <div class="all-posts__count">
+        <span>Mostrando</span>
+        <span class="count">{{ len $paginator.Pages }}</span>
+        <span class="label">de {{ $paginator.TotalNumberOfElements }} posts</span>
+      </div>
+    </div>
+
+    <div class="card-list">
+      {{ range $paginator.Pages }}
+        {{ partial "core/card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Pagination -->
+  {{ if gt $paginator.TotalPages 1 }}
+    <section class="pagination">
+      <nav class="pagination__wrapper" aria-label="Page navigation">
+        {{ if $paginator.HasPrev }}
+          <a class="btn outline prev" href="{{ $paginator.Prev.URL }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+            Anterior
+          </a>
+        {{ else }}
+          <span class="btn outline prev disabled" aria-disabled="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+            Anterior
+          </span>
+        {{ end }}
+
+        <div class="pagination__pages">
+          {{ range $page := $paginator.Pagers }}
+            <a class="btn outline{{ if eq $page.PageNumber $paginator.PageNumber }} active{{ end }}" href="{{ $page.URL }}">
+              {{ $page.PageNumber }}
+            </a>
+          {{ end }}
+        </div>
+        {{ if $paginator.HasNext }}
+          <a class="btn outline next" href="{{ $paginator.Next.URL }}">
+            Próxima
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="pagination__icon">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </a>
+        {{ else }}
+          <span class="btn outline next disabled" aria-disabled="true">
+            Próxima
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="pagination__icon">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </span>
+        {{ end }}
+      </nav>
+    </section>
+  {{ end }}
+
+  <!-- Newsletter Signup -->
+  {{ partial "sections/subscribe.html" . }}
+</div>
+{{ end }}

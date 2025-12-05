@@ -1,0 +1,14 @@
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: $space-2 $space-7;
+  background-color: var(--color-input-bg);
+  border: 2px solid var(--color-input-border);
+  border-radius: $radius-100;
+  transition: border-color 0.2s ease-in-out;
+
+  &:focus {
+    border-color: var(--color-input-border-focus);
+    outline: none;
+  }
+}

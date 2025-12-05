@@ -1,0 +1,37 @@
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 481px;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 1025px;
+$breakpoint-xl: 1280px !default;
+$breakpoint-2xl: 1536px !default;
+
+
+$height-xs: 480px;
+$height-sm: 600px;
+$height-md: 667px;
+$height-lg: 800px;
+$height-xl: 900px;
+$height-2xl: 1024px;
+
+
+$breakpoint-mobile: $breakpoint-sm;
+$breakpoint-tablet: $breakpoint-md;
+$breakpoint-desktop: $breakpoint-lg;
+$breakpoint-wide: $breakpoint-2xl;
+
+
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+
+$space-5: 1.25rem;
+$space-6: 2rem;
+$space-7: 2.5rem;
+$space-8: 3rem;
+
+$space-9: 3.5rem;
+$space-10: 4rem;
+$space-11: 4.5rem;
+$space-12: 5rem;

@@ -1,0 +1,247 @@
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-align-start {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex-column-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@mixin flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+@mixin flex-column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-wrap-start {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+@mixin grid($columns, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+@mixin responsive-container {
+  padding-inline: var(--container-padding-x);
+}
+
+@mixin gradient-to-r($from, $to) {
+  background: linear-gradient(to right, $from, $to);
+}
+
+@mixin badge {
+  width: fit-content;
+  padding: $space-1 $space-4;
+  background-color: map-get($blue, 600);
+  color: $white;
+  border-radius: 100px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+@mixin sponsor-tier($gradient-color1, $gradient-color2, $logo-size) {
+  .sponsor__tier-title {
+    @include flex-center;
+    @include gradient-to-r($gradient-color1, $gradient-color2);
+  }
+
+  .sponsor-logo {
+    width: $logo-size;
+    height: auto;
+    aspect-ratio: 3/1;
+  }
+}
+
+@mixin image-overlay-text($color) {
+  @include flex-column-center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  &__text {
+    margin-top: $space-2;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color;
+  }
+
+  svg {
+    width: $space-7 * 2;
+    height: $space-7 * 2;
+    stroke: $color;
+  }
+}
+
+@mixin hero-img-fade($n, $start, $mid1, $mid2) {
+  @keyframes hero-img-fade-#{$n} {
+
+    0%,
+    #{ $start + "%" } {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #{ $mid1 + "%" },
+    #{ $mid2 + "%" } {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @if $n ==1 {
+
+      0%,
+      #{ $start + "%" } {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      #{ $mid1 + "%" },
+      #{ $mid2 + "%" } {
+        opacity: 1;
+        pointer-events: none;
+      }
+
+      100% {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+    @else {
+
+      0%,
+      #{ $start + "%" } {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #{ $mid1 + "%" },
+      #{ $mid2 + "%" } {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      @if $n ==2 {
+
+        50%,
+        70% {
+          opacity: 0.5;
+          pointer-events: none;
+        }
+      }
+
+      @else if $n ==3 {
+
+        75%,
+        95% {
+          opacity: 0.5;
+          pointer-events: none;
+        }
+      }
+
+      100% {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+@mixin img-cover($position: center) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: $position;
+}
+
+@mixin clampy($mobile, $tablet, $desktop) {
+  font-size: $mobile;
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: $lg;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    font-size: $xl;
+  }
+}
+
+
+
+
+
+
+@mixin location-info-item {
+  @include flex-start;
+  align-items: flex-start;
+  gap: $space-3;
+}
+
+
+@mixin location-icon($color) {
+  width: $space-6;
+  height: $space-6;
+  stroke: $color;
+}
+
+
+@mixin map-image-box {
+  @include flex-center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 50%;
+  background-color: var(--color-map-fallback);
+  border: 1px solid var(--color-border);
+  border-radius: $radius-2;
+  box-shadow: $box-shadow-md;
+  overflow: hidden;
+}

@@ -1,0 +1,78 @@
+{{/* Get current language */}}
+{{ $currentLang := .Site.Language.Lang }}
+
+{{/* Get event data */}}
+{{ $event := .Site.Data.event }}
+{{ $locationName := $event.location.place }}
+{{ $description := index $event.description $currentLang }}
+
+{{ range where .Site.Data.footer "language" $currentLang }}
+<footer class="site-footer" id="footer" lang="{{ $currentLang }}" dir="{{ .Site.Language.Dir }}">
+  {{/* Footer container */}}
+  <div class="site-footer__container">
+    <div class="site-footer__grid-content">
+      <div class="site-footer__grid-content_item">
+        <div class="site-footer__brand-container">
+          {{/* Show event logo or name */}}
+          {{ partial "svg/logos/event-white.svg" }}
+        </div>
+        <p class="site-footer__description">
+          {{ $description | safeHTML }}
+        </p>
+        <p class="site-footer__local">
+          <strong>Local:</strong> {{ $locationName | safeHTML }}<br>
+        </p>
+      </div>
+
+      {{/* Render left footer links section */}}
+      {{ $menu := .menu }}
+      {{ $leftSections := slice "quick-links" "community" }}
+      <div class="site-footer__grid-content_item">
+        {{ range $leftSections }}
+          {{ partial "footer/links-section.html" (dict "id" . "menu" $menu) }}
+        {{ end }}
+      </div>
+
+      {{/* Render middle footer links sections */}}
+      <div class="site-footer__grid-content_item">
+        {{/* Render past events section */}}
+        {{ partial "footer/past-events.html" }}
+      </div>
+
+      {{/* Render right footer links sections */}}
+      {{ $rightSections := slice "information" "social-media" }}
+      <div class="site-footer__grid-content_item">
+        {{ range $rightSections }}
+          {{ partial "footer/links-section.html" (dict "id" . "menu" $menu) }}
+        {{ end }}
+        {{ partial "footer/social-links.html" $event }}
+      </div>
+    </div>
+
+    {{/* Footer bottom: copyright and links */}}
+    <div class="site-footer__bottom">
+      <p>© {{ now.Format "2006" }} {{ .bottom.text }}</p>
+      <div class="site-footer__bottom-actions">
+        {{ range .bottom.links }}
+          <a href="{{ .url }}" {{ if .external }}target="_blank" rel="noopener noreferrer"{{ end }}>
+            {{ .title }}
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</footer>
+{{ end }}
+
+{{/* Load footer scripts */}}
+{{ partial "footer/js.html" }}
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GM6V78MEDS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GM6V78MEDS');
+</script>

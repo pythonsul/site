@@ -1,0 +1,21 @@
+{{- /* Get the main JavaScript resource */ -}}
+{{- with resources.Get "js/main.js" }}
+  {{- /* Define build options for js.Build */ -}}
+  {{- $opts := dict
+    "minify" (not hugo.IsDevelopment)
+    "sourceMap" (cond hugo.IsDevelopment "external" "")
+    "targetPath" "js/main.js"
+  }}
+  {{- /* Build the JavaScript with the specified options */ -}}
+  {{- with . | js.Build $opts }}
+    {{- if hugo.IsDevelopment }}
+      {{- /* In development, include the script without fingerprinting */ -}}
+      <script src="{{ .RelPermalink }}"></script>
+    {{- else }}
+      {{- /* In production, fingerprint the script and add integrity attributes */ -}}
+      {{- with . | fingerprint }}
+        <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}

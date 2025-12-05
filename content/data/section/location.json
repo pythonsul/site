@@ -1,0 +1,17 @@
+[
+  {
+    "language": "pt-br",
+    "title": "Local do Evento",
+    "description": "A PySul 2026 acontecerá no auditório do SENAI, um dos mais modernos espaços para eventos do Sul do Brasil."
+  },
+  {
+    "language": "en",
+    "title": "Event Location",
+    "description": "PySul 2026 will take place in the SENAI auditorium, one of the most modern event venues in Southern Brazil."
+  },
+  {
+    "language": "es",
+    "title": "Lugar del Evento",
+    "description": "PySul 2026 se realizará en el auditorio del SENAI, uno de los espacios para eventos más modernos del sur de Brasil."
+  }
+]

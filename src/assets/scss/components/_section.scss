@@ -1,0 +1,83 @@
+$layout-primary: map-get($pysul-layout, primary);
+
+.section {
+  @include responsive-container;
+  position: relative;
+  width: 100%;
+  padding-block: $space-8;
+  margin-inline: auto;
+  box-shadow: none;
+  text-align: left;
+
+  @media (min-width: $breakpoint-lg) {
+    padding-block: $space-10;
+  }
+
+  @media (min-width: $breakpoint-2xl) {
+    padding-block: $space-12;
+  }
+}
+
+.section-container {
+  @include flex-column-center;
+  width: 100%;
+}
+
+.section-title {
+  @include flex-start;
+  margin-bottom: $space-4;
+  padding-left: $space-6;
+  max-width: 60ch;
+  color: var(--color-text-strong);
+
+  @media screen and (min-width: $breakpoint-md) {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+.section-description {
+  width: 100%;
+  max-width: 90ch;
+  margin-bottom: $space-4;
+  margin-inline: auto;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: var(--color-text);
+
+  @media screen and (min-width: $breakpoint-md) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $breakpoint-2xl) {
+    margin-bottom: $space-8;
+  }
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: 0.95rem;
+
+  @include font-body(600);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $layout-primary;
+  margin-bottom: $space-2;
+}
+
+.coffee-icon {
+  @include flex-center;
+  width: $space-8;
+  height: $space-8;
+  margin-right: $space-2;
+
+  svg {
+    width: $space-6;
+    height: $space-6;
+    color: $layout-primary;
+  }
+}

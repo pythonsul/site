@@ -1,0 +1,81 @@
+$layout-primary: map-get($pysul-layout, primary);
+
+.blog-section {
+  background-color: $white;
+  padding-block: $space-10;
+
+  &__container {
+    @extend .section-container;
+    gap: $space-8;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $space-3;
+    margin-bottom: $space-4;
+
+    @media (min-width: $breakpoint-lg) {
+      text-align: center;
+    }
+  }
+
+  &__icon {
+    @include flex-center;
+    width: $space-8;
+    height: $space-8;
+    border-radius: 999px;
+    background-color: rgba($layout-primary, 0.15);
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      color: $layout-primary;
+    }
+  }
+
+  .section-title {
+    margin: 0;
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .section-description {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-text);
+  }
+
+  .latest-posts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(16rem, 1fr));
+    gap: $space-5;
+
+    article {
+      height: 100%;
+
+      .card {
+        height: 100%;
+        border-radius: $radius-4;
+        border: 1px solid var(--color-border-muted);
+        box-shadow: 0 20px 35px rgba($black, 0.08);
+        background-color: var(--color-content-card-bg);
+      }
+    }
+  }
+}
+
+.blog__all-content {
+  margin-top: $space-6;
+  text-align: center;
+
+  .btn {
+    min-width: 15rem;
+  }
+}

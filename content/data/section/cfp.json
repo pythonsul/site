@@ -1,0 +1,173 @@
+[
+  {
+    "language": "pt-br",
+    "title": "Chamada para Palestras",
+    "description": "Quer compartilhar conhecimento com a comunidade?<br> Seja palestrante e faça parte!",
+    "howToApply": {
+      "title": "Como participar?",
+      "items": [
+        "Palestras técnicas sobre Python e seu ecossistema",
+        "Python em diferentes áreas: web, data science, IA, IoT",
+        "Casos de sucesso e experiências práticas",
+        "Tópicos sobre carreira e desenvolvimento profissional",
+        "Iniciativas de diversidade e inclusão na tecnologia"
+      ]
+    },
+    "submissionFormats": {
+      "title": "Formatos Disponíveis",
+      "items": [
+        {
+          "title": "Palestra (20, 30, ou 40min)",
+          "description": "Apresentações técnicas ou inspiracionais para o público geral."
+        },
+        {
+          "title": "Tutoriais (180min ou 360 min)",
+          "description": "Sessões práticas e oficinas com atividades interativas."
+        },
+        {
+          "title": "Lightning Talks* (5min)",
+          "description": "Apresentações rápidas e dinâmicas sobre qualquer tópico.<br><small>*Submissões durante o evento</small>"
+        }
+      ]
+    },
+    "submissionDeadline": {
+      "title": "Datas Importantes",
+      "items": [
+        {
+          "title": "Prazo para Submissão",
+          "icon": "svg/icons/calendar.svg",
+          "date": "a definir"
+        },
+        {
+          "title": "Resultados da Seleção",
+          "icon": "svg/icons/calendar-check.svg",
+          "date": "a definir"
+        },
+        {
+          "title": "Benefícios",
+          "icon": "svg/icons/file-badge.svg",
+          "date": "Inscrições gratuitas para palestrantes selecionados + certificado"
+        }
+      ]
+    },
+    "cta": {
+      "text": "Enviar Proposta",
+      "link": "#",
+      "footer": "Dúvidas? entre em contato: {{ Email }}"
+    }
+  },
+  {
+    "language": "en",
+    "title": "Call for Proposals",
+    "description": "Want to share knowledge with the community?<br> Be a speaker and be part of it!",
+    "howToApply": {
+      "title": "How to Participate?",
+      "items": [
+        "Technical talks about Python and its ecosystem.",
+        "Python in different areas: web, data science, AI, IoT",
+        "Success stories and practical experiences",
+        "Topics on career and professional development",
+        "Diversity and inclusion initiatives in technology"
+      ]
+    },
+    "submissionFormats": {
+      "title": "Available Formats",
+      "items": [
+        {
+          "title": "Talk (20, 30 or 40min)",
+          "description": "Technical or inspirational presentations for the general audience."
+        },
+        {
+          "title": "Workshop (180min or 360min)",
+          "description": "Hands-on sessions with interactive activities."
+        },
+        {
+          "title": "Lightning Talk* (5min)",
+          "description": "Quick and dynamic presentations on any topic.<br><small>*Submissions during the event</small>"
+        }
+      ]
+    },
+    "submissionDeadline": {
+      "title": "Important Dates",
+      "items": [
+        {
+          "title": "Submission Deadline",
+          "icon": "svg/icons/calendar.svg",
+          "date": "to be defined"
+        },
+        {
+          "title": "Selection Results",
+          "icon": "svg/icons/calendar-check.svg",
+          "date": "to be defined"
+        },
+        {
+          "title": "Benefits",
+          "icon": "svg/icons/file-badge.svg",
+          "date": "Free registration for selected speakers + certificate"
+        }
+      ]
+    },
+    "cta": {
+      "text": "Submit Proposal",
+      "link": "#",
+      "footer": "For questions, contact: {{ Email }}"
+    }
+  },
+  {
+    "language": "es",
+    "title": "Llamado a Propuestas",
+    "description": "¿Querés compartir conocimiento con la comunidad?<br> ¡Sé ponente y formá parte!",
+    "howToApply": {
+      "title": "¿Cómo participar?",
+      "items": [
+        "Charlas técnicas sobre Python y su ecosistema.",
+        "Python en diferentes áreas: web, ciencia de datos, IA, IoT.",
+        "Casos de éxito y experiencias prácticas.",
+        "Temas sobre carrera y desarrollo profesional.",
+        "Iniciativas de diversidad e inclusión en tecnología."
+      ]
+    },
+    "submissionFormats": {
+      "title": "Formatos Disponibles",
+      "items": [
+        {
+          "title": "Charla (20, 30, o 40min)",
+          "description": "Presentaciones técnicas o inspiradoras para el público general."
+        },
+        {
+          "title": "Taller (180min o 360min)",
+          "description": "Sesiones prácticas y hands-on con actividades interactivas."
+        },
+        {
+          "title": "Lightning Talk* (5min)",
+          "description": "Presentaciones rápidas y dinámicas sobre cualquier tema.<br><small>*Submisiones durante el evento</small>"
+        }
+      ]
+    },
+    "submissionDeadline": {
+      "title": "Fechas Importantes",
+      "items": [
+        {
+          "title": "Plazo para Envío",
+          "icon": "svg/icons/calendar.svg",
+          "date": "A definir"
+        },
+        {
+          "title": "Resultados de Selección",
+          "icon": "svg/icons/calendar-check.svg",
+          "date": "A definir"
+        },
+        {
+          "title": "Beneficios",
+          "icon": "svg/icons/file-badge.svg",
+          "date": "Inscripciones gratuitas para ponentes seleccionados + certificado"
+        }
+      ]
+    },
+    "cta": {
+      "text": "Enviar Propuesta",
+      "link": "#",
+      "footer": "Para dudas, contactá a: {{ Email }}"
+    }
+  }
+]

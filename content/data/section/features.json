@@ -1,0 +1,86 @@
+[
+  {
+    "language": "pt-br",
+    "title": "Sobre a PySul 2026",
+    "description": "A Python Sul (PySul) 2026 reúne profissionais, estudantes e entusiastas para explorar todo o universo do Python — do desenvolvimento web à ciência de dados, da inteligência artificial à automação e ao DevOps. Mais do que um evento técnico, é um grande ponto de encontro da comunidade sul-brasileira, pensado para oferecer aprendizado de qualidade, estimular conexões valiosas e ampliar a troca de experiências que impulsiona inovação em toda a região. O propósito central da PySul sempre foi fortalecer a comunidade Python no Sul do país, criando um espaço inclusivo, colaborativo e acessível. A edição de 2026 reforça ainda mais esse espírito regional: descentralizar, incluir e consolidar o ecossistema tech fora de os grandes centros tradicionais.",
+    "imageCaption": "Conheça nosso macote Caramelo, símbolo de persistência e luta.",
+    "cards": [
+      {
+        "title": "Palestras",
+        "description": "Palestras sobre Python, IA, web e mais.",
+        "icon": "svg/logos/coffee.svg"
+      },
+      {
+        "title": "Tutoriais",
+        "description": "Participe de sessões práticas para aprimorar suas habilidades.",
+        "icon": "svg/logos/coffee.svg"
+      },
+      {
+        "title": "Networking e Conexões",
+        "description": "Conecte-se com outros profissionais e entusiastas de Python.",
+        "icon": "svg/logos/coffee.svg"
+      },
+      {
+        "title": "Comunidade Python",
+        "description": "Faça parte de um ambiente acolhedor e diverso.",
+        "icon": "svg/logos/coffee.svg"
+      }
+    ]
+  },
+  {
+    "language": "en",
+    "title": "About PySul 2026",
+    "description": "PySul 2026 brings together professionals, students and enthusiasts to explore the full universe of Python — from web development to data science, from artificial intelligence to automation and DevOps. More than a technical event, it is a major meeting point for the southern Brazilian Python community, designed to provide high-quality learning, foster valuable connections and expand the exchange of experiences that drives innovation across the region. PySul's core purpose has always been to strengthen the Python community in the South of the country by creating an inclusive, collaborative and accessible space. The 2026 edition further reinforces this regional spirit: decentralize, include and consolidate the tech ecosystem beyond the traditional major centers.",
+    "imageCaption": "Meet our mascot Caramelo, a symbol of persistence and resilience.",
+    "cards": [
+      {
+        "title": "Talks",
+        "description": "Talks on Python, AI, web and more.",
+        "icon": "svg/logos/coffee.svg"
+      },
+      {
+        "title": "Tutorials",
+        "description": "Join hands-on sessions to improve your skills.",
+        "icon": "svg/logos/coffee.svg"
+      },
+      {
+        "title": "Networking & Connections",
+        "description": "Connect with other Python professionals and enthusiasts.",
+        "icon": "svg/logos/coffee.svg"
+      },
+      {
+        "title": "Python Community",
+        "description": "Be part of a welcoming and diverse community.",
+        "icon": "svg/logos/coffee.svg"
+      }
+    ]
+  },
+  {
+    "language": "es",
+    "title": "Sobre PySul 2026",
+    "description": "PySul 2026 reúne a profesionales, estudiantes y entusiastas para explorar todo el universo de Python — desde el desarrollo web hasta la ciencia de datos, la inteligencia artificial, la automatización y DevOps. Más que un evento técnico, es un gran punto de encuentro de la comunidad del sur de Brasil, pensado para ofrecer aprendizaje de calidad, promover conexiones valiosas y ampliar el intercambio de experiencias que impulsa la innovación en toda la región. El propósito central de PySul siempre fue fortalecer la comunidad Python en el sur del país, creando un espacio inclusivo, colaborativo y accesible. La edición 2026 refuerza aún más este espíritu regional: descentralizar, incluir y consolidar el ecosistema tech fuera de los grandes centros tradicionales.",
+    "imageCaption": "Conocé a nuestro mascota Caramelo, símbolo de persistencia y lucha.",
+    "cards": [
+      {
+        "title": "Charlas",
+        "description": "Charlas sobre Python, IA, web y más.",
+        "icon": "svg/logos/coffee.svg"
+      },
+      {
+        "title": "Tutoriales",
+        "description": "Participá en sesiones prácticas para mejorar tus habilidades.",
+        "icon": "svg/logos/coffee.svg"
+      },
+      {
+        "title": "Networking y Conexiones",
+        "description": "Conectate con otros profesionales y entusiastas de Python.",
+        "icon": "svg/logos/coffee.svg"
+      },
+      {
+        "title": "Comunidad Python",
+        "description": "Formá parte de un ambiente acogedor y diverso.",
+        "icon": "svg/logos/coffee.svg"
+      }
+    ]
+  }
+]

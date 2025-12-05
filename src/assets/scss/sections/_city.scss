@@ -1,0 +1,92 @@
+$layout-primary: map-get($pysul-layout, primary);
+$layout-text-dark: map-get($pysul-layout, text-dark);
+$layout-mint: map-get($pysul-layout, accent-mint);
+
+.city {
+  @extend .section;
+  background-color: var(--color-about-bg);
+  color: var(--color-about-text);
+  border-radius: $radius-5;
+}
+
+
+
+.city--container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-8;
+  width: 100%;
+  padding: $space-5 0;
+
+  @media (min-width: $breakpoint-xl) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: start;
+    gap: $space-12;
+  }
+}
+
+
+
+.city--content {
+  @include flex-column-start;
+  gap: $space-4;
+
+  .section-description {
+    margin: 0;
+    text-align: left;
+    color: var(--color-about-text);
+
+    strong {
+      color: $layout-text-dark;
+      font-weight: 700;
+    }
+  }
+}
+
+.city--heading {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  margin-bottom: $space-2;
+}
+
+.section-title {
+  text-align: left;
+  margin: 0;
+  padding-left: 0;
+  font-size: clamp(2rem, 5vw, 2.4rem);
+
+  &::before {
+    display: none;
+  }
+}
+
+
+
+.city--mascot {
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: $space-5 0 (-$space-5) (-$space-5);
+    background-color: rgba($layout-mint, 0.5);
+    border-radius: $radius-4;
+    z-index: 0;
+  }
+
+  figure {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      border-radius: $radius-4;
+      box-shadow: 0 20px 40px rgba($black, 0.15);
+      object-fit: cover;
+    }
+  }
+}

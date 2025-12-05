@@ -1,0 +1,36 @@
+@function color-token($map, $key, $fallback: null) {
+  @return if(map-has-key($map, $key), map-get($map, $key), $fallback);
+}
+
+@mixin define-vars($map, $prefix: '') {
+  @each $key, $val in $map {
+    --#{$prefix}#{$key}: #{map-get($map, $key)};
+  }
+}
+
+@import "./light";
+@import "./dark";
+
+@layer base {
+  :root {
+    @include define-vars($theme-light, 'color-');
+    @include define-vars($buttons-light, 'color-button-');
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      @include define-vars($theme-dark, 'color-');
+      @include define-vars($buttons-dark, 'color-button-');
+    }
+  }
+
+  [data-color-mode='light'] {
+    @include define-vars($theme-light, 'color-');
+    @include define-vars($buttons-light, 'color-button-');
+  }
+
+  [data-color-mode='dark'] {
+    @include define-vars($theme-dark, 'color-');
+    @include define-vars($buttons-dark, 'color-button-');
+  }
+}

@@ -1,0 +1,128 @@
+{{/* 
+  NOTE: This is a Hugo template that generates JSON dynamically.
+  Linters may report false positives or structural errors.
+  Ignore warnings/errors in this file during JSON linting or Hugo build lint checks.
+*/}}
+
+{{- $currentLang := .Site.Language.Lang -}}
+
+{{/* Initialize main data object */}}
+{{- $data := dict
+  "title"       ((.Site.Params.title | default .Site.Title) | markdownify | plainify | htmlUnescape)
+  "description" ((.Site.Params.description | default .Site.Params.title) | markdownify | plainify | htmlUnescape)
+  "language"    (.Site.Language.Lang | markdownify | plainify | htmlUnescape)
+-}}
+
+{{/* ----------------------------
+      1. Blog Posts
+----------------------------- */}}
+{{- $contents := slice -}}
+
+{{- range where site.RegularPages "Params.draft" "ne" true -}}
+  {{- $contents = $contents | append (dict
+    "key"        .Params.key
+    "title"       (.Title | markdownify | plainify | htmlUnescape)
+    "description" (.Description | markdownify | plainify | htmlUnescape)
+    "language"    (.Site.Language.Lang | markdownify | plainify | htmlUnescape)
+    "date"        .PublishDate
+    "link"        .RelPermalink
+    "keywords"    .Params.keywords
+    "tags"        .Params.tags
+    "categories"  .Params.categories
+    "text"        (replace (.Plain | htmlUnescape) "\n" " " | strings.TrimRight " ")
+  ) -}}
+{{- end -}}
+
+{{- $data = merge $data (dict "content" $contents) -}}
+
+{{/* ----------------------------
+      2. Section Data
+----------------------------- */}}
+{{- $sections := slice -}}
+
+{{- range $index, $sectionData := .Site.Data.section -}}
+
+  {{- $sectionID := ($index | lower) -}}
+
+  {{- if reflect.IsMap $sectionData -}}
+    {{- range $key, $value := $sectionData -}}
+      {{- if reflect.IsSlice $value -}}
+        {{- range $meta := $value -}}
+          {{- if and (isset $meta "language") (eq (lower $meta.language) $currentLang) -}}
+
+            {{- $sectionItem := dict
+              "id"          $sectionID
+              "title"       ($meta.title | markdownify | plainify | htmlUnescape)
+              "description" ($meta.description | markdownify | plainify | htmlUnescape)
+            -}}
+
+            {{- if isset $meta "footer" -}}
+              {{- $sectionItem = merge $sectionItem (dict "footer" (dict
+                "title"       ($meta.footer.title | markdownify | plainify | htmlUnescape)
+                "description" ($meta.footer.description | markdownify | plainify | htmlUnescape)
+              )) -}}
+            {{- end -}}
+
+            {{- $sections = $sections | append $sectionItem -}}
+
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+  {{- else if reflect.IsSlice $sectionData -}}
+    {{- range $item := $sectionData -}}
+      {{- if and (isset $item "language") (eq (lower $item.language) $currentLang) -}}
+
+        {{- $sectionItem := dict
+          "id"          $sectionID
+          "title"       ($item.title | markdownify | plainify | htmlUnescape)
+          "description" ($item.description | markdownify | plainify | htmlUnescape)
+        -}}
+
+        {{- if isset $item "cards" -}}
+          {{- $cards := slice -}}
+          {{- range $item.cards -}}
+            {{- $card := dict
+              "title"       (.title | markdownify | plainify | htmlUnescape)
+              "description" (.description | markdownify | plainify | htmlUnescape)
+            -}}
+            {{- $cards = $cards | append $card -}}
+          {{- end -}}
+          {{- $sectionItem = merge $sectionItem (dict "cards" $cards) -}}
+        {{- end -}}
+
+        {{- $sections = $sections | append $sectionItem -}}
+
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+{{- end -}}
+
+{{- $data = merge $data (dict "sections" $sections) -}}
+
+{{/* ----------------------------
+      3. Site Pages
+----------------------------- */}}
+{{- $pages := slice -}}
+
+{{- range .Site.Pages -}}
+  {{- if and (isset .Params "draft") (not .Params.draft) -}}
+    {{- $pageItem := dict
+      "key"         .Params.key
+      "title"       (.Title | markdownify | plainify | htmlUnescape)
+      "description" (.Description | markdownify | plainify | htmlUnescape)
+      "language"    (.Site.Language.Lang | markdownify | plainify | htmlUnescape)
+      "link"        .RelPermalink
+    -}}
+    {{- $pages = $pages | append $pageItem -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $data = merge $data (dict "pages" $pages) -}}
+
+{{/* ----------------------------
+      Final Output
+----------------------------- */}}
+{{- $data | jsonify -}}

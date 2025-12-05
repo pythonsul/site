@@ -1,0 +1,252 @@
+@import "./criative-bg";
+
+.category- {
+  &career {
+    --category-border-color: var(--color-category-career-border);
+    --category-bg-color: var(--color-category-career-bg);
+  }
+
+  &ai {
+    --category-border-color: var(--color-category-ai-border);
+    --category-bg-color: var(--color-category-ai-bg);
+  }
+
+  &open_source {
+    --category-border-color: var(--color-category-open-source-border);
+    --category-bg-color: var(--color-category-open-source-bg);
+  }
+
+  &testing {
+    --category-border-color: var(--color-category-testing-border);
+    --category-bg-color: var(--color-category-testing-bg);
+  }
+
+  &automation {
+    --category-border-color: var(--color-category-automation-border);
+    --category-bg-color: var(--color-category-automation-bg);
+  }
+
+  &software_engineering {
+    --category-border-color: var(--color-category-software-engineering-border);
+    --category-bg-color: var(--color-category-software-engineering-bg);
+  }
+
+  &web {
+    --category-border-color: var(--color-category-web-border);
+    --category-bg-color: var(--color-category-web-bg);
+  }
+
+  &database {
+    --category-border-color: var(--color-category-database-border);
+    --category-bg-color: var(--color-category-database-bg);
+  }
+
+  &data_science {
+    --category-border-color: var(--color-category-data-science-border);
+    --category-bg-color: var(--color-category-data-science-bg);
+  }
+
+  &lightning_talks {
+    --category-border-color: var(--color-category-lightning_talks-border);
+    --category-bg-color: repeating-linear-gradient(135deg,
+        rgba(255, 255, 255, 0.04) 0 10px,
+        rgba(0, 0, 0, 0.03) 10px 20px), var(--color-category-lightning_talks-bg);
+  }
+
+  &keynote {
+    --category-border-color: var(--color-category-keynote-border);
+    --category-bg-color: var(--color-category-keynote-bg);
+  }
+
+  &lunch {
+    --category-border-color: var(--color-category-lunch-border);
+    --category-bg-color: repeating-linear-gradient(135deg,
+        rgba(255, 255, 255, 0.04) 0 10px,
+        rgba(0, 0, 0, 0.03) 10px 20px), var(--color-category-lunch-bg);
+    opacity: 0.7;
+  }
+}
+
+.type- {
+  &workshop {
+    background: repeating-linear-gradient(40deg,
+        rgba(255, 255, 255, 0.02) 0 10px,
+        rgba(0, 0, 0, 0.02) 10px 20px), var(--category-bg-color) !important;
+  }
+}
+
+.schedule {
+  @extend .section;
+  @include flex-column-center;
+  text-align: center;
+  gap: $space-8;
+  background-color: var(--color-schedule-bg);
+  border-radius: $radius-4;
+  box-shadow: 0 20px 45px rgba($black, 0.08);
+
+  .container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    z-index: 2;
+    @include responsive-container;
+  }
+
+  .schedule-header {
+    width: 100%;
+    padding: $space-4;
+    margin-bottom: $space-6;
+    border-radius: $radius-6;
+    background-color: var(--color-schedule-bg);
+    box-shadow: $box-shadow-md;
+
+    .schedule-title {
+      margin-bottom: $space-2;
+    }
+  }
+}
+
+.schedule-content {
+  width: 100%;
+}
+
+.schedule-content .header {
+  width: 100%;
+  @include flex-center;
+  gap: $space-3;
+  margin-bottom: $space-4;
+
+  .schedule-tab-button {
+    width: 100%;
+    padding: $space-4 $space-2;
+    font-size: 1rem;
+  }
+}
+
+.schedule .body {
+  width: 100%;
+  display: grid;
+  gap: $space-4;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .schedule-tab-content {
+    width: 100%;
+    gap: $space-2;
+    @include flex-column-start;
+    display: none;
+
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+    }
+
+    &.active {
+      display: flex;
+    }
+
+    .schedule-event {
+      width: 100%;
+      height: 100%;
+      padding: $space-3;
+      border-radius: $radius-2;
+      border: 2px solid var(--color-border);
+      border-left: 8px solid var(--category-border-color, transparent);
+      background: var(--category-bg-color, var(--color-bg-secondary));
+      box-shadow: $box-shadow-light;
+      transition: box-shadow 140ms ease, transform 140ms ease;
+      @include flex-column-start;
+      justify-content: center;
+      gap: $space-3;
+
+      &:hover {
+        box-shadow: $box-shadow-md;
+        transform: translateY(-4px);
+      }
+
+      .event-time {
+        @include flex-center;
+        gap: $space-2;
+        color: var(--color-text-secondary);
+        font-size: 0.9rem;
+        font-weight: 500;
+
+        svg {
+          width: $space-4;
+          height: $space-4;
+          stroke: currentColor;
+        }
+
+        .duration {
+          color: var(--color-text-secondary);
+          font-size: 0.8rem;
+          font-weight: 500;
+        }
+      }
+
+      .event-category {
+        display: inline-block;
+        padding: $space-1 $space-4;
+        border-radius: $radius-100;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        background-color: var(--category-border-color);
+      }
+
+      .event-body {
+        width: 100%;
+        text-align: left;
+        @include flex-column-start;
+
+        .event-title {
+          margin: 0 0 $space-2 0;
+          color: var(--color-text);
+          font-weight: 700;
+          line-height: 1.2;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          line-clamp: 2;
+          @include responsive-font(0.850rem, 0.905rem, 1rem);
+        }
+
+        .event-speaker-container {
+          width: 100%;
+          margin-top: $space-6;
+          padding: $space-3 0 0 0;
+          border-top: 2px solid var(--color-border-subtle);
+          @include flex-center;
+          justify-content: flex-start;
+          gap: $space-4;
+        }
+
+        .event-speaker {
+          @include flex-start;
+          gap: $space-3;
+          align-items: center;
+
+          .speaker-photo {
+            margin: 0;
+            width: $space-7;
+            height: $space-7;
+            border-radius: $radius-100;
+            object-fit: cover;
+            box-shadow: $box-shadow-md;
+            overflow: hidden;
+          }
+
+          .speaker-name {
+            color: var(--color-text);
+            font-size: 0.9rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

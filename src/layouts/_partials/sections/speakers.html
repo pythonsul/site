@@ -1,0 +1,39 @@
+{{ $content := .Site.Data.speakers }}
+
+
+<section class="speakers" id="speakers">
+    <div class="container">
+        <div class="section-header">
+            <h2>
+                {{ i18n "section_speakers_title" }}
+            </h2>
+            <p>
+                {{ i18n "section_speakers_description" }}
+            </p>
+        </div>
+
+        <div class="speakers-grid">
+            {{ range $index, $speaker := $content }}
+            <div class="speaker-card">
+                <div class="speaker-photo">
+                  {{ partial "core/image.html" (dict "src" $speaker.photo "alt" $speaker.name "avatar" true "className" "avatar") }}
+                </div>
+                <div class="speaker-info">
+                    <h3 class="speaker-name">{{ $speaker.name }}</h3>
+                    <p class="speaker-title">{{ $speaker.title }}</p>
+                    <p class="speaker-bio">{{ $speaker.bio }}</p>
+                    <div class="external-links">
+                      {{ range $key, $link := $speaker.external_links }}
+                        <a href="{{ $link }}" target="_blank" rel="noopener noreferrer">
+                          {{ partial (printf "svg/icons/%s.svg" $key ) }}
+                        </a>
+                      {{ end }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+    </div>
+
+</section>

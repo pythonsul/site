@@ -1,0 +1,58 @@
+{{ $currentLang := .Site.Language.Lang }}
+{{ $title := .Site.Data.event.name }}
+{{ $description := index .Site.Data.event.description $currentLang }}
+{{ $keywords := index .Site.Data.event.keywords $currentLang }}
+{{ $author := .Site.Data.event.author }}
+
+<head>
+  {{/* Set character encoding */}}
+  <meta charset="utf-8">
+  {{/* Responsive viewport settings */}}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{/* Dynamic page title: Home or Page Title | Site Title */}}
+  <title>{{ if .IsHome }}{{ $title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+  {{/* Meta description: page or site default */}}
+  <meta name="description"
+    content="{{ with .Params.description }}{{ . }}{{ else }}{{ $description | safeHTML }}{{ end }}">
+  {{/* Meta keywords: page or site default */}}
+  <meta name="keywords" content="{{ with .Params.keywords }}{{ . }}{{ else }}{{ $keywords }}{{ end }}">
+  {{/* Meta author: page or site default */}}
+  <meta name="author" content="{{ with .Params.author }}{{ . }}{{ else }}{{ $author }}{{ end }}">
+  {{/* Open Graph meta tags for social media sharing */}}
+  <meta property="og:title" content="{{ if .IsHome }}{{ $title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}">
+  <meta property="og:description"
+    content="{{ with .Params.description }}{{ . }}{{ else }}{{ $description | safeHTML }}{{ end }}">
+  <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ with .Params.og_image }}{{ . }}{{ else }}{{ .Site.BaseURL }}/images/og-image.png{{ end }}">
+
+
+  {{/* Search engine robots instructions */}}
+  <meta name="robots" content="index, follow">
+  {{/* IE compatibility mode */}}
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {{/* Browser theme color */}}
+  <meta name="theme-color" content="#f6f5f4">
+  {{/* Enable Apple mobile web app features */}}
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  {{/* Web manifest link */}}
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f5f4">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#333333">
+  <link rel="manifest" href="{{ .Site.BaseURL }}/webmanifest.json">
+
+  {{/* Favicon */}}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}/images/favicon-16x16.png">
+
+  {{/* Canonical URL for SEO */}}
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  {{/* Include cached CSS partial */}}
+  {{ partialCached "head/css.html" . }}
+
+  <meta name="google-site-verification" content="w0Eguu3yiqxvE2kvntwJCB0z2QnNy8vDYrI8l_A6jHA" />
+</head>

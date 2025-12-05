@@ -1,0 +1,35 @@
+{{ $currentLang := .Site.Language.Lang }}
+
+{{/* Loop through details sections matching the current language */}}
+{{ range where .Site.Data.section.details "language" $currentLang }}
+<section class="details-section">
+  <div class="details-section__container">
+    {{/* Section title */}}
+    <h2 class="section-title details-section__container-title">
+      {{ .title }}
+    </h2>
+    {{/* Section description */}}
+    <p class="section-description details-section__container-description">
+      {{ .description }}
+    </p>
+    <div class="details-section__cards">
+      {{/* Loop through each highlight card */}}
+      {{ range $key, $card := .cards }}
+      <div class="details-section__card">
+        <div class="icon-box">
+          {{/* Render card icon partial */}}
+          {{ partial $card.icon }}
+        </div>
+        <div class="item-number">{{ math.Add $key 1 }}</div>
+        <h3>
+          {{ $card.title }}
+        </h3>
+        <p>
+          {{ $card.description }}
+        </p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

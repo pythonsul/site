@@ -1,0 +1,55 @@
+<div id="wayback-container" class="wayback-container" role="region" aria-label="Navegação para site original"
+  tabindex="0">
+  <button id="wayback-button" aria-label="Voltar para o site atual" class="wayback-button"
+    data-url-back="{{ .Site.BaseURL }}/#footer">
+    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 13L5 8L9 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+  <span class="wayback-title" aria-hidden="true">
+    {{ T "wayback_title" | safeHTML }}
+  </span>
+</div>
+
+<div class="wayback-banner" role="banner" aria-live="polite">
+  {{ T "wayback_banner" | safeHTML }}
+</div>
+
+{{ $opts := dict 
+  "enableSourceMap" hugo.IsDevelopment
+  "targetPath" "css/main.css"
+  "outputStyle" (cond hugo.IsDevelopment "expanded" "compressed")
+}}
+
+{{/* Main SCSS: Process and include main stylesheet */}}
+{{- with resources.Get "scss/pages/_wayback.scss" -}}
+  {{ $opts := merge $opts (dict "targetPath" "css/wayback.css") }}
+    {{ $style := . | toCSS $opts }}
+
+    {{- if hugo.IsDevelopment }}
+      <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{- else -}}
+      {{- with $style | minify | fingerprint -}}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{/* Javascript block */}}
+{{- with resources.Get "js/core/wayback.js" }}
+  {{- $opts := dict
+    "minify" (not hugo.IsDevelopment)
+    "sourceMap" (cond hugo.IsDevelopment "external" "")
+    "targetPath" "js/core/wayback.js"
+  }}
+
+  {{- with . | js.Build $opts }}
+    {{- if hugo.IsDevelopment }}
+      <script src="{{ .RelPermalink }}"></script>
+    {{- else }}
+      {{- with . | fingerprint }}
+        <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}

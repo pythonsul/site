@@ -1,0 +1,68 @@
+{
+  "name": "Python Sul 2026 - Londrina",
+  "description": {
+    "pt-br": "Python Sul (ou PySul) é um evento comunitário que conecta pessoas apaixonadas por Python e tecnologia.<br> Desde 2017, percorre os estados da região Sul do Brasil com edições anuais itinerantes.",
+    "es": "Python Sul (o PySul) es un evento comunitario que conecta a personas apasionadas por Python y la tecnología.<br> Desde 2017, recorre las provincias de la región sur de Brasil con ediciones anuales itinerantes, promoviendo el intercambio de conocimientos y el fortalecimiento de la comunidad.",
+    "en": "Python Sul (or PySul) is a community-driven event that brings together people passionate about Python and technology.<br> Since 2017, it has been touring the states in the southern region of Brazil with annual traveling editions, fostering knowledge exchange and community strengthening."
+  },
+  "keywords": {
+    "pt-br": "Python, AI, Aprendizado de Máquina, Python Sul, PySul, Evento, Comunidade, Tecnologia, Desenvolvimento, Programação, Londrina, PR",
+    "es": "Python, IA, Python Sul, PySul, Evento, Comunidad, Tecnología, Desarrollo, Programación, Londrina, PR",
+    "en": "Python, IA, Machine Learning, Python Sul, PySul, Event, Community, Technology, Development, Programming, Londrina, PR"
+  },
+  "location": {
+    "name": "SENAI",
+    "place": "Londrina - PR",
+    "address": "R. Belém, 844 - Centro, Londrina - PR, 86026-040",
+    "map": ""
+  },
+  "author": "Python Sul",
+  "social": {
+    "instagram": "https://www.instagram.com/pythonsul",
+    "linkedin": "https://www.linkedin.com/in/python-sul/",
+    "youtube": "https://www.youtube.com/@PythonSul",
+    "github": "https://github.com/pythonsul/python-sul-site",
+    "telegram": "https://t.me/PythonSulBR",
+    "whatsapp": "https://chat.whatsapp.com/E0T75BJFPUhC82cWLBap4j"
+  },
+  "sponsorship": {
+    "plans": [
+      {
+        "language": "en",
+        "url": "/documents/sponsorship-en.pdf",
+        "title": "Sponsorship Plan in English"
+      },
+      {
+        "language": "pt-br",
+        "url": "/documents/plano-de-patrocinio-pt-br.pdf",
+        "title": "Plano de patrocínio em Português"
+      }
+    ]
+  },
+  "date": {
+    "start": "2026-04-18",
+    "finish": "2026-04-21"
+  },
+  "time": {
+    "start": "09:00",
+    "finish": "18:00"
+  },
+  "cta": {
+    "string": "header_cta",
+    "link": "#"
+  },
+  "keynotes": {
+    "pt-br": {
+      "title": "Conheça as Keynotes de 2026",
+      "keynotes_list": []
+    },
+    "es": {
+      "title": "Conozca las Keynotes de 2026",
+      "keynotes_list": []
+    },
+    "en": {
+      "title": "Meet the 2026 Keynotes",
+      "keynotes_list": []
+    }
+  }
+}

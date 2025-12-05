@@ -1,0 +1,49 @@
+{{ $currentLang := .Site.Language.Lang }}
+
+{{/* Loop through blog section data for the current language */}}
+{{ range where .Site.Data.section.blog "language" $currentLang }}
+<section class="blog-section section" id="blog">
+  <div class="section-container blog-section__container">
+    <div class="blog-section__header">
+        <h2 class="section-title">
+          <div class="coffee-icon">
+            {{ partial "svg/logos/coffee.svg" }}
+          </div>
+          {{ .title }}
+        </h2>
+        <p class="section-description">
+          {{ .description }}
+        </p>
+    </div>
+
+    <div class="latest-posts">
+      {{/* Get latest 3 published blog posts */}}
+      {{ $posts := where site.RegularPages "Type" "blog" }}
+      {{ $posts = first 3 (where $posts ".Params.draft" "=" false) }}
+      {{ $posts = sort $posts ".Date" "desc" }}
+      {{ range $posts }}
+        {{/* Render each post card */}}
+        {{ partial "core/card.html" . }}
+      {{ end }}
+    </div>
+    {{ if .cta }}
+      {{ with .cta }}
+      <div class="blog__all-content">
+        <a href='{{ relLangURL .url }}' class="btn accent">
+          {{ .label | safeHTML }}
+          {{ partial "svg/icons/arrow-right.svg" }}
+        </a>
+      </div>
+      {{ end }}
+    {{ else }}
+      <div class="blog__all-content">
+        {{/* Link to all blog posts */}}
+        <a href='{{ relLangURL "/blog" }}' class="btn accent">
+          {{ .allPostsLink | safeHTML }}
+          {{ partial "svg/icons/arrow-right.svg" }}
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

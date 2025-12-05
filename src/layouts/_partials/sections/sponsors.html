@@ -1,0 +1,80 @@
+{{ $currentLang := .Site.Language.Lang }}
+{{ $sponsorshipPlans := .Site.Data.event.sponsorship.plans }}
+{{ $tiersConfig := slice
+(dict "key" "diamond" "default" "Patrocinador Diamante")
+(dict "key" "gold" "default" "Patrocinador Ouro")
+(dict "key" "silver" "default" (i18n "sponsor_tier_silver"))
+(dict "key" "bronze" "default" (i18n "sponsor_tier_bronze"))
+}}
+
+{{ range where .Site.Data.section.sponsors.meta "language" $currentLang }}
+<section class="sponsors section" id="sponsors">
+  <div class="section-container sponsors__container">
+    <div class="sponsors__intro">
+      <h2 class="section-title">
+        <div class="coffee-icon">
+          {{ partial "svg/logos/coffee.svg" }}
+        </div>
+        {{ .title | safeHTML }}
+      </h2>
+      <p class="section-description">
+        {{ .description | safeHTML }}
+      </p>
+    </div>
+
+    <div class="sponsors__tiers">
+      {{ range $tier := $tiersConfig }}
+      {{ $items := default (slice) (index $.Site.Data.section.sponsors $tier.key) }}
+      {{ if gt (len $items) 0 }}
+      {{ $labelKey := printf "sponsor_tier_%s" $tier.key }}
+      {{ $label := $tier.default }}
+      {{ $labelI18n := i18n $labelKey }}
+      {{ if ne $labelI18n $labelKey }}
+      {{ $label = $labelI18n }}
+      {{ end }}
+      <section class="sponsor-tier sponsor-tier--{{ $tier.key }}">
+        <h3 class="sponsor-tier__title">
+          {{ $label | safeHTML }}
+        </h3>
+        <ul class="sponsor-tier__logos">
+          {{ range $items }}
+          <li class="sponsor-logo {{ .name | urlize }}">
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+              <img src="{{ .logo }}" alt="{{ .name }} Logo">
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+      {{ end }}
+    </div>
+
+  </div>
+
+  <div class="sponsors__cta">
+    <h3 class="sponsors__cta-title">
+      {{ .footer.title | safeHTML }}
+    </h3>
+    <p class="sponsors__cta-text">
+      {{ .footer.description | safeHTML }}
+    </p>
+    <div class="sponsors__cta-actions">
+      {{ $primaryPlans := where $sponsorshipPlans "language" $currentLang }}
+      {{ $secondaryPlans := where $sponsorshipPlans "language" "ne" $currentLang }}
+      {{ range $primaryPlans }}
+      <a href="{{ .url }}" class="btn on-accent" target="_blank" rel="noopener noreferrer">
+        {{ .title | safeHTML }}
+        {{ partial "svg/icons/download.svg" }}
+      </a>
+      {{ end }}
+      {{ range $secondaryPlans }}
+      <a href="{{ .url }}" class="btn on-accent" target="_blank" rel="noopener noreferrer">
+        {{ .title | safeHTML }}
+        {{ partial "svg/icons/download.svg" }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
