@@ -36,12 +36,12 @@
         {
           "title": "Prazo para Submissão",
           "icon": "svg/icons/calendar.svg",
-          "date": "a definir"
+          "date": "31/03/2026"
         },
         {
           "title": "Resultados da Seleção",
           "icon": "svg/icons/calendar-check.svg",
-          "date": "a definir"
+          "date": "20/04/2026"
         },
         {
           "title": "Benefícios",
@@ -52,7 +52,7 @@
     },
     "cta": {
       "text": "Enviar Proposta",
-      "link": "#",
+      "link": "https://talks.python.org.br/pysul2026/cfp",
       "footer": "Dúvidas? entre em contato: {{ Email }}"
     }
   },
@@ -93,12 +93,12 @@
         {
           "title": "Submission Deadline",
           "icon": "svg/icons/calendar.svg",
-          "date": "to be defined"
+          "date": "31/03/2026"
         },
         {
           "title": "Selection Results",
           "icon": "svg/icons/calendar-check.svg",
-          "date": "to be defined"
+          "date": "20/04/2026"
         },
         {
           "title": "Benefits",
@@ -109,7 +109,7 @@
     },
     "cta": {
       "text": "Submit Proposal",
-      "link": "#",
+      "link": "https://talks.python.org.br/pysul2026/cfp",
       "footer": "For questions, contact: {{ Email }}"
     }
   },
@@ -150,12 +150,12 @@
         {
           "title": "Plazo para Envío",
           "icon": "svg/icons/calendar.svg",
-          "date": "A definir"
+          "date": "31/03/2026"
         },
         {
           "title": "Resultados de Selección",
           "icon": "svg/icons/calendar-check.svg",
-          "date": "A definir"
+          "date": "20/04/2026"
         },
         {
           "title": "Beneficios",
@@ -166,7 +166,7 @@
     },
     "cta": {
       "text": "Enviar Propuesta",
-      "link": "#",
+      "link": "https://talks.python.org.br/pysul2026/cfp",
       "footer": "Para dudas, contactá a: {{ Email }}"
     }
   }
