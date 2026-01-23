@@ -1,11 +1,11 @@
 [[main]]
-name = "Palestras"
+name = "Programação"
 url = "#schedule"
 weight = 1
 
 [[main]]
-name = "Conversas"
-url = "#speakers"
+name = "Blog"
+url = "#blog"
 weight = 2
 
 [[main]]
@@ -14,11 +14,21 @@ url = "#sponsors"
 weight = 3
 
 [[main]]
-name = "Blog"
-url = "#blog"
+name = "Apoiadores"
+url = "#supporters"
 weight = 4
+
+[[main]]
+name = "Local"
+url = "#local"
+weight = 5
+
+[[main]]
+name = "Hospedagem"
+url = "#accommodation"
+weight = 6
 
 [[main]]
 name = "Código de conduta"
 url = "/codigo-de-conduta/"
-weight = 5
+weight = 7
