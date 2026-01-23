@@ -161,3 +161,45 @@ other = "Oradores"
 
 [section_speakers_description]
 other = "Conoce a los oradores que compartirán sus conocimientos y experiencias durante el evento."
+
+[room_type]
+other = "Tipo de Habitación"
+
+[single]
+other = "Individual"
+
+[double]
+other = "Doble"
+
+[triple]
+other = "Triple"
+
+[tax_notice]
+other = "Las tarifas tienen un cargo adicional del 3% de impuestos sobre servicios (ISS)"
+
+[book_via_whatsapp]
+other = "Reservar por WhatsApp"
+
+[amenities_title]
+other = "Comodidades y Facilidades"
+
+[check_in]
+other = "El check-in comienza a las 14:00"
+
+[check_out]
+other = "El check-out finaliza a las 12:00"
+
+[parking]
+other = "Estacionamiento: R$ 20,00 por vehículo"
+
+[breakfast]
+other = "Desayuno"
+
+[complimentary]
+other = "Cortesia"
+
+[email]
+other = "Correo electrónico"
+
+[clicking_here]
+other = "haciendo clic aquí"

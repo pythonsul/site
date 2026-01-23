@@ -163,3 +163,45 @@ other = "Palestrantes"
 
 [section_speakers_description]
 other = "Conheça os palestrantes que compartilharão seus conhecimentos e experiências durante o evento."
+
+[room_type]
+other = "Tipo de Quarto"
+
+[single]
+other = "Individual"
+
+[double]
+other = "Duplo"
+
+[triple]
+other = "Triplo"
+
+[tax_notice]
+other = "As diárias têm acréscimo de 3% de taxas de impostos sobre serviço (ISS)"
+
+[book_via_whatsapp]
+other = "Reservar via WhatsApp"
+
+[amenities_title]
+other = "Comodidades e Facilidades"
+
+[check_in]
+other = "As diárias iniciam-se às 14h"
+
+[check_out]
+other = "As diárias encerram-se às 12h"
+
+[parking]
+other = "Estacionamento: R$ 20,00 por veículo"
+
+[breakfast]
+other = "Café da manhã"
+
+[complimentary]
+other = "Cortesia"
+
+[email]
+other = "E-mail"
+
+[clicking_here]
+other = "clicando aqui"

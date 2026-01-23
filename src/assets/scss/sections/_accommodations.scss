@@ -1,0 +1,117 @@
+$layout-primary: map-get($pysul-layout, primary);
+$bg-light: map-get($pysul-layout, bg-light);
+
+.accommodation {
+    @extend .section;
+    @include responsive-container;
+    background-color: $bg-light;
+    padding: $space-12 0;
+}
+
+.accommodation__container {
+    @extend .section-container;
+    display: flex;
+    flex-direction: column;
+    gap: $space-8;
+}
+
+.accommodation__heading {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    color: var(--color-text-strong);
+
+    svg {
+        width: 32px;
+        height: 32px;
+        color: $layout-primary;
+    }
+
+    h2 {
+        font-size: clamp(1.75rem, 4vw, 2.25rem);
+        margin: 0;
+    }
+}
+
+.accommodation__grid {
+    display: flex;
+    flex-direction: column;
+    gap: $space-8;
+
+    @media (min-width: $breakpoint-lg) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.accommodation__details {
+    flex: 2;
+}
+
+.accommodation__hotel-name {
+    font-size: 1.5rem;
+    color: $layout-primary;
+    margin-bottom: $space-2;
+}
+
+.accommodation__description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: $space-6;
+    max-width: 65ch;
+}
+
+.accommodation__table-wrapper {
+    overflow-x: auto;
+    border: 1px solid rgba($black, 0.08);
+    border-radius: $radius-3;
+}
+
+.accommodation__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+        padding: $space-4;
+        text-align: left;
+        border-bottom: 1px solid rgba($black, 0.05);
+    }
+
+    th {
+        background-color: rgba($layout-primary, 0.05);
+        color: var(--color-text-strong);
+        font-weight: 700;
+    }
+}
+
+.accommodation__sidebar {
+    flex: 1;
+}
+
+.accommodation__card {
+    background-color: rgba($layout-mint, 0.2);
+    padding: $space-8;
+    border-radius: $radius-4;
+    display: flex;
+    flex-direction: column;
+    gap: $space-6;
+}
+
+.accommodation__info-label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: $space-1;
+}
+
+.accommodation__amenities ul {
+    list-style: none;
+    padding: 0;
+    margin-top: $space-2;
+
+    li {
+        padding: $space-1 0;
+        border-bottom: 1px solid rgba($black, 0.05);
+        font-size: 0.95rem;
+    }
+}
