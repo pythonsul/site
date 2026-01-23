@@ -1,0 +1,83 @@
+[
+  {
+    "language": "pt-br",
+    "accommodation_title": "Hospedagem Parceira",
+    "hotel_name": "Cedro Hotel",
+    "hotel_address": "Avenida Juscelino Kubitschek, 200 Centro - Londrina/PR",
+    "description": "O Cedro Hotel oferece tarifas especiais para o evento PySul. Os hóspedes desfrutam de café da manhã cortesia, Wi-Fi gratuito e jantares cortesia em dias selecionados.",
+    "rooms": [
+      {
+        "type": "Luxo (Standard)",
+        "single": "R$ 239,00",
+        "double": "R$ 279,00",
+        "triple": "R$ 339,00"
+      },
+      {
+        "type": "Suíte Júnior",
+        "single": "R$ 359,00",
+        "double": "R$ 399,00",
+        "triple": "R$ 449,00"
+      },
+      {
+        "type": "Suíte Master",
+        "single": "R$ 529,00",
+        "double": "R$ 569,00",
+        "triple": "-"
+      }
+    ]
+  },
+  {
+    "language": "en",
+    "accommodation_title": "Partner Accommodation",
+    "hotel_name": "Cedro Hotel",
+    "hotel_address": "200 Juscelino Kubitschek Avenue, Downtown - Londrina/PR",
+    "description": "Cedro Hotel offers special rates for the PySul event. Guests enjoy complimentary breakfast, free Wi-Fi, and complimentary dinners on selected days.",
+    "rooms": [
+      {
+        "type": "Standard Luxury",
+        "single": "R$ 239.00",
+        "double": "R$ 279.00",
+        "triple": "R$ 339.00"
+      },
+      {
+        "type": "Junior Suite",
+        "single": "R$ 359.00",
+        "double": "R$ 399.00",
+        "triple": "R$ 449.00"
+      },
+      {
+        "type": "Master Suite",
+        "single": "R$ 529.00",
+        "double": "R$ 569.00",
+        "triple": "-"
+      }
+    ]
+  },
+  {
+    "language": "es",
+    "accommodation_title": "Alojamiento Asociado",
+    "hotel_name": "Cedro Hotel",
+    "hotel_address": "Avenida Juscelino Kubitschek, 200 Centro - Londrina/PR",
+    "description": "Cedro Hotel ofrece tarifas especiales para el evento PySul. Los huéspedes disfrutan de desayuno de cortesía, Wi-Fi gratuito y cenas de cortesía en días seleccionados.",
+    "rooms": [
+      {
+        "type": "Lujo (Standard)",
+        "single": "R$ 239,00",
+        "double": "R$ 279,00",
+        "triple": "R$ 339,00"
+      },
+      {
+        "type": "Suite Júnior",
+        "single": "R$ 359,00",
+        "double": "R$ 399,00",
+        "triple": "R$ 449,00"
+      },
+      {
+        "type": "Suite Master",
+        "single": "R$ 529,00",
+        "double": "R$ 569,00",
+        "triple": "-"
+      }
+    ]
+  }
+]

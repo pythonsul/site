@@ -1,0 +1,92 @@
+{{ $currentLang := .Site.Language.Lang }} {{ range where
+.Site.Data.section.accommodations "language" $currentLang }}
+<section id="accommodation" class="accommodation">
+    <div class="accommodation__container">
+        <div class="accommodation__heading">
+            {{ partial "svg/logos/coffee.svg" }}
+            <h2>{{ .accommodation_title | safeHTML }}</h2>
+        </div>
+
+        <div class="accommodation__grid">
+            <div class="accommodation__details">
+                <h3 class="accommodation__hotel-name">{{ .hotel_name }}</h3>
+                <p class="accommodation__description">
+                    {{ .description | markdownify }}
+                </p>
+
+                <div class="accommodation__table-wrapper">
+                    <table class="accommodation__table">
+                        <thead>
+                            <tr>
+                                <th>{{ T "room_type" }}</th>
+                                <th>{{ T "single" }}</th>
+                                <th>{{ T "double" }}</th>
+                                <th>{{ T "triple" }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{ range .rooms }}
+                            <tr>
+                                <td><strong>{{ .type }}</strong></td>
+                                <td>{{ .single }}</td>
+                                <td>{{ .double }}</td>
+                                <td>{{ .triple }}</td>
+                            </tr>
+                            {{ end }}
+                        </tbody>
+                    </table>
+                    <p class="accommodation__tax-note">
+                        * {{ T "tax_notice" }}
+                    </p>
+                </div>
+            </div>
+
+            <aside class="accommodation__sidebar">
+                <div class="accommodation__card">
+                    <div class="accommodation__info-item">
+                        <span class="accommodation__info-label"
+                            >{{ T "address" }}:</span
+                        >
+                        <span class="accommodation__info-value"
+                            >{{ .hotel_address }}</span
+                        >
+                    </div>
+
+                    <div class="accommodation__contact-block">
+                        <p><strong>{{ T "book_via_whatsapp" }}:</strong></p>
+                        <a
+                            href="https://wa.me/554333157000"
+                            class="button"
+                            target="_blank"
+                        >
+                            (43) 3315-7000
+                        </a>
+                        <p><strong>{{ T "email" }}:</strong></p>
+                            <a href="mailto:reservas@cedrohotel.com.br" class="button">
+                            reservas@cedrohotel.com.br
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="accommodation__amenities">
+                        <p><strong>{{ T "amenities_title" }}:</strong></p>
+                        <ul>
+                            <li>{{ T "check_in" }}</li>
+                            <li>{{ T "check_out" }}</li>
+                            <li>{{ T "parking" }}</li>
+                            <li>
+                                {{ T "breakfast" }}: {{ T "complimentary" }}
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>{{ T "know_more_about" }}
+                        <a href="/documents/informacoes-cedro-hotel.pdf" target="_blank">{{ T "clicking_here" }}</a>
+                        </p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+{{ end }}

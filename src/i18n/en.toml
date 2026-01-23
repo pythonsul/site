@@ -161,4 +161,46 @@ other = "Check out the full schedule of talks, workshops, and activities planned
 other = "Speakers"
 
 [section_speakers_description]
-other = "Meet the speakers who will share their knowledge and experiences during the event." 
+other = "Meet the speakers who will share their knowledge and experiences during the event."
+
+[room_type]
+other = "Room Type"
+
+[single]
+other = "Single"
+
+[double]
+other = "Double"
+
+[triple]
+other = "Triple"
+
+[tax_notice]
+other = "Rates are subject to an additional 3% service tax (ISS)"
+
+[book_via_whatsapp]
+other = "Book via WhatsApp"
+
+[amenities_title]
+other = "Amenities & Facilities"
+
+[check_in]
+other = "Check-in starts at 2:00 PM"
+
+[check_out]
+other = "Check-out ends at 12:00 PM"
+
+[parking]
+other = "Parking: R$ 20.00 per vehicle"
+
+[breakfast]
+other = "Breakfast"
+
+[complimentary]
+other = "Complimentary"
+
+[email]
+other = "Email"
+
+[clicking_here]
+other = "clicking here"
