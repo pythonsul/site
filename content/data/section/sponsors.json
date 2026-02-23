@@ -5,8 +5,8 @@
       "title": "Patrocinadores",
       "description": "Ajude a fazer da Python Sul 2026 um evento ainda mais incrível!",
       "footer": {
-      "title": "Quer patrocinar a PySul 2026?",
-      "description": "Junte-se a nós e apoie a maior conferência Python do Sul do Brasil.<br> Diferentes níveis de patrocínio disponíveis."
+        "title": "Quer patrocinar a PySul 2026?",
+        "description": "Junte-se a nós e apoie a maior conferência Python do Sul do Brasil.<br> Diferentes níveis de patrocínio disponíveis."
       }
     },
     {
@@ -14,8 +14,8 @@
       "title": "Sponsors",
       "description": "Help make Python Sul 2026 an even more amazing event!",
       "footer": {
-      "title": "Want to sponsor PySul 2026?",
-      "description": "Join us and support the largest Python conference in Southern Brazil.<br> Different sponsorship levels available."
+        "title": "Want to sponsor PySul 2026?",
+        "description": "Join us and support the largest Python conference in Southern Brazil.<br> Different sponsorship levels available."
       }
     },
     {
@@ -23,8 +23,8 @@
       "title": "Patrocinadores",
       "description": "¡Ayudanos a hacer de Python Sul 2026 un evento aún más increíble!",
       "footer": {
-      "title": "¿Querés patrocinar la PySul 2026?",
-      "description": "Sumate a nosotros y apoyá la mayor conferencia de Python del Sur de Brasil.<br> Distintos niveles de patrocinio disponibles."
+        "title": "¿Querés patrocinar la PySul 2026?",
+        "description": "Sumate a nosotros y apoyá la mayor conferencia de Python del Sur de Brasil.<br> Distintos niveles de patrocinio disponibles."
       }
     }
   ],
@@ -62,6 +62,16 @@
         "pt-br": "Logo da Illum Design Gráfico e Web",
         "en": "Illum Graphic and Web Design Logo",
         "es": "Logo de Illum Diseño Gráfico y Web"
+      }
+    },
+    {
+      "name": "Prefeitura de Londrina",
+      "url": "https://portal.londrina.pr.gov.br/sine-geral-smter",
+      "logo": "/images/sponsors/prefeitura.jpg",
+      "alt": {
+        "pt-br": "Logo da Prefeitura de Londrina",
+        "en": "Londrina City Hall Logo",
+        "es": "Logo de la Alcaldía de Londrina"
       }
     }
   ]
