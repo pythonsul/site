@@ -40,7 +40,7 @@
           {{ range $items }}
           <li class="sponsor-logo {{ .name | urlize }}">
             <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
-              <img src="{{ .logo }}" alt="{{ .name }} Logo">
+              {{ partial "core/image.html" (dict "src" .logo "alt" (printf "%s Logo" .name) "className" "sponsor-logo__image") }}
             </a>
           </li>
           {{ end }}

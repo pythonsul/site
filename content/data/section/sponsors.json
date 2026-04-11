@@ -31,8 +31,70 @@
   "platinum": [],
   "diamond": [],
   "gold": [],
-  "silver": [],
-  "bronze": [],
+  "silver": [
+    {
+      "name": "Furioso",
+      "url": "#",
+      "logo": "/images/sponsors/furioso.jpg",
+      "alt": {
+        "pt-br": "Logo da Furioso",
+        "en": "Furioso Logo",
+        "es": "Logo de Furioso"
+      }
+    },
+    {
+      "name": "Hidratar",
+      "url": "#",
+      "logo": "/images/sponsors/hidratar.png",
+      "alt": {
+        "pt-br": "Logo da Hidratar",
+        "en": "Hidratar Logo",
+        "es": "Logo de Hidratar"
+      }
+    },
+    {
+      "name": "LinuxTips",
+      "url": "#",
+      "logo": "/images/sponsors/linuxtips.png",
+      "alt": {
+        "pt-br": "Logo da LinuxTips",
+        "en": "LinuxTips Logo",
+        "es": "Logo de LinuxTips"
+      }
+    },
+    {
+      "name": "Refriko",
+      "url": "#",
+      "logo": "/images/sponsors/refriko.png",
+      "alt": {
+        "pt-br": "Logo da Refriko",
+        "en": "Refriko Logo",
+        "es": "Logo de Refriko"
+      }
+    }
+  ],
+  "bronze": [
+    {
+      "name": "Bolha",
+      "url": "#",
+      "logo": "/images/sponsors/bolha.jpeg",
+      "alt": {
+        "pt-br": "Logo da Bolha",
+        "en": "Bolha Logo",
+        "es": "Logo de Bolha"
+      }
+    },
+    {
+      "name": "Conta Aberta",
+      "url": "#",
+      "logo": "/images/sponsors/contaaberta.jpeg",
+      "alt": {
+        "pt-br": "Logo da Conta Aberta",
+        "en": "Conta Aberta Logo",
+        "es": "Logo de Conta Aberta"
+      }
+    }
+  ],
   "supporters": [
     {
       "name": "SENAI",
