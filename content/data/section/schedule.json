@@ -1,1 +1,496 @@
-[]
+[
+  {
+    "day": "day1_tutorials",
+    "sessions": [
+      {
+        "start": "08:30",
+        "end": "09:30",
+        "duration": "1h",
+        "title": "Abertura e Avisos",
+        "category": "opening",
+        "type": "opening"
+      },
+      {
+        "start": "09:30",
+        "end": "12:00",
+        "duration": "2h",
+        "title": "Python no Papel: Anotações Visuais para Aprender Programação",
+        "speaker": {
+          "name": "Romênia Noriko Ishiyama",
+          "photo": "images/speakers/romenia-noriko-ishiyama.jpg"
+        },
+        "category": "education",
+        "type": "tutorial_short",
+        "room": "Sala A"
+      },
+      {
+        "start": "10:30",
+        "end": "11:00",
+        "duration": "30m",
+        "title": "Coffee Break",
+        "category": "break",
+        "type": "break"
+      },
+      {
+        "start": "12:00",
+        "end": "14:00",
+        "duration": "2h",
+        "title": "Almoço",
+        "category": "lunch",
+        "type": "lunch"
+      },
+      {
+        "start": "14:00",
+        "end": "18:30",
+        "duration": "4h",
+        "title": "Criando seu primeiro bot para o telegram utilizando python",
+        "speaker": {
+          "name": "Bernardo de Castro",
+          "photo": "images/speakers/bernardo-de-castro.jpg"
+        },
+        "category": "automation",
+        "type": "tutorial_long",
+        "room": "Sala B"
+      },
+      {
+        "start": "14:00",
+        "end": "18:30",
+        "duration": "4h",
+        "title": "Introdução a django-ninja",
+        "speaker": {
+          "name": "Ana Dulce",
+          "photo": "images/speakers/ana-dulce.jpg"
+        },
+        "category": "web",
+        "type": "tutorial_long",
+        "room": "Sala C"
+      },
+      {
+        "start": "16:00",
+        "end": "16:30",
+        "duration": "30m",
+        "title": "Coffee Break",
+        "category": "break",
+        "type": "break"
+      }
+    ]
+  },
+  {
+    "day": "day2_talks",
+    "sessions": [
+      {
+        "start": "08:30",
+        "end": "09:30",
+        "duration": "1h",
+        "title": "Abertura e Avisos",
+        "category": "opening",
+        "type": "opening"
+      },
+      {
+        "start": "09:30",
+        "end": "10:30",
+        "duration": "1h",
+        "title": "Keynote - Camila Maia",
+        "speaker": {
+          "name": "Camila Maia",
+          "photo": "images/keynotes/camila-maia.jpg"
+        },
+        "category": "keynote",
+        "type": "keynote"
+      },
+      {
+        "start": "10:30",
+        "end": "11:00",
+        "duration": "30m",
+        "title": "Coffee Break",
+        "category": "break",
+        "type": "break"
+      },
+      {
+        "start": "11:00",
+        "end": "11:40",
+        "duration": "40m",
+        "title": "Checando Propriedades",
+        "speaker": {
+          "name": "Pablo Henrique Aguilar",
+          "photo": "images/speakers/pablo-henrique-aguilar.jpg"
+        },
+        "category": "software_engineering",
+        "room": "Sala A"
+      },
+      {
+        "start": "11:00",
+        "end": "11:40",
+        "duration": "40m",
+        "title": "Caso de estudo de um teste técnico",
+        "speaker": {
+          "name": "Cássio Botaro",
+          "photo": "images/speakers/cassio-botaro.jpg"
+        },
+        "category": "testing",
+        "room": "Sala B"
+      },
+      {
+        "start": "11:00",
+        "end": "11:40",
+        "duration": "40m",
+        "title": "Quando vai ficar pronto? Usando dados para responder a pergunta mais difícil do cliente",
+        "speaker": {
+          "name": "Rodrigo Bastos Vieira",
+          "photo": "images/speakers/rodrigo-bastos-vieira.jpg"
+        },
+        "category": "data_science",
+        "room": "Sala C"
+      },
+      {
+        "start": "11:40",
+        "end": "12:00",
+        "duration": "20m",
+        "title": "Perguntas / Networking",
+        "category": "networking",
+        "type": "networking"
+      },
+      {
+        "start": "12:00",
+        "end": "14:30",
+        "duration": "2h30m",
+        "title": "Almoço",
+        "category": "lunch",
+        "type": "lunch"
+      },
+      {
+        "start": "14:30",
+        "end": "15:30",
+        "duration": "1h",
+        "title": "Keynote - Teo Calvo",
+        "speaker": {
+          "name": "Teo Calvo",
+          "photo": "images/keynotes/teo-calvo.jpg"
+        },
+        "category": "keynote",
+        "type": "keynote"
+      },
+      {
+        "start": "15:30",
+        "end": "16:00",
+        "duration": "30m",
+        "title": "Perguntas / Networking",
+        "category": "networking",
+        "type": "networking"
+      },
+      {
+        "start": "16:00",
+        "end": "16:30",
+        "duration": "30m",
+        "title": "Coffee Break",
+        "category": "break",
+        "type": "break"
+      },
+      {
+        "start": "16:30",
+        "end": "17:10",
+        "duration": "40m",
+        "title": "Antes de sair criando índices: como o Django realmente conversa com o PostgreSQL",
+        "speaker": {
+          "name": "Lucas Hiago de Moura Vilela",
+          "photo": "images/speakers/lucas-hiago-de-moura-vilela.jpg"
+        },
+        "category": "web",
+        "room": "Sala A"
+      },
+      {
+        "start": "16:30",
+        "end": "17:10",
+        "duration": "40m",
+        "title": "Robot Framework - Como fazer RPA com python",
+        "speaker": {
+          "name": "Guilherme Martins",
+          "photo": "images/speakers/guilherme-martins.jpg"
+        },
+        "category": "automation",
+        "room": "Sala B"
+      },
+      {
+        "start": "16:30",
+        "end": "17:10",
+        "duration": "40m",
+        "title": "Do Vibe Code ao Low-Code: Como não enlouquecer testando com Playwright",
+        "speaker": {
+          "name": "Daniel Wandarti",
+          "photo": "images/speakers/daniel-wandarti.jpg"
+        },
+        "category": "testing",
+        "room": "Sala C"
+      },
+      {
+        "start": "17:10",
+        "end": "17:50",
+        "duration": "40m",
+        "title": "Quem é você na comunidade? Presença, prática e pertencimento",
+        "speaker": {
+          "name": "Glória Barboza",
+          "photo": "images/speakers/gloria-barboza.jpg"
+        },
+        "category": "community",
+        "room": "Sala A"
+      },
+      {
+        "start": "17:10",
+        "end": "17:50",
+        "duration": "40m",
+        "title": "Como um cara de humanas virou engenheiro de dados - para além da transição de carreira",
+        "speaker": {
+          "name": "Gabriel Passos",
+          "photo": "images/speakers/gabriel-passos.jpg"
+        },
+        "category": "career",
+        "room": "Sala B"
+      },
+      {
+        "start": "17:10",
+        "end": "17:50",
+        "duration": "40m",
+        "title": "As 5 Habilidades de sucesso para lideres na área de tecnologia.",
+        "speaker": {
+          "name": "Wellington Dutra",
+          "photo": "images/speakers/wellington-dutra.jpg"
+        },
+        "category": "career",
+        "room": "Sala C"
+      },
+      {
+        "start": "17:50",
+        "end": "18:30",
+        "duration": "40m",
+        "title": "Guia de sobrevivência para primeiros contribuidores: do fork ao merge",
+        "speaker": {
+          "name": "Leticia @levxyca",
+          "photo": "images/speakers/leticia-levxyca.jpg"
+        },
+        "category": "open_source",
+        "room": "Sala A"
+      },
+      {
+        "start": "17:50",
+        "end": "18:30",
+        "duration": "40m",
+        "title": "IA Aplicada: Desenvolvimento de Software Interativo para auxilio em Depressão e Ansiedade",
+        "speaker": {
+          "name": "Lucas Rafael Goncalves Dolenkei",
+          "photo": "images/speakers/lucas-rafael-goncalves-dolenkei.jpg"
+        },
+        "category": "ai",
+        "room": "Sala B"
+      },
+      {
+        "start": "17:50",
+        "end": "18:30",
+        "duration": "40m",
+        "title": "O mundo invertido do Mercado de Tecnologia",
+        "speaker": {
+          "name": "Felipe Ramos da Silva",
+          "photo": "images/speakers/felipe-ramos-da-silva.jpg"
+        },
+        "category": "career",
+        "room": "Sala C"
+      }
+    ]
+  },
+  {
+    "day": "day3_talks",
+    "sessions": [
+      {
+        "start": "08:30",
+        "end": "09:30",
+        "duration": "1h",
+        "title": "Abertura e Avisos",
+        "category": "opening",
+        "type": "opening"
+      },
+      {
+        "start": "09:30",
+        "end": "10:30",
+        "duration": "1h",
+        "title": "Keynote - Melissa Weber",
+        "speaker": {
+          "name": "Melissa Weber",
+          "photo": "images/keynotes/melissa-weber.jpg"
+        },
+        "category": "keynote",
+        "type": "keynote"
+      },
+      {
+        "start": "10:30",
+        "end": "11:00",
+        "duration": "30m",
+        "title": "Coffee Break",
+        "category": "break",
+        "type": "break"
+      },
+      {
+        "start": "11:00",
+        "end": "11:40",
+        "duration": "40m",
+        "title": "Softskills para liderança e Transição de carreira",
+        "speaker": {
+          "name": "Thiago Henrique de Oliveira Silva",
+          "photo": "images/speakers/thiago-henrique-de-oliveira-silva.jpg"
+        },
+        "category": "career",
+        "room": "Sala A"
+      },
+      {
+        "start": "11:00",
+        "end": "11:40",
+        "duration": "40m",
+        "title": "Engenharia além do código: o que ninguém esconde, mas você ainda não viu",
+        "speaker": {
+          "name": "Bruno Szczuk",
+          "photo": "images/speakers/bruno-szczuk.jpg"
+        },
+        "category": "software_engineering",
+        "room": "Sala B"
+      },
+      {
+        "start": "11:00",
+        "end": "11:40",
+        "duration": "40m",
+        "title": "Python, Web e IA: A Stack do Dev do Futuro (Que Começa Hoje)",
+        "speaker": {
+          "name": "Rafael Ferreira",
+          "photo": "images/speakers/rafael-ferreira.jpg"
+        },
+        "category": "ai",
+        "room": "Sala C"
+      },
+      {
+        "start": "11:40",
+        "end": "12:00",
+        "duration": "20m",
+        "title": "Perguntas / Networking",
+        "category": "networking",
+        "type": "networking"
+      },
+      {
+        "start": "12:00",
+        "end": "14:30",
+        "duration": "2h30m",
+        "title": "Almoço",
+        "category": "lunch",
+        "type": "lunch"
+      },
+      {
+        "start": "14:30",
+        "end": "15:30",
+        "duration": "1h",
+        "title": "Keynote - Luciano Ramalho",
+        "speaker": {
+          "name": "Luciano Ramalho",
+          "photo": "images/keynotes/luciano-ramalho.jpg"
+        },
+        "category": "keynote",
+        "type": "keynote"
+      },
+      {
+        "start": "15:30",
+        "end": "16:00",
+        "duration": "30m",
+        "title": "Perguntas / Networking",
+        "category": "networking",
+        "type": "networking"
+      },
+      {
+        "start": "16:00",
+        "end": "16:30",
+        "duration": "30m",
+        "title": "Coffee Break",
+        "category": "break",
+        "type": "break"
+      },
+      {
+        "start": "16:30",
+        "end": "17:10",
+        "duration": "40m",
+        "title": "Task Scheduling com Python no Simgrid",
+        "speaker": {
+          "name": "Lucas Villela",
+          "photo": "images/speakers/lucas-villela.jpg"
+        },
+        "category": "software_engineering",
+        "room": "Sala A"
+      },
+      {
+        "start": "16:30",
+        "end": "17:10",
+        "duration": "40m",
+        "title": "Novos caminhos profissionais na tecnologia",
+        "speaker": {
+          "name": "Alana Onitsko Ferreira",
+          "photo": "images/speakers/alana-onitsko-ferreira.jpg"
+        },
+        "category": "career",
+        "room": "Sala B"
+      },
+      {
+        "start": "16:30",
+        "end": "17:10",
+        "duration": "40m",
+        "title": "Como as humanas podem salvar os humanos do impacto da IA",
+        "speaker": {
+          "name": "Andre Machado",
+          "photo": "images/speakers/andre-machado.jpg"
+        },
+        "category": "ai",
+        "room": "Sala C"
+      },
+      {
+        "start": "17:10",
+        "end": "17:50",
+        "duration": "40m",
+        "title": "Saindo do Ingress para o Gateway API no K8S em APPs Python",
+        "speaker": {
+          "name": "Guto Carvalho",
+          "photo": "images/speakers/guto-carvalho.jpg"
+        },
+        "category": "devops",
+        "room": "Sala A"
+      },
+      {
+        "start": "17:10",
+        "end": "17:50",
+        "duration": "40m",
+        "title": "Construindo uma Cultura de Code Review",
+        "speaker": {
+          "name": "Renan de Assis",
+          "photo": "images/speakers/renan-de-assis.jpg"
+        },
+        "category": "software_engineering",
+        "room": "Sala B"
+      },
+      {
+        "start": "17:10",
+        "end": "17:50",
+        "duration": "40m",
+        "title": "GitHub e Open Source",
+        "speaker": {
+          "name": "Enderson Menezes Candido",
+          "photo": "images/speakers/enderson-menezes-candido.jpg"
+        },
+        "category": "open_source",
+        "room": "Sala C"
+      },
+      {
+        "start": "17:50",
+        "end": "18:30",
+        "duration": "40m",
+        "title": "Escalar Python de verdade: Concorrência, Paralelismo e Arquitetura em Sistemas Reais.",
+        "speaker": {
+          "name": "Giovanna Resende",
+          "photo": "images/speakers/giovanna-resende.jpg"
+        },
+        "category": "software_engineering",
+        "room": "Sala A"
+      }
+    ]
+  }
+]

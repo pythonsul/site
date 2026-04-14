@@ -185,6 +185,17 @@
         }
       }
 
+      .event-room {
+        font-weight: 400;
+        background-color: rgba($black, 0.08);
+        border-radius: $radius-100;
+        padding: $space-1 $space-3 $space-1 $space-1;
+        
+        display: flex;
+        align-items: center;
+        
+      }
+
       .event-category {
         display: inline-block;
         padding: $space-1 $space-4;
@@ -242,7 +253,7 @@
 
           .speaker-name {
             color: var(--color-text);
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 500;
           }
         }

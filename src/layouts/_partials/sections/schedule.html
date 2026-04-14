@@ -72,12 +72,18 @@
                             <div class="event-speaker-container">
                                 {{- range $index, $speaker := $speakers }}
                                 <div class="event-speaker">
-                                    {{- with $speaker.photo }}
-                                    {{ partial "core/image.html" (dict "src" . "alt" $speaker.name "avatar" true "className" "speaker-photo") }}
-                                    {{- end }}
+                                    {{- /* with $speaker.photo */}}
+                                    {{- /* partial "core/image.html" (dict "src" . "alt" $speaker.name "avatar" true "className" "speaker-photo") */}}
+                                    {{- /* end */}}
                                     <span class="speaker-name">{{ $speaker.name }}</span>
                                 </div>
                                 {{- end }}
+                            </div>
+                            {{ end }}
+                            {{ with .room }}
+                            <div class="event-room">
+                                {{ partial "svg/icons/map-pin.svg" }}
+                                <span>{{ . }}</span>
                             </div>
                             {{ end }}
                         </div>
