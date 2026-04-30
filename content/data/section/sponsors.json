@@ -93,7 +93,18 @@
         "en": "Conta Aberta Logo",
         "es": "Logo de Conta Aberta"
       }
+    },
+        {
+      "name": "Pratic Leve",
+      "url": "#",
+      "logo": "/images/sponsors/praticleve.jpeg",
+      "alt": {
+        "pt-br": "Logo da Pratic Leve",
+        "en": "Pratic Leve Logo",
+        "es": "Logo de Pratic Leve"
+      }
     }
+
   ],
   "supporters": [
     {
